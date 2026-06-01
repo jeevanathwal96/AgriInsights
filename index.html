@@ -240,6 +240,19 @@ label{font-size:13px;color:var(--t3);font-weight:500;display:block;margin-bottom
 #pg-cashflow .fwd-chart-h{font-size:13px;font-weight:700;color:var(--t1);margin-bottom:4px}
 #pg-cashflow .fwd-chart-s{font-size:11px;color:var(--t3);margin-bottom:16px}
 #pg-cashflow .fwd-row{display:grid;grid-template-columns:62px 1fr 130px;gap:14px;align-items:center;padding:7px 0;border-bottom:1px solid var(--br2)}
+#pg-cashflow .cf-bankbal{background:var(--gb);border:1px solid #cfe9d8;border-radius:12px;padding:13px 15px;margin-bottom:14px}
+#pg-cashflow .cf-bb-lab{font-size:12.5px;font-weight:800;color:var(--gd)}
+#pg-cashflow .cf-bb-sub{font-size:11px;color:var(--t3);margin-top:2px}
+#pg-cashflow .cf-bb-input{display:flex;align-items:center;gap:8px;margin-top:10px}
+#pg-cashflow .cf-bb-cur{font-size:14px;font-weight:800;color:var(--gd)}
+#pg-cashflow .cf-bb-input input{flex:1;padding:9px 12px;border:1px solid var(--br);border-radius:8px;font-family:inherit;font-size:14px;font-weight:700;background:#fff}
+#pg-cashflow .cf-bb-input button{padding:9px 16px;border:none;border-radius:8px;background:var(--gd);color:#fff;font-weight:700;font-size:13px;cursor:pointer}
+#pg-cashflow .fwd-row{cursor:pointer}
+#pg-cashflow .fwd-drill{background:var(--bg);border:1px dashed var(--br);border-radius:10px;padding:11px 13px;margin:2px 0 8px;font-size:12px;display:none}
+#pg-cashflow .fwd-drill.open{display:block}
+#pg-cashflow .fwd-drill .dr{display:flex;justify-content:space-between;padding:3px 0}
+#pg-cashflow .fwd-drill .dr.tot{border-top:1px solid var(--br);margin-top:4px;padding-top:6px;font-weight:800}
+#pg-cashflow .fwd-drill .pos{color:var(--gd)}#pg-cashflow .fwd-drill .neg{color:var(--rd)}
 #pg-cashflow .fwd-row:last-child{border-bottom:none}
 #pg-cashflow .fwd-row .month{font-size:13px;font-weight:700;color:var(--t2);font-variant-numeric:tabular-nums}
 #pg-cashflow .fwd-bar-track{position:relative;height:22px;background:var(--br2);border-radius:6px;overflow:hidden}
@@ -974,6 +987,17 @@ label{font-size:13px;color:var(--t3);font-weight:500;display:block;margin-bottom
 .ob-tour-title{font-size:13px;font-weight:700;color:#111827;margin-bottom:2px}
 .ob-tour-sub{font-size:12px;color:#6B7280;line-height:1.5}
 .ob-actions{display:flex;flex-direction:column;gap:10px;margin-top:auto;padding-top:16px}
+/* 'You're ready' step: keep the action button on-screen (was pushed below the fold) */
+#ob-step-4 .ob-congrats{padding:10px 0 4px}
+#ob-step-4 .ob-congrats-icon{font-size:46px;margin-bottom:8px}
+#ob-step-4 .ob-congrats-h{font-size:22px;margin-bottom:4px}
+#ob-step-4 .ob-congrats-sub{font-size:13px;margin-bottom:14px;line-height:1.5}
+#ob-step-4 .ob-tour-list{gap:8px;margin-bottom:12px}
+#ob-step-4 .ob-tour-item{padding:10px 12px}
+#ob-step-4 .ob-tour-icon{width:32px;height:32px;font-size:15px}
+#ob-step-4 .ob-tour-title{font-size:12.5px}
+#ob-step-4 .ob-tour-sub{font-size:11.5px}
+#ob-step-4 .ob-actions{position:sticky;bottom:0;margin-top:6px;padding:12px 0 18px;background:linear-gradient(180deg,rgba(240,250,244,0),#F0FAF4 30%);z-index:2}
 .ob-btn-pri{padding:15px 24px;background:#1B4332;color:#fff;border:none;border-radius:12px;font-size:16px;font-weight:700;cursor:pointer;transition:all .15s;font-family:inherit;letter-spacing:-.1px}
 .ob-btn-pri:hover{background:#2D6A4F;transform:translateY(-1px);box-shadow:0 4px 12px rgba(27,67,50,.25)}
 .ob-btn-sec{padding:12px 20px;background:transparent;color:#6B7280;border:1.5px solid #E5E7EB;border-radius:12px;font-size:14px;font-weight:600;cursor:pointer;transition:all .15s;font-family:inherit}
@@ -1078,6 +1102,17 @@ label{font-size:13px;color:var(--t3);font-weight:500;display:block;margin-bottom
 #page-tour-fixed-btn:hover{background:var(--gp)}
 #page-tour-fixed-dismiss{padding:7px 10px 7px 6px;background:var(--gb);color:var(--t4);font-size:14px;cursor:pointer;border:none;border-left:1px solid var(--gp);font-family:inherit;transition:all .12s;line-height:1}
 #page-tour-fixed-dismiss:hover{background:var(--rp);color:var(--rd);border-left-color:var(--rp)}
+#page-tour-fixed.pulse{animation:ptfPulse 1.5s ease-out 4}
+@keyframes ptfPulse{0%{box-shadow:0 0 0 0 rgba(64,145,108,.5)}70%{box-shadow:0 0 0 12px rgba(64,145,108,0)}100%{box-shadow:0 0 0 0 rgba(64,145,108,0)}}
+#tour-complete-bg{position:fixed;inset:0;z-index:8050;background:rgba(17,24,39,.5);display:none;align-items:center;justify-content:center;padding:20px}
+.tour-complete-card{background:#fff;border-radius:18px;max-width:360px;width:100%;box-shadow:0 25px 50px -12px rgba(0,0,0,.3);padding:24px;animation:tourPop .25s ease}
+.tcc-ic{width:46px;height:46px;border-radius:12px;background:var(--gp);display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:14px}
+.tcc-h{font-size:18px;font-weight:800;color:var(--gd);margin-bottom:7px}
+.tcc-p{font-size:13px;color:var(--t2);line-height:1.55;margin-bottom:14px}
+.tcc-hl{background:var(--gb);border:1px solid var(--gp);border-radius:10px;padding:10px 12px;font-size:12px;color:var(--gd);line-height:1.5;margin-bottom:16px;display:flex;gap:8px}
+.tcc-row{display:flex;gap:9px}
+.tcc-b1{flex:1;background:var(--gd);color:#fff;border:none;border-radius:10px;padding:11px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit}
+.tcc-b2{flex:1;background:var(--br2);color:var(--t2);border:none;border-radius:10px;padding:11px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit}
 
 .chart-and-drawer{position:relative;display:flex;gap:0;transition:all .3s ease}
 .chart-and-drawer .chart-wrap{flex:1;min-width:0;transition:all .3s ease}
@@ -1386,6 +1421,81 @@ body.simple-view #nav-budgets{display:none}
 .ls-report-cta .ar{font-size:20px;opacity:.9}
 .ls-report-cta.sars{background:linear-gradient(135deg,var(--gm),var(--gd))}
 .ls-report-cta.med{background:linear-gradient(135deg,#9a3d6e,var(--pu))}
+/* ---- Crop section ---- */
+.crop-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:11px;margin-bottom:18px}
+.crop-kpis.k3{grid-template-columns:repeat(3,1fr)}
+.crop-kpi{border:1px solid var(--br);border-radius:11px;padding:11px 13px}
+.crop-kpi .l{font-size:10.5px;color:var(--t3);font-weight:600}
+.crop-kpi .v{font-size:19px;font-weight:800;margin-top:3px}
+.crop-kpi.acc{background:var(--gb);border-color:#cfe9d8}.crop-kpi.acc .v{color:var(--gd)}
+.crop-safex{background:var(--gb);border:1px solid #cfe9d8;border-radius:11px;padding:12px 14px;margin-bottom:16px;display:flex;align-items:center;gap:12px}
+.crop-safex .ic{font-size:22px}.crop-safex .t{font-weight:800;font-size:13px;color:var(--gd)}.crop-safex .s{font-size:11.5px;color:var(--t3);margin-top:1px}
+.crop-sec-h{font-size:11px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:.04em;margin:18px 0 10px}
+.crop-lands{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.crop-land{border:1px solid var(--br);border-radius:13px;padding:14px;cursor:pointer;transition:box-shadow .12s}
+.crop-land:hover{box-shadow:0 4px 14px rgba(0,0,0,.08)}
+.crop-land .top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:9px}
+.crop-land .nm{font-size:14px;font-weight:800}.crop-land .meta{font-size:11.5px;color:var(--t3);margin-top:1px}
+.crop-ic{font-size:26px;line-height:1}
+.crop-stage{font-size:9.5px;font-weight:800;padding:3px 8px;border-radius:20px;text-transform:uppercase;letter-spacing:.03em;display:inline-block}
+.s-grow{background:var(--gp);color:var(--gd)}.s-harv{background:var(--ap,#FEF3C7);color:var(--am,#B45309)}.s-plan{background:var(--pp);color:var(--pu)}.s-fallow{background:var(--br2);color:var(--t3)}
+.crop-land .grid{display:grid;grid-template-columns:1fr 1fr;gap:7px 12px;font-size:12px;margin-top:8px}
+.crop-land .grid .k{color:var(--t3)}.crop-land .grid .vv{font-weight:700;text-align:right}
+.crop-progress{height:6px;background:var(--br2);border-radius:99px;margin-top:9px;overflow:hidden}.crop-progress i{display:block;height:100%;background:var(--gl)}
+.crop-gm{margin-top:11px;border-top:1px solid var(--br2);padding-top:10px;display:flex;justify-content:space-between;align-items:center}
+.crop-gm .lab{font-size:11px;color:var(--t3);font-weight:600}.crop-gm .val{font-size:15px;font-weight:800;color:var(--gd)}
+.crop-tbl{width:100%;border-collapse:collapse;font-size:12px}
+.crop-tbl th,.crop-tbl td{padding:8px;border-bottom:1px solid var(--br2);text-align:left;vertical-align:top}
+.crop-tbl th{font-size:10px;text-transform:uppercase;color:var(--t3);font-weight:800;letter-spacing:.03em}
+.crop-tbl td.r,.crop-tbl th.r{text-align:right}
+.crop-tbl tfoot td{font-weight:800;border-top:2px solid var(--gd);border-bottom:none;color:var(--gd)}
+.crop-row-actions{display:flex;gap:8px;margin:14px 0;flex-wrap:wrap}
+.crop-miniban{background:var(--ap,#FEF3C7);border:1px solid #f5e3a8;border-radius:10px;padding:10px 12px;font-size:12px;color:var(--am,#B45309);font-weight:700;margin-bottom:13px;display:flex;gap:8px}
+.crop-chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px;align-items:center}
+.crop-chip{font-size:11px;font-weight:700;padding:5px 11px;border-radius:99px;border:1px solid var(--br);color:var(--t3);background:#fff;cursor:pointer}
+.crop-chip.on{background:var(--gd);color:#fff;border-color:var(--gd)}
+.crop-logbtn{margin-left:auto;font-size:12px;font-weight:700;background:var(--gd);color:#fff;border:none;border-radius:8px;padding:7px 12px;cursor:pointer}
+.crop-tagp{font-size:9.5px;font-weight:800;padding:2px 7px;border-radius:20px;white-space:nowrap}
+.crop-tagp.p-seed{background:var(--gp);color:var(--gd)}.crop-tagp.p-fert{background:var(--bp,#EFF6FF);color:var(--bl,#1D4ED8)}.crop-tagp.p-herb{background:#F5F3FF;color:#5B21B6}.crop-tagp.p-fung{background:var(--ap,#FEF3C7);color:var(--am,#B45309)}.crop-tagp.p-pest{background:var(--rp);color:var(--rd)}
+.crop-tbl .st-wd{color:var(--am,#B45309);font-weight:700}.crop-tbl .st-ok{color:var(--gd);font-weight:700}.crop-tbl .miss{color:var(--rd);font-weight:700}
+.crop-infonote{font-size:11.5px;color:var(--t3);background:var(--br2);border-radius:8px;padding:10px 13px;line-height:1.5;margin-top:12px}
+.crop-score{display:flex;align-items:center;gap:14px;background:var(--gb);border:1px solid #cfe9d8;border-radius:12px;padding:14px 16px;margin-bottom:16px}
+.crop-score .big{font-size:30px;font-weight:800;color:var(--gd)}.crop-score .lab{font-size:12px;color:var(--t2)}.crop-score .lab b{color:var(--gd)}
+.crop-clist{display:flex;flex-direction:column;gap:11px}
+.crop-citem{border:1px solid var(--br);border-radius:12px;padding:14px}
+.crop-citem .ch{display:flex;align-items:center;gap:10px}
+.crop-citem .cstat{width:11px;height:11px;border-radius:50%;flex:none}
+.crop-citem .cstat.g{background:#16a34a}.crop-citem .cstat.a{background:#d97706}.crop-citem .cstat.r{background:var(--rd)}
+.crop-citem .ct{font-size:13.5px;font-weight:800;flex:1}
+.crop-citem .cact{font-size:11px;font-weight:700;color:var(--gl)}
+.crop-citem .law{font-size:10.5px;color:var(--t4);font-weight:700;text-transform:uppercase;letter-spacing:.03em;margin-top:1px}
+.crop-citem .cd{font-size:12px;color:var(--t2);line-height:1.5;margin-top:8px}
+.crop-kv2{display:grid;grid-template-columns:repeat(2,auto);gap:5px 22px;font-size:12px;margin-top:9px;justify-content:start}
+.crop-kv2 .k{color:var(--t3)}.crop-kv2 .v{font-weight:700}
+.crop-field{margin-bottom:13px}
+.crop-field label{display:block;font-size:11px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:.04em;margin-bottom:5px}
+.crop-field input,.crop-field select{width:100%;padding:10px 12px;border:1px solid var(--br);border-radius:8px;font-family:inherit;font-size:13px;font-weight:600;background:#fff}
+.crop-field .hint{font-size:11px;color:var(--t4);margin-top:4px}
+.crop-two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.crop-formbtn{width:100%;background:var(--gd);color:#fff;border:none;border-radius:9px;padding:12px;font-weight:700;font-size:13px;margin-top:6px;cursor:pointer}
+.crop-divider{height:1px;background:var(--br2);margin:18px 0 14px}
+.crop-rpt-label{font-size:11px;font-weight:700;color:var(--t4);text-align:center;text-transform:uppercase;letter-spacing:.05em;margin-bottom:9px}
+.crop-rpt-cta{display:flex;align-items:center;gap:13px;width:100%;border:none;border-radius:12px;padding:14px 17px;text-align:left;color:#fff;box-shadow:0 5px 14px rgba(0,0,0,.16);margin-bottom:10px;cursor:pointer;font-family:inherit}
+.crop-rpt-cta .ic{font-size:22px}.crop-rpt-cta .tx{flex:1}.crop-rpt-cta .t{display:block;font-size:13.5px;font-weight:800}
+.crop-rpt-cta .s{display:block;font-size:11px;opacity:.92;margin-top:4px;line-height:1.4}
+.crop-rpt-cta .ar{font-size:19px;opacity:.9}
+.crop-rpt-cta.gm-r{background:linear-gradient(135deg,var(--gm),var(--gd))}
+.crop-rpt-cta.spray{background:linear-gradient(135deg,#9a3d6e,var(--pu))}
+.crop-rpt-cta.cost{background:linear-gradient(135deg,#2563EB,#1E3A8A)}
+.crop-rpt-cta.water{background:linear-gradient(135deg,#0891B2,#0E7490)}
+@media(max-width:780px){.crop-lands,.crop-two{grid-template-columns:1fr}.crop-kpis,.crop-kpis.k3{grid-template-columns:repeat(2,1fr)}}
+body.simple-view #nav-crop{display:none !important}
+/* ---- Compliance audit log ---- */
+.cau-chips{display:flex;gap:6px;flex-wrap:wrap}
+.cau-chip{font-size:11px;font-weight:700;padding:5px 11px;border-radius:99px;border:1px solid var(--br);color:var(--t3);background:#fff;cursor:pointer}
+.cau-chip.on{background:var(--gd);color:#fff;border-color:var(--gd)}
+.cau-area{font-size:9.5px;font-weight:800;text-transform:uppercase;letter-spacing:.03em;padding:2px 7px;border-radius:20px;background:var(--gp);color:var(--gd)}
+.cau-area.w{background:var(--bp);color:var(--bl)}.cau-area.s{background:#F5F3FF;color:#5B21B6}.cau-area.o{background:var(--ap);color:var(--am)}
 </style>
 </head>
 <body>
@@ -1636,10 +1746,23 @@ body.simple-view #nav-budgets{display:none}
 
 <div id="page-tour-fixed">
   <button id="page-tour-fixed-btn" onclick="startCurrentPageTour()">
-    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-    Tour this page
+    <svg viewBox="0 0 24 24" width="11" height="11" fill="currentColor" stroke="none"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+    Demo this page
   </button>
   <button id="page-tour-fixed-dismiss" onclick="hideTourBtn()" title="Hide this button">✕</button>
+</div>
+
+<div id="tour-complete-bg" onclick="if(event.target===this)tourCompleteClose()">
+  <div class="tour-complete-card">
+    <div class="tcc-ic">✅</div>
+    <div class="tcc-h">Overview complete!</div>
+    <div class="tcc-p">You’ve seen the whole app. Every tab also has its own <b>detailed walkthrough</b> — handy when you want to go deeper on Crops, Money Flow or Compliance.</div>
+    <div class="tcc-hl">&#x1F446; Look for <b>“▶ Demo this page”</b> at the top of any screen to start that tab’s walkthrough.</div>
+    <div class="tcc-row">
+      <button class="tcc-b1" onclick="tourCompleteDemoNow()">Demo this page now</button>
+      <button class="tcc-b2" onclick="tourCompleteClose()">Got it</button>
+    </div>
+  </div>
 </div>
 
 <!-- SIDEBAR -->
@@ -1668,6 +1791,7 @@ body.simple-view #nav-budgets{display:none}
     <div class="nav-sep"></div>
     <div class="nav-group-lbl" data-t="nav.group.farm">My Farm</div>
     <div class="nav-item" id="nav-planning" onclick="nav('planning')"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span data-t="nav.planning">Planning</span></div>
+    <div class="nav-item" id="nav-crop" onclick="nav('crop')" style="display:none"><svg viewBox="0 0 24 24"><path d="M12 2v20"/><path d="M12 8c0-3 2-5 5-5 0 3-2 5-5 5z"/><path d="M12 11c0-3-2-5-5-5 0 3 2 5 5 5z"/><path d="M12 14c0-3 2-5 5-5 0 3-2 5-5 5z"/></svg><span data-t="nav.crop">Crops</span></div>
     <div class="nav-item" id="nav-livestock" onclick="nav('livestock')"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg><span data-t="nav.livestock">Livestock</span></div>
     <div class="nav-item" id="nav-assets" onclick="nav('assets')"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span data-t="nav.assets">Assets</span></div>
 
@@ -2460,7 +2584,7 @@ body.simple-view #nav-budgets{display:none}
       <div class="acc-card-inner">
         <div class="acc-sub">Send your year-end records to your accountant, or export to Pastel / Xero for direct import — no rekeying.</div>
         <div class="acc-grid">
-          <button class="acc-btn" onclick="accDownloadYearEnd()">
+          <button class="acc-btn" onclick="accPreviewYearEnd()">
             <div class="acc-btn-ic">📦</div>
             <div class="acc-btn-txt"><div class="acc-btn-t">Year-end pack</div><div class="acc-btn-d">All statements + GL + asset register</div></div>
           </button>
@@ -2974,6 +3098,26 @@ body.simple-view #nav-budgets{display:none}
 
 </div>
 
+<!-- ===== CROPS ===== -->
+<div class="pg" id="pg-crop">
+  <div class="page-hdr">
+    <div><div class="page-title">Crops</div><div class="page-sub" id="crop-tab-sub">Your lands, yields and margins</div></div>
+    <button class="btn-pri" onclick="cropSetTab('add')">+ Add Crop</button>
+  </div>
+  <div class="tabs" style="margin-bottom:16px">
+    <div class="tab on" id="crop-tab-overview" onclick="cropSetTab('overview')">Overview</div>
+    <div class="tab" id="crop-tab-lands" onclick="cropSetTab('lands')">Lands</div>
+    <div class="tab" id="crop-tab-inputs" onclick="cropSetTab('inputs')">Inputs &amp; Spray</div>
+    <div class="tab" id="crop-tab-comply" onclick="cropSetTab('comply')">Compliance</div>
+    <div class="tab" id="crop-tab-add" onclick="cropSetTab('add')">Add Crop</div>
+  </div>
+  <div id="crop-view-overview"></div>
+  <div id="crop-view-lands" style="display:none"></div>
+  <div id="crop-view-inputs" style="display:none"></div>
+  <div id="crop-view-comply" style="display:none"></div>
+  <div id="crop-view-add" style="display:none"></div>
+</div>
+
 <!-- ===== MARKET PRICES ===== -->
 <div class="pg" id="pg-market">
 
@@ -3260,6 +3404,7 @@ body.simple-view #nav-budgets{display:none}
         <div style="margin-bottom:8px"><div class="ys-lbl">Planned Profit</div><div class="ys-val g" id="ps-profit">—</div></div>
         <div style="margin-bottom:8px"><div class="ys-lbl">Actual YTD</div><div class="ys-val b" id="ps-actual">—</div></div>
         <div id="ps-badge" class="ys-badge" style="margin-top:8px"></div>
+        <div id="ps-scenario" style="display:none;margin-top:10px;padding-top:10px;border-top:1px dashed #d9c4e3;font-size:11.5px;line-height:1.5"></div>
       </div>
 
       <!-- What-if tool — tab-aware (crops vs livestock) -->
@@ -3443,15 +3588,9 @@ body.simple-view #nav-budgets{display:none}
       <div class="fg2" style="margin-bottom:10px">
         <div><label>Expected yield (ton/ha)</label><input id="ac-yield" type="number" placeholder="e.g. 6" oninput="calcAcProfit()"/></div>
         <div>
-          <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-bottom:6px">
-            <label style="margin:0">Expected price (R/ton)</label>
-            <div id="ac-mkt-toggle" style="display:none;align-items:center;background:#F3F4F6;border-radius:99px;padding:2px;font-size:10px;font-weight:700">
-              <button type="button" id="ac-toggle-my"  onclick="setCropUseMarket(false)" style="border:none;background:#fff;color:var(--t1);padding:4px 9px;border-radius:99px;cursor:pointer;font-family:inherit;font-size:10px;font-weight:700;box-shadow:0 1px 2px rgba(0,0,0,.06)">My price</button>
-              <button type="button" id="ac-toggle-mkt" onclick="setCropUseMarket(true)"  style="border:none;background:transparent;color:var(--t3);padding:4px 9px;border-radius:99px;cursor:pointer;font-family:inherit;font-size:10px;font-weight:700">Use SAFEX</button>
-            </div>
-          </div>
+          <label style="margin:0 0 6px;display:block">Expected price (R/ton)</label>
           <input id="ac-price" type="number" placeholder="e.g. 2758" oninput="calcAcProfit();onCropPriceTyped()"/>
-          <div id="ac-mkt-hint" style="display:none;font-size:11px;color:var(--t3);margin-top:5px;line-height:1.45"></div>
+          <div id="ac-mkt-chip" style="display:none"></div>
         </div>
       </div>
       <div class="fg2" style="margin-bottom:10px">
@@ -3554,7 +3693,7 @@ body.simple-view #nav-budgets{display:none}
 
       <div class="form-group" style="margin-bottom:16px">
         <label class="form-label" style="display:flex;align-items:center;justify-content:space-between">
-          <span>Show "Tour this page" button</span>
+          <span>Show "Demo this page" button</span>
           <label class="toggle-wrap" style="flex-shrink:0">
             <input type="checkbox" id="set-tour-btn" checked onchange="ST.showTourBtn=this.checked;updateTourBtnVisibility()"/>
             <div class="toggle-track"></div>
@@ -3758,6 +3897,16 @@ body.simple-view #nav-budgets{display:none}
     </div>
   </div>
 
+  <!-- Current bank balance anchor -->
+  <div class="cf-bankbal" id="cf-bankbal">
+    <div class="cf-bb-lab">💰 Your current bank balance</div>
+    <div class="cf-bb-sub" id="cf-bb-sub">The forecast below starts from this. Update it whenever you like.</div>
+    <div class="cf-bb-input">
+      <span class="cf-bb-cur">R</span><input id="cf-bb-val" type="text" inputmode="numeric" placeholder="e.g. 642 000">
+      <button onclick="cfSaveBankBalance()" id="cf-bb-save">Save</button>
+    </div>
+  </div>
+
   <!-- Forward answer card -->
   <div class="cf-answer ok" id="cf-fwd-answer">
     <div class="cf-a-icon" id="cf-fwd-answer-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
@@ -3935,6 +4084,7 @@ function saveState() {
       ST: (typeof ST !== 'undefined') ? ST : null,
       ST_ASSETS: (typeof ST_ASSETS !== 'undefined') ? ST_ASSETS : null,
       ST_LS: (typeof ST_LS !== 'undefined') ? ST_LS : null,
+      ST_CROP: (typeof ST_CROP !== 'undefined') ? ST_CROP : null,
       ST_PLAN: (typeof ST_PLAN !== 'undefined') ? ST_PLAN : null,
       FARM: (typeof FARM !== 'undefined') ? FARM : null,
       RPT_STATE: (typeof RPT_STATE !== 'undefined') ? RPT_STATE : null
@@ -3975,6 +4125,9 @@ function loadState() {
     }
     if (snap.ST_LS && typeof ST_LS !== 'undefined') {
       for (var k3 in snap.ST_LS) { if (Object.prototype.hasOwnProperty.call(snap.ST_LS,k3)) ST_LS[k3] = snap.ST_LS[k3]; }
+    }
+    if (snap.ST_CROP && typeof ST_CROP !== 'undefined') {
+      for (var kc in snap.ST_CROP) { if (Object.prototype.hasOwnProperty.call(snap.ST_CROP,kc)) ST_CROP[kc] = snap.ST_CROP[kc]; }
     }
     if (snap.ST_PLAN && typeof ST_PLAN !== 'undefined') {
       for (var k4 in snap.ST_PLAN) { if (Object.prototype.hasOwnProperty.call(snap.ST_PLAN,k4)) ST_PLAN[k4] = snap.ST_PLAN[k4]; }
@@ -4099,14 +4252,1395 @@ function registerServiceWorker() {
 }
 
 // ---------- Boot entry — called ONCE from window.load ----------
+/* =====================================================================
+   CROP SECTION  —  fully data-driven (state: ST_CROP)
+   Mirrors Livestock. Visibility gated by getFarmType() (crops|mixed).
+   ===================================================================== */
+var ST_CROP = {
+  activeTab: 'overview',
+  filter: 'all',
+  complyView: 'tracker',
+  season: '2024/25',
+  // SAFEX / reference grain prices (R per tonne) — editable, not hard-coded into UI
+  prices: { 'White maize':4180, 'Yellow maize':4090, 'Wheat':6450, 'Sunflower':9650, 'Soybeans':8900, 'Sorghum':4600 },
+  // Master crop list (label + icon + whether a SAFEX ref price applies via prices{})
+  cropTypes: [
+    {t:'White maize', i:'\uD83C\uDF3D'}, {t:'Yellow maize', i:'\uD83C\uDF3D'}, {t:'Wheat', i:'\uD83C\uDF3E'},
+    {t:'Sunflower', i:'\uD83C\uDF3B'}, {t:'Soybeans', i:'\uD83E\uDED8'}, {t:'Sorghum', i:'\uD83C\uDF3E'},
+    {t:'Groundnuts', i:'\uD83E\uDD5C'}, {t:'Dry beans', i:'\uD83E\uDED8'}, {t:'Barley', i:'\uD83C\uDF3E'},
+    {t:'Canola', i:'\uD83C\uDF3C'}, {t:'Lucerne / hay', i:'\uD83C\uDF3F'}, {t:'Potatoes', i:'\uD83E\uDD54'},
+    {t:'Vegetables', i:'\uD83E\uDD6C'}, {t:'Citrus', i:'\uD83C\uDF4A'}, {t:'Deciduous fruit', i:'\uD83C\uDF4E'},
+    {t:'Macadamias', i:'\uD83C\uDF30'}, {t:'Avocados', i:'\uD83E\uDD51'}, {t:'Sugarcane', i:'\uD83C\uDF3E'}, {t:'Other', i:'\uD83C\uDF31'}
+  ],
+  // Lands
+  lands: [
+    {id:1, name:'Vlakte', area:120, crop:'White maize', cultivar:'PAN 3Q-740', gmo:true, irrigated:false, planted:'2024-11-18', harvest:'2025-05-15', stage:'growing', targetYield:6.2, actualYield:null, inputPerHa:11200, prevCrop:'Soybeans'},
+    {id:2, name:'Rietkuil', area:90, crop:'Sunflower', cultivar:'AGSUN 5278', gmo:false, irrigated:false, planted:'2024-12-06', harvest:'2025-04-20', stage:'growing', targetYield:1.8, actualYield:null, inputPerHa:7400, prevCrop:'White maize'},
+    {id:3, name:'Langfontein', area:70, crop:'Soybeans', cultivar:'DM 6.8i', gmo:true, irrigated:true, planted:'2024-11-22', harvest:'2025-05-01', stage:'harvest', targetYield:2.6, actualYield:null, inputPerHa:8900, prevCrop:'Maize'},
+    {id:4, name:'Onderste land', area:60, crop:'Wheat', cultivar:'', gmo:false, irrigated:true, planted:'', harvest:'2025-11-15', stage:'planned', targetYield:4.0, actualYield:null, inputPerHa:9500, prevCrop:'Fallow'},
+    {id:5, name:'Koppie', area:15, crop:'', cultivar:'', gmo:false, irrigated:false, planted:'', harvest:'', stage:'fallow', targetYield:0, actualYield:1.7, inputPerHa:0, prevCrop:'Sunflower'}
+  ],
+  // Field events (planting / harvest / delivery)
+  events: [
+    {id:'ce1', land:2, kind:'planted', date:'2024-12-06', note:'Sunflower AGSUN 5278'},
+    {id:'ce2', land:5, kind:'harvested', date:'2024-04-18', note:'Sunflower 1.7 t/ha', tons:25.5, yield:1.7},
+    {id:'ce3', land:5, kind:'delivered', date:'2024-04-20', note:'Senwes silo', tons:25.5, cert:'SNW-4471'}
+  ],
+  // Inputs & spray applications
+  inputs: [
+    {id:'ci1', land:1, date:'2025-03-18', product:'Karate Zeon', reg:'L7723', kind:'insecticide', rate:'200 ml/ha', batch:'KZ8841', by:'S. Khumalo', operatorCert:'P2', phi:14, costPerHa:120},
+    {id:'ci2', land:1, date:'2025-03-02', product:'Abacus fungicide', reg:'L9120', kind:'fungicide', rate:'1.5 l/ha', batch:'', by:'S. Khumalo', operatorCert:'P2', phi:42, costPerHa:380},
+    {id:'ci3', land:2, date:'2025-01-11', product:'Bromoxynil + atrazine', reg:'L4451', kind:'herbicide', rate:'2.0 l/ha', batch:'BX2210', by:'J. Dube', operatorCert:'', phi:0, costPerHa:210},
+    {id:'ci4', land:1, date:'2024-11-18', product:'KYNOCH 2:3:2 (22)', reg:'K0231', kind:'fertiliser', rate:'320 kg/ha', batch:'', by:'J. Dube', operatorCert:'', phi:0, costPerHa:3200},
+    {id:'ci5', land:1, date:'2024-11-18', product:'PAN 3Q-740 seed (Bt)', reg:'Certified', kind:'seed', rate:'32 000 s/ha', batch:'SD5567', by:'J. Dube', operatorCert:'', phi:0, costPerHa:2100}
+  ],
+  // Compliance records (status derived where possible; doc flags stored)
+  compliance: {
+    // Which areas the farmer chooses to track (auto-relevant ones default on)
+    tracked: { chem:true, water:true, gmo:true, invasive:true, seed:true, soil:true, ohs:true, diesel:true, export:false },
+    waterWUL:'WUL-FS-2291', waterAuthorised:480000, waterUsed:312400, waterMetered:true,
+    gmoStewardshipDoc:true, gmoRefugeLogged:true, gmoRefugePct:'',
+    invasiveRegister:true, invasiveOutstanding:'Koppie firebreak', invasiveLastAction:'Pompom weed · Feb 2025',
+    seedCertified:true, retainedSeed:false, seedNote:'',
+    soilPractice:'Min-till + contours', soilTest:'Vlakte · Aug 2024',
+    operatorsTrained:2, operatorsTotal:2, ppeIssued:true, firstAidKit:true, workerTraining:'2 operators P2 \u00b7 May 2024',
+    sdsRegister:true, containerDisposal:true,
+    dieselLitres:18400, dieselLogbook:true,
+    exportReady:true, exportScheme:'',
+    // Reminder cadence per area, in months (0 = no periodic check). Editable per farm.
+    cadence: { chem:0, water:1, gmo:12, invasive:4, seed:12, soil:12, ohs:24, diesel:2, export:12 },
+    // Dated check/test logs per area: [{date:'YYYY-MM-DD', what, note, photos:[{name,url,kind}]}]
+    logs: {
+      water:[ {date:'2025-02-05', what:'Monthly meter reading', note:'Reading 312,400 m\u00b3. Pump 2 serviced.', photos:[]} ],
+      soil:[ {date:'2024-08-14', what:'Soil test', note:'Vlakte composite sample sent to lab.', photos:[]} ],
+      ohs:[ {date:'2024-05-10', what:'Operator training & PPE', note:'2 operators certified P2.', photos:[]} ]
+    },
+    // Standing documents on file per area: [{name,url,kind,expiry:'YYYY-MM'|'',added}]
+    docs: {
+      water:[ {name:'WUL-FS-2291 licence.pdf', kind:'pdf', url:'', expiry:'2027-06', added:'2022-06-01'} ],
+      export:[]
+    },
+    // Structured water meter readings (item 7): [{date:'YYYY-MM-DD', m3}]
+    waterReadings:[ {date:'2025-01-08', m3:286100}, {date:'2025-02-05', m3:312400} ]
+  }
+};
+
+/* ---------- helpers ---------- */
+function cropFmtR(n){ return 'R\u00a0' + Math.round(n||0).toLocaleString('en-ZA'); }
+function cropLandById(id){ for(var i=0;i<ST_CROP.lands.length;i++) if(ST_CROP.lands[i].id===id) return ST_CROP.lands[i]; return null; }
+function cropIcon(type){ var c=ST_CROP.cropTypes.filter(function(x){return x.t===type;})[0]; return c?c.i:'\uD83C\uDF31'; }
+function cropPrice(type){ return ST_CROP.prices[type] || 0; }
+function cropPlanted(l){ return l.stage!=='fallow' && l.crop; }
+function cropAreaPlanted(){ return ST_CROP.lands.filter(cropPlanted).reduce(function(s,l){return s+(l.area||0);},0); }
+function cropLandYield(l){ return (l.actualYield!=null ? l.actualYield : l.targetYield) || 0; }
+// Effective price/ton: the land's own price if set, otherwise the SAFEX reference for the crop.
+function cropLandPrice(l){ return (l && l.price>0) ? l.price : cropPrice(l ? l.crop : ''); }
+function cropLandIncomePerHa(l){ var p=cropLandPrice(l); return p ? cropLandYield(l)*p : 0; }
+function cropLandGMperHa(l){ return cropLandIncomePerHa(l) - (l.inputPerHa||0); }
+function cropExpectedTons(){ return ST_CROP.lands.filter(cropPlanted).reduce(function(s,l){return s+cropLandYield(l)*(l.area||0);},0); }
+function cropForecastGM(){ return ST_CROP.lands.filter(cropPlanted).reduce(function(s,l){return s+cropLandGMperHa(l)*(l.area||0);},0); }
+function cropStageLabel(s){ return {growing:'Growing',harvest:'Ready to harvest',planned:'Planned',fallow:'Fallow / grazing'}[s] || s; }
+function cropStageClass(s){ return {growing:'s-grow',harvest:'s-harv',planned:'s-plan',fallow:'s-fallow'}[s] || 's-fallow'; }
+// Effective stage: a growing land auto-advances to 'harvest' once its harvest date passes
+function cropEffStage(l){
+  if(l.stage==='growing' && l.harvest){
+    var h=new Date(l.harvest+'T00:00:00');
+    if(!isNaN(h) && LS_TODAY>=h) return 'harvest';
+  }
+  return l.stage;
+}
+
+// ---- Crop <-> Planning link (Option A: shared identity via linkId) ----
+var CROP_LINK_SEQ = 1;
+function cropMonthLabel(iso){
+  if(!iso) return '';
+  var p=iso.split('-'); if(p.length<2) return '';
+  var M=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  return M[parseInt(p[1],10)-1]+' '+p[0];
+}
+function cropFindPlanLine(land){
+  if(!land || !land.planId || typeof ST_PLAN==='undefined' || !ST_PLAN.crops) return -1;
+  for(var i=0;i<ST_PLAN.crops.length;i++){ if(ST_PLAN.crops[i].linkId===land.planId) return i; }
+  return -1;
+}
+// Does this land's linked plan line exist, and is it excluded from the forecast?
+function cropLandExcluded(land){ var i=cropFindPlanLine(land); return i>=0 && ST_PLAN.crops[i].inForecast===false; }
+function cropHasPlanLine(land){ return cropFindPlanLine(land)>=0; }
+// Toggle the linked plan line's forecast inclusion from the Crop tab
+function cropToggleForecast(id){
+  var l=cropLandById(id); if(!l) return;
+  var i=cropFindPlanLine(l); if(i<0){ toast('Add a price & dates so this crop has a forecast line first','info'); return; }
+  var c=ST_PLAN.crops[i];
+  c.inForecast = (c.inForecast===false) ? true : false;
+  if(typeof recomputePlan==='function') recomputePlan();
+  dataChanged('crop');
+  if(typeof cropRenderLandModal==='function') cropRenderLandModal();
+  toast(c.inForecast===false ? (l.name+' set as a scenario \u2014 left out of your forecast') : (l.name+' added back into your forecast'),'success');
+}
+// A land that can be forecast: planted/growing/harvest crop with a price and yield
+// Appears as a Planning crop line: any land with a crop (not fallow).
+function cropForecastable(land){
+  return !!(land && land.crop && land.stage!=='fallow');
+}
+// Has enough detail for the forecast to distribute money across months.
+function cropForecastReady(land){
+  return cropForecastable(land) && cropLandPrice(land)>0 && cropLandYield(land)>0 && (land.area||0)>0 && cropMonthLabel(land.planted) && cropMonthLabel(land.harvest);
+}
+// Create/update/remove the linked Planning crop line so the forecast counts each crop ONCE
+function cropSyncToPlan(land){
+  if(typeof ST_PLAN==='undefined' || !ST_PLAN.crops) return;
+  var idx=cropFindPlanLine(land);
+  if(!cropForecastable(land)){
+    // fallow / no crop -> drop the linked line if we own it
+    if(idx>=0){ ST_PLAN.crops.splice(idx,1); land.planId=null; }
+    return;
+  }
+  if(!land.planId) land.planId = 'cl'+(CROP_LINK_SEQ++)+'_'+land.id;
+  var entry={
+    crop: land.crop,
+    field: land.name,
+    ha: land.area||0,
+    plant: cropMonthLabel(land.planted),
+    harvest: cropMonthLabel(land.harvest),
+    yield: cropLandYield(land),
+    price: cropLandPrice(land),
+    inputCost: land.inputPerHa||0,
+    otherCost: 0,
+    repeat: 'none',
+    linkId: land.planId
+  };
+  idx=cropFindPlanLine(land);
+  if(idx>=0){ if(ST_PLAN.crops[idx].inForecast===false) entry.inForecast=false; ST_PLAN.crops[idx]=entry; }
+  else ST_PLAN.crops.push(entry);
+}
+
+// One-time reconciliation so demo lands & demo plan don't double-count.
+// fresh=true (first run, no saved state): plan is seeded from lands (lands are the source for crop ops).
+function cropInitialPlanSync(fresh){
+  if(typeof ST_PLAN==='undefined' || !ST_PLAN.crops) return;
+  var anyLinked = ST_PLAN.crops.some(function(c){return c.linkId;});
+  if(anyLinked) return; // already reconciled (returning user)
+  if(fresh){
+    // Replace the demo crop plan with the land-derived, linked set
+    ST_PLAN.crops = ST_PLAN.crops.filter(function(c){return false;}); // clear demo crop lines
+    ST_CROP.lands.forEach(function(l){ if(l) { l.planId=null; cropSyncToPlan(l); } });
+  }
+}
+// Jump from a land to its line in Planning (and flash it)
+function cropViewInPlanning(id){
+  var l=cropLandById(id); if(!l) return;
+  cropHideLandModal && cropHideLandModal();
+  if(!l.planId || cropFindPlanLine(l)<0){ toast('This land has no forecast line yet \u2014 add a price & yield','info'); }
+  CROP_FLASH_LINK = l.planId || null;
+  nav('planning');
+  setTimeout(function(){ if(typeof setPlanTab==='function') setPlanTab('crops'); cropFlashPlanLine(); }, 80);
+}
+var CROP_FLASH_LINK=null;
+function cropFlashPlanLine(){
+  if(!CROP_FLASH_LINK) return;
+  var el=document.querySelector('[data-linkid="'+CROP_FLASH_LINK+'"]');
+  CROP_FLASH_LINK=null;
+  if(el){ el.scrollIntoView({behavior:'smooth',block:'center'}); el.style.transition='box-shadow .3s'; el.style.boxShadow='0 0 0 3px var(--gl)'; setTimeout(function(){ el.style.boxShadow=''; },1600); }
+}
+// Jump from a Planning crop line back to its land
+function cropOpenLandFromPlan(linkId){
+  var land=ST_CROP.lands.filter(function(x){return x.planId===linkId;})[0];
+  if(!land){ toast('Linked land not found','info'); return; }
+  nav('crop');
+  setTimeout(function(){ ST_CROP.activeTab='overview'; cropSetTab('overview'); cropOpenLand(land.id); }, 80);
+}
+function cropDispDate(iso){ if(!iso) return '\u2014'; var p=iso.split('-'); if(p.length<3) return iso; var M=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']; return parseInt(p[2],10)+' '+M[parseInt(p[1],10)-1]+' '+p[0]; }
+function cropInputSafe(inp){ if(!inp.phi||!inp.date) return null; var d=new Date(inp.date+'T00:00:00'); d.setDate(d.getDate()+inp.phi); return d; }
+function cropInputActive(inp){ var s=cropInputSafe(inp); return s && s>LS_TODAY; }
+function cropInputKindMeta(k){ return {seed:['Seed','p-seed'],fertiliser:['Fertiliser','p-fert'],herbicide:['Herbicide','p-herb'],fungicide:['Fungicide','p-fung'],insecticide:['Insecticide','p-pest']}[k] || ['Other','p-fert']; }
+function cropInputCostTotal(){ return ST_CROP.inputs.reduce(function(s,inp){var l=cropLandById(inp.land);return s+(inp.costPerHa||0)*((l&&l.area)||0);},0); }
+function cropActivePHI(){ return ST_CROP.inputs.filter(cropInputActive); }
+
+/* ---------- progress (growth %) from planted→harvest dates ---------- */
+function cropGrowthPct(l){
+  if(l.stage==='planned'||l.stage==='fallow') return 0;
+  if(!l.planted||!l.harvest) return l.stage==='harvest'?100:50;
+  var p=new Date(l.planted+'T00:00:00'), h=new Date(l.harvest+'T00:00:00');
+  if(LS_TODAY>=h) return 100;
+  if(LS_TODAY<=p) return 2;
+  return Math.round((LS_TODAY-p)/(h-p)*100);
+}
+
+/* ---------- compliance scoring ---------- */
+function cropComplianceDefs(){
+  var c=ST_CROP.compliance;
+  var missingBatch=ST_CROP.inputs.filter(function(i){return i.product && i.kind!=='fertiliser' && i.kind!=='seed' && !i.batch;}).length;
+  var withinPHI=cropActivePHI().length;
+  var chemStatus = (missingBatch>0||withinPHI>0||!c.sdsRegister||!c.containerDisposal)?'a':'g';
+  var anyGMO=ST_CROP.lands.some(function(l){return l.gmo && cropPlanted(l);});
+  var anyIrr=ST_CROP.lands.some(function(l){return l.irrigated;});
+  // Each item: id, t(title), law, auto(relevance auto-on), status, desc, kv(display rows), fields(editable inputs)
+  return [
+    {id:'chem', t:'Agrochemical use & records', law:'Act 36 of 1947 \u00b7 Agricultural Remedies', auto:true, status:chemStatus,
+     desc:'All sprays must use registered products at label rate, applied by a competent operator, with records kept. PHI observed before harvest.',
+     kv:[['Registered products', ST_CROP.inputs.length+' logged'],['PHI observed', withinPHI?(withinPHI+' land within PHI'):'\u2713 all clear'],['Missing batch no.', missingBatch?(missingBatch+' record'):'\u2713 none'],['SDS register', c.sdsRegister?'\u2713 kept':'\u26a0 none'],['Empty containers', c.containerDisposal?'\u2713 triple-rinsed/disposed':'\u26a0 record it'],['Operators (from OHS)', c.operatorsTrained>=c.operatorsTotal?'\u2713 certified':'\u26a0 check']],
+     fields:[{k:'sdsRegister',label:'Safety Data Sheet (SDS) register kept?',type:'bool'},{k:'containerDisposal',label:'Empty containers triple-rinsed & disposal recorded?',type:'bool'}],
+     keep:['Registered product (L-number) used at label rate','Date, land, batch & applicator per application','Pre-harvest interval observed before harvest','SDS for every product in the chemical store','Empty-container triple-rinse & disposal record'],
+     note:'Spray records (product, rate, batch, PHI) are logged on the Inputs & Spray tab \u2014 they flow into this automatically. Operator training is managed under Worker safety.'},
+    {id:'water', t:'Water use & abstraction', law:'National Water Act 36 of 1998', auto:anyIrr, status: anyIrr ? (c.waterMetered && c.waterUsed<=c.waterAuthorised ? 'g':'a') : 'g',
+     desc: anyIrr ? 'Irrigation water use is registered/licensed and abstraction recorded against the authorised volume; feeds your water-use return.' : 'No irrigated lands recorded \u2014 Schedule-1 / dryland use only. Register if you start irrigating.',
+     kv: anyIrr ? [['WUL / reg no.', c.waterWUL||'\u2014'],['Authorised', (c.waterAuthorised||0).toLocaleString('en-ZA')+' m\u00b3/yr'],['Used this season', (c.waterUsed||0).toLocaleString('en-ZA')+' m\u00b3 ('+(c.waterAuthorised?Math.round(c.waterUsed/c.waterAuthorised*100):0)+'%)'],['Meter readings', c.waterMetered?'\u2713 logged':'\u26a0 none']] : [['Irrigated lands','none']],
+     fields:[{k:'waterWUL',label:'Water-use licence / registration no.',type:'text'},{k:'waterAuthorised',label:'Authorised volume (m\u00b3/yr)',type:'number'},{k:'waterUsed',label:'Abstracted this season (m\u00b3)',type:'number'},{k:'waterMetered',label:'Monthly meter readings kept?',type:'bool'}], keep:['Water-use licence / registration','Monthly meter readings vs authorised volume','Annual water-use return']},
+    {id:'gmo', t:'GMO crops & refuge planting', law:'GMO Act 15 of 1997', auto:anyGMO, status: anyGMO ? (c.gmoStewardshipDoc && c.gmoRefugeLogged ? 'g':'a') : 'g',
+     desc: anyGMO ? 'For Bt crops a non-Bt refuge must be planted per the seed-licence stewardship terms, and the permit/agreement kept on file.' : 'No GMO/Bt cultivars planted this season.',
+     kv: anyGMO ? [['Bt crop(s)', ST_CROP.lands.filter(function(l){return l.gmo&&cropPlanted(l);}).map(function(l){return l.crop;}).join(', ')||'\u2014'],['Refuge recorded', c.gmoRefugeLogged?'\u2713 logged':'\u26a0 not logged'],['Refuge %', c.gmoRefugePct||'per seed licence'],['Stewardship doc', c.gmoStewardshipDoc?'\u2713 on file':'\u26a0 missing']] : [['Bt cultivars','none']],
+     fields:[{k:'gmoRefugeLogged',label:'Refuge area planted & recorded?',type:'bool'},{k:'gmoRefugePct',label:'Refuge planted (%)',type:'text',ph:'e.g. 5% or 20% per licence'},{k:'gmoStewardshipDoc',label:'Stewardship / permit doc on file?',type:'bool'}], keep:['Seed licence / stewardship agreement','Refuge area planted (% per licence)','Bt cultivar & land record']},
+    {id:'invasive', t:'Alien & invasive plant control', law:'CARA 43/1983 \u00b7 NEMBA 10/2004', auto:true, status: c.invasiveOutstanding ? 'a':'g',
+     desc:'Declared weeds and invasive species on the property must be controlled and recorded. Land owners carry a duty of care.',
+     kv:[['Control register', c.invasiveRegister?'\u2713 kept':'\u26a0 none'],['Last action', c.invasiveLastAction||'\u2014'],['Outstanding', c.invasiveOutstanding||'\u2713 none']],
+     fields:[{k:'invasiveRegister',label:'Control register kept?',type:'bool'},{k:'invasiveLastAction',label:'Last control action',type:'text',ph:'e.g. Pompom weed \u00b7 Feb 2025'},{k:'invasiveOutstanding',label:'Outstanding action (blank if none)',type:'text',ph:'e.g. Koppie firebreak'}], keep:['Control register (species, date, method)','Map / area of infestation','Follow-up actions outstanding']},
+    {id:'seed', t:'Certified seed & cultivar rights', law:'Plant Improvement & PBR Acts', auto:true, status: c.seedCertified ? 'g':'a',
+     desc:'Seed source and cultivar are recorded; any retained/farm-saved seed and royalties are tracked for protected cultivars.',
+     kv:[['Seed source', c.seedCertified?'Certified (invoice on file)':'\u26a0 unverified'],['Retained seed', c.retainedSeed?'Yes \u2014 track royalty':'None this season']],
+     fields:[{k:'seedCertified',label:'Certified seed (invoice on file)?',type:'bool'},{k:'retainedSeed',label:'Using retained / farm-saved seed?',type:'bool'},{k:'seedNote',label:'Note (royalty / supplier)',type:'text'}], keep:['Seed invoice / certification per cultivar','Supplier & cultivar per land','Retained-seed royalty record (protected cultivars)']},
+    {id:'soil', t:'Soil conservation & erosion', law:'CARA 43 of 1983', auto:true, status: c.soilPractice ? 'g':'a',
+     desc:'Cultivation must not cause erosion; conservation measures (contours, minimum till, cover) recorded per land.',
+     kv:[['Practice', c.soilPractice||'\u2014'],['Soil test', c.soilTest||'\u2014']],
+     fields:[{k:'soilPractice',label:'Conservation practice',type:'text',ph:'e.g. Min-till + contours'},{k:'soilTest',label:'Latest soil test',type:'text',ph:'e.g. Vlakte \u00b7 Aug 2024'}], keep:['Conservation practice per land (contours, min-till, cover)','Soil test results','Any erosion-control directive from the department']},
+    {id:'ohs', t:'Worker safety & PPE', law:'OHS Act 85 of 1993', auto:true, status: (c.operatorsTrained>=c.operatorsTotal && c.ppeIssued && c.firstAidKit) ? 'g':'a',
+     desc:'Workers are trained and issued PPE; the chemical store, first-aid and spill response meet safety requirements. This is the single place to record worker training.',
+     kv:[['Operators trained', c.operatorsTrained+' of '+c.operatorsTotal],['Training record', c.workerTraining||'\u2014'],['PPE issued', c.ppeIssued?'\u2713 logged':'\u26a0 none'],['First-aid / spill kit', c.firstAidKit?'\u2713 in place':'\u26a0 check']],
+     fields:[{k:'operatorsTrained',label:'Operators trained',type:'number'},{k:'operatorsTotal',label:'Operators total',type:'number'},{k:'workerTraining',label:'Training record (who / when)',type:'text',ph:'e.g. 2 operators P2 \u00b7 May 2024'},{k:'ppeIssued',label:'PPE issued & recorded?',type:'bool'},{k:'firstAidKit',label:'First-aid & spill kit in place?',type:'bool'}],
+     keep:['Worker induction & training dates','PPE issue register','First-aid kit & spill response','Safe chemical store & handling']},
+    {id:'diesel', t:'Diesel refund (primary production)', law:'Customs & Excise \u00b7 SARS', auto:true, status: c.dieselLogbook ? 'g':'a',
+     desc:'Eligible diesel litres for farming are logged with logbook detail so the refund can be claimed on the VAT return.',
+     kv:[['Eligible litres', (c.dieselLitres||0).toLocaleString('en-ZA')+' L'],['Logbook', c.dieselLogbook?'\u2713 per activity':'\u26a0 incomplete']],
+     fields:[{k:'dieselLitres',label:'Eligible diesel litres (season)',type:'number'},{k:'dieselLogbook',label:'Per-activity logbook kept?',type:'bool'}], keep:['Eligible vs non-eligible diesel split','Per-activity logbook (date, machine, litres)','Purchase invoices for the claim period']},
+    {id:'export', t:'Export / GlobalGAP readiness', law:'Optional \u00b7 market access', auto:false, status: c.exportReady ? 'g':'a',
+     desc:'For crops sold to export buyers: traceability, spray records and MRL compliance are export-ready from the spray program.',
+     kv:[['Spray records', missingBatch?'\u26a0 '+missingBatch+' incomplete':'\u2713 complete'],['Scheme', c.exportScheme||'\u2014'],['Traceability','Land \u2192 batch \u2192 delivery']],
+     fields:[{k:'exportScheme',label:'Certification scheme',type:'text',ph:'e.g. GlobalGAP, SIZA'},{k:'exportReady',label:'Records export-ready?',type:'bool'}], keep:['Valid scheme certificate (with expiry)','Full traceability: land \u2192 batch \u2192 delivery','MRL / residue compliance from spray records']}
+  ];
+}
+// Only the areas the farmer has chosen to track
+function cropComplianceTrackedIds(){
+  var t=(ST_CROP.compliance && ST_CROP.compliance.tracked) || {};
+  return cropComplianceDefs().filter(function(it){ return t[it.id]!==false; });
+}
+// Back-compat alias used by the report
+function cropComplianceItems(){ return cropComplianceTrackedIds(); }
+function cropComplianceDefById(id){ return cropComplianceDefs().filter(function(it){return it.id===id;})[0]; }
+function cropComplianceScore(){ var it=cropComplianceTrackedIds(); return {ok:it.filter(function(i){return i.status==='g';}).length, total:it.length}; }
+
+// ---- Compliance reminders (cadence -> next due) + logs ----
+function cropComplianceLog(id){ var L=(ST_CROP.compliance.logs)||{}; return (L[id]||[]).slice().sort(function(a,b){return a.date<b.date?1:-1;}); }
+function cropComplianceCadence(id){ var c=(ST_CROP.compliance.cadence)||{}; return c[id]||0; }
+function cropAddMonths(d, m){ var x=new Date(d.getTime()); x.setMonth(x.getMonth()+m); return x; }
+// Returns {state:'none'|'ok'|'soon'|'over', next:Date|null, last:Date|null, days:int, label:string}
+function cropComplianceDue(id){
+  var months=cropComplianceCadence(id);
+  if(!months) return {state:'none', next:null, last:null, days:0, label:''};
+  var log=cropComplianceLog(id);
+  var last = log.length ? new Date(log[0].date+'T00:00:00') : null;
+  if(!last || isNaN(last)) return {state:'over', next:null, last:null, days:-9999, label:'No check logged yet'};
+  var next=cropAddMonths(last, months);
+  var days=Math.round((next-LS_TODAY)/86400000);
+  var state = days<0 ? 'over' : (days<=14 ? 'soon' : 'ok');
+  var M=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var nlabel=M[next.getMonth()]+' '+next.getFullYear();
+  var label = state==='over' ? ('Overdue '+Math.abs(days)+' day'+(Math.abs(days)===1?'':'s')) : (state==='soon' ? ('Due in '+days+' day'+(days===1?'':'s')) : ('\u2713 Done \u00b7 next '+nlabel));
+  return {state:state, next:next, last:last, days:days, label:label};
+}
+function cropComplianceDueList(){
+  return cropComplianceTrackedIds().map(function(it){ var d=cropComplianceCombinedDue(it.id); return {id:it.id, t:it.t, law:it.law, due:d}; })
+    .filter(function(x){ return x.due.state==='over' || x.due.state==='soon'; })
+    .sort(function(a,b){ return a.due.days-b.due.days; });
+}
+
+// ---- Documents on file (item 2) + expiry tracking (item 3) ----
+function cropComplianceDocs(id){ var D=(ST_CROP.compliance.docs)||{}; return D[id]||[]; }
+// Expiry state for a 'YYYY-MM' string: {state:'none'|'ok'|'soon'|'over', days, label}
+function cropDocExpiry(expiry){
+  if(!expiry) return {state:'none', days:0, label:''};
+  var p=String(expiry).split('-'); if(p.length<2) return {state:'none',days:0,label:''};
+  // expires at end of that month
+  var d=new Date(parseInt(p[0],10), parseInt(p[1],10), 0);
+  var days=Math.round((d-LS_TODAY)/86400000);
+  var M=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var lbl=M[parseInt(p[1],10)-1]+' '+p[0];
+  var state = days<0 ? 'over' : (days<=60 ? 'soon' : 'ok');
+  var label = state==='over' ? ('Expired '+lbl) : (state==='soon' ? ('Expires '+lbl+' ('+days+'d)') : ('Valid to '+lbl));
+  return {state:state, days:days, label:label};
+}
+// Soonest-expiring doc state for an area (drives badges & notifications)
+function cropComplianceDocDue(id){
+  var worst={state:'none',days:99999,label:''};
+  cropComplianceDocs(id).forEach(function(doc){
+    var e=cropDocExpiry(doc.expiry);
+    if(e.state==='none') return;
+    var rank={over:0,soon:1,ok:2};
+    if(rank[e.state]<rank[worst.state] || worst.state==='none' || e.days<worst.days){
+      if(e.state==='over' || (e.state==='soon'&&worst.state!=='over') || worst.state==='none')
+        worst={state:e.state,days:e.days,label:e.label,name:doc.name};
+    }
+  });
+  return worst;
+}
+// Combined due state for a card: worst of the check cadence and any document expiry
+function cropComplianceCombinedDue(id){
+  var chk=cropComplianceDue(id), doc=cropComplianceDocDue(id);
+  var rank={over:3,soon:2,ok:1,none:0};
+  var pickDoc = rank[doc.state] > rank[chk.state];
+  if(pickDoc) return {state:doc.state, label:doc.label, source:'doc', days:doc.days, name:doc.name};
+  return {state:chk.state, label:chk.label, source:'check', days:chk.days};
+}
+
+// ---- Water meter readings (item 7) ----
+function cropWaterReadings(){ return (ST_CROP.compliance.waterReadings||[]).slice().sort(function(a,b){return a.date<b.date?1:-1;}); }
+function cropAddWaterReading(){
+  var dt=$('cwr-date')?$('cwr-date').value:'';
+  var m3=$('cwr-m3')?parseFloat($('cwr-m3').value):NaN;
+  if(!dt){ toast('Pick a reading date','error'); return; }
+  if(isNaN(m3)||m3<0){ toast('Enter the meter reading (m\u00b3)','error'); return; }
+  if(!ST_CROP.compliance.waterReadings) ST_CROP.compliance.waterReadings=[];
+  ST_CROP.compliance.waterReadings.push({date:dt, m3:m3});
+  // keep the headline 'used this season' in sync with the latest reading
+  ST_CROP.compliance.waterUsed=m3; ST_CROP.compliance.waterMetered=true;
+  // also log it as a dated check so the monthly reminder resets
+  if(!ST_CROP.compliance.logs) ST_CROP.compliance.logs={};
+  if(!ST_CROP.compliance.logs.water) ST_CROP.compliance.logs.water=[];
+  ST_CROP.compliance.logs.water.push({date:dt, what:'Meter reading', note:m3.toLocaleString('en-ZA')+' m\u00b3', photos:[]});
+  dataChanged('crop');
+  if(typeof renderNotifications==='function') renderNotifications();
+  cropRenderComplianceModal();
+  toast('Reading logged','success');
+}
+function cropDeleteWaterReading(date){
+  var R=ST_CROP.compliance.waterReadings||[];
+  ST_CROP.compliance.waterReadings=R.filter(function(r){return r.date!==date;});
+  dataChanged('crop'); cropRenderComplianceModal();
+}
+
+// ---- Audit log: flatten every logged record across areas (item: combined view) ----
+var CROP_AUDIT={ q:'', from:'', to:'', area:'all' };
+function cropAllLogEntries(){
+  var out=[];
+  var defs=cropComplianceTrackedIds();
+  var byId={}; defs.forEach(function(d){ byId[d.id]=d; });
+  // 1) compliance check logs
+  defs.forEach(function(d){
+    cropComplianceLog(d.id).forEach(function(e){
+      out.push({areaId:d.id, area:d.t, law:d.law, date:e.date, what:e.what||'Check', note:e.note||'', photos:(e.photos||[]), src:'check'});
+    });
+  });
+  // 2) spray applications double as Act 36 (chem) evidence
+  if(byId['chem']){
+    (ST_CROP.inputs||[]).forEach(function(i){
+      var l=cropLandById(i.land);
+      out.push({areaId:'chem', area:byId['chem'].t, law:byId['chem'].law, date:i.date, what:i.product+(l?(' \u00b7 '+l.name):''), note:[i.rate,i.batch?('batch '+i.batch):'',i.phi?('PHI '+i.phi+'d'):''].filter(Boolean).join(' \u00b7 '), photos:[], src:'spray', reg:i.reg||''});
+    });
+  }
+  // 3) documents on file (so they're searchable here too)
+  defs.forEach(function(d){
+    cropComplianceDocs(d.id).forEach(function(doc){
+      var ex=cropDocExpiry(doc.expiry);
+      out.push({areaId:d.id, area:d.t, law:d.law, date:doc.added||'', what:'Document: '+doc.name, note:(doc.expiry?ex.label:'no expiry set'), photos:(doc.url?[{name:doc.name,kind:doc.kind,url:doc.url}]:[]), src:'doc'});
+    });
+  });
+  return out.sort(function(a,b){ return (a.date<b.date?1:(a.date>b.date?-1:0)); });
+}
+function cropAuditFiltered(){
+  var f=CROP_AUDIT;
+  var q=(f.q||'').trim().toLowerCase();
+  return cropAllLogEntries().filter(function(e){
+    if(f.area!=='all' && e.areaId!==f.area) return false;
+    if(f.from && e.date && e.date<f.from) return false;
+    if(f.to && e.date && e.date>f.to) return false;
+    if(q){
+      var hay=(e.area+' '+e.law+' '+e.what+' '+e.note+' '+(e.reg||'')+' '+e.photos.map(function(p){return p.name;}).join(' ')).toLowerCase();
+      if(hay.indexOf(q)<0) return false;
+    }
+    return true;
+  });
+}
+
+// ---- Full-size photo viewer (lightbox) ----
+var CROP_LIGHT=null;
+function cropPhotoView(url, kind, caption){
+  CROP_LIGHT={url:url, kind:kind, caption:caption||''};
+  var ov=$('crop-light-overlay');
+  if(!ov){
+    ov=document.createElement('div'); ov.id='crop-light-overlay';
+    ov.style.cssText='position:fixed;inset:0;background:rgba(17,24,39,.88);z-index:700;display:flex;align-items:center;justify-content:center;padding:24px';
+    ov.innerHTML='<div id="crop-light-inner" style="max-width:560px;width:100%;display:flex;flex-direction:column;align-items:center;gap:14px"></div>';
+    document.body.appendChild(ov);
+    ov.addEventListener('click', function(ev){ if(ev.target===ov) cropPhotoClose(); });
+  }
+  ov.style.display='flex';
+  var inner=$('crop-light-inner');
+  var media = (kind==='image')
+    ? '<img src="'+url+'" style="max-width:100%;max-height:70vh;border-radius:12px;box-shadow:0 12px 40px rgba(0,0,0,.5)">'
+    : '<div style="background:#fff;border-radius:12px;padding:40px 50px;font-size:40px">\uD83D\uDCC4</div>';
+  inner.innerHTML=media+
+    '<div style="color:#fff;font-size:12.5px;text-align:center;line-height:1.4">'+esc(caption||'')+'</div>'+
+    '<div style="display:flex;gap:10px">'+
+      '<button onclick="cropPhotoOpenTab()" style="background:rgba(255,255,255,.16);color:#fff;border:none;border-radius:8px;padding:8px 14px;font-size:12.5px;font-weight:700;cursor:pointer">Open in new tab</button>'+
+      '<button onclick="cropPhotoDownload()" style="background:rgba(255,255,255,.16);color:#fff;border:none;border-radius:8px;padding:8px 14px;font-size:12.5px;font-weight:700;cursor:pointer">Download</button>'+
+      '<button onclick="cropPhotoClose()" style="background:rgba(255,255,255,.16);color:#fff;border:none;border-radius:8px;padding:8px 14px;font-size:12.5px;font-weight:700;cursor:pointer">\u2715 Close</button>'+
+    '</div>';
+}
+function cropPhotoClose(){ var ov=$('crop-light-overlay'); if(ov) ov.style.display='none'; }
+function cropPhotoOpenTab(){ if(!CROP_LIGHT||!CROP_LIGHT.url) return; var w=window.open(); if(w){ if(CROP_LIGHT.kind==='image') w.document.write('<img src="'+CROP_LIGHT.url+'" style="max-width:100%">'); else w.location=CROP_LIGHT.url; } }
+function cropPhotoDownload(){ if(!CROP_LIGHT||!CROP_LIGHT.url) return; var a=document.createElement('a'); a.href=CROP_LIGHT.url; a.download=(CROP_LIGHT.caption||'photo').split(' ')[0]||'photo'; document.body.appendChild(a); a.click(); document.body.removeChild(a); }
+
+// ---- Audit log view + filters ----
+function cropComplySetView(v){ ST_CROP.complyView=v; cropRenderCompliance(); }
+function cropAuditSetArea(id){ CROP_AUDIT.area=id; cropRenderCompliance(); }
+function cropAuditSearch(v){ CROP_AUDIT.q=v; cropRenderAuditLogList(); }
+function cropAuditSetFrom(v){ CROP_AUDIT.from=v; cropRenderAuditLogList(); }
+function cropAuditSetTo(v){ CROP_AUDIT.to=v; cropRenderAuditLogList(); }
+function cropAreaTagClass(id){ return {water:'w',soil:'',chem:'',ohs:'o',seed:'s',gmo:'s',invasive:'',diesel:'',export:'o'}[id]||''; }
+function cropRenderAuditLog(){
+  var areas=cropComplianceTrackedIds();
+  var chips='<span onclick="cropAuditSetArea(\'all\')" class="cau-chip'+(CROP_AUDIT.area==='all'?' on':'')+'">All</span>'+
+    areas.map(function(d){ return '<span onclick="cropAuditSetArea(\''+d.id+'\')" class="cau-chip'+(CROP_AUDIT.area===d.id?' on':'')+'">'+esc(d.t.split(' ')[0])+'</span>'; }).join('');
+  var html=''+
+    '<div style="position:relative;margin-bottom:12px">'+
+      '<span style="position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:14px;color:var(--t4)">\uD83D\uDD0D</span>'+
+      '<input id="cau-q" type="text" value="'+esc(CROP_AUDIT.q)+'" oninput="cropAuditSearch(this.value)" placeholder="Search legislation, certificate or note \u2014 e.g. Act 36, GlobalGAP, WUL-FS-2291" style="width:100%;padding:10px 12px 10px 34px;border:1px solid var(--gp);border-radius:10px;font-family:inherit;font-size:13px;background:var(--gb)">'+
+    '</div>'+
+    '<div style="font-size:11px;color:var(--t3);margin-bottom:10px">Searches legislation, area names, check notes &amp; document names.</div>'+
+    '<div style="display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid var(--br2)">'+
+      '<div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:10px;font-weight:800;color:var(--t3);text-transform:uppercase">From</label><input id="cau-from" type="date" value="'+esc(CROP_AUDIT.from)+'" onchange="cropAuditSetFrom(this.value)" style="padding:8px 10px;border:1px solid var(--br);border-radius:8px;font-family:inherit;font-size:12.5px"></div>'+
+      '<div style="display:flex;flex-direction:column;gap:4px"><label style="font-size:10px;font-weight:800;color:var(--t3);text-transform:uppercase">To</label><input id="cau-to" type="date" value="'+esc(CROP_AUDIT.to)+'" onchange="cropAuditSetTo(this.value)" style="padding:8px 10px;border:1px solid var(--br);border-radius:8px;font-family:inherit;font-size:12.5px"></div>'+
+      '<div style="display:flex;flex-direction:column;gap:4px;flex:1;min-width:160px"><label style="font-size:10px;font-weight:800;color:var(--t3);text-transform:uppercase">Areas</label><div class="cau-chips">'+chips+'</div></div>'+
+      '<button onclick="cropExportAudit()" style="font-size:12px;font-weight:700;background:var(--gb);border:1px solid var(--gp);color:var(--gd);border-radius:8px;padding:8px 12px;cursor:pointer">\u2B07 Export log</button>'+
+    '</div>'+
+    '<div id="cau-list">'+cropAuditListHtml()+'</div>';
+  return html;
+}
+function cropRenderAuditLogList(){ var el=$('cau-list'); if(el) el.innerHTML=cropAuditListHtml(); }
+function cropAuditListHtml(){
+  var rows=cropAuditFiltered();
+  if(!rows.length) return '<div style="font-size:12.5px;color:var(--t4);padding:18px 0;text-align:center">No matching records.</div>';
+  var html=rows.map(function(e){
+    var ph=(e.photos||[]);
+    var thumb;
+    if(ph.length && ph[0].kind==='image'){
+      thumb='<div onclick="cropPhotoFromAudit(\''+e.areaId+'\',\''+encodeURIComponent(e.date)+'\',0)" style="width:50px;height:50px;border-radius:8px;flex:none;border:1px solid var(--br);overflow:hidden;cursor:pointer;position:relative"><img src="'+ph[0].url+'" style="width:100%;height:100%;object-fit:cover">'+(ph.length>1?'<span style="position:absolute;bottom:-2px;right:-2px;background:var(--gd);color:#fff;font-size:9px;font-weight:800;border-radius:99px;padding:1px 5px">'+ph.length+'</span>':'')+'</div>';
+    } else {
+      thumb='<div style="width:50px;height:50px;border-radius:8px;flex:none;background:#eef0f2;border:1px solid var(--br);display:flex;align-items:center;justify-content:center;font-size:18px">'+(ph.length?'\uD83D\uDCC4':(e.src==='spray'?'\uD83E\uDDEA':(e.src==='doc'?'\uD83D\uDCCE':'\uD83D\uDDD3\uFE0F')))+'</div>';
+    }
+    var fileLine=ph.length?'<div style="font-size:10.5px;color:var(--gm);font-weight:700;margin-top:3px">\uD83D\uDCCE '+ph.map(function(pp){return esc(pp.name);}).join(', ')+(ph[0].kind==='image'?' \u00b7 tap to view':'')+'</div>':'';
+    return '<div style="display:flex;gap:11px;padding:11px 0;border-bottom:1px solid var(--br2)">'+thumb+
+      '<div style="flex:1;min-width:0"><div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap"><span class="cau-area '+cropAreaTagClass(e.areaId)+'">'+esc(e.area.split(' ')[0])+'</span><span style="font-size:12px;font-weight:800">'+cropDispDate(e.date)+'</span></div>'+
+      '<div style="font-size:12.5px;font-weight:700;margin-top:3px">'+esc(e.what)+'</div>'+
+      (e.note?'<div style="font-size:11.5px;color:var(--t3);margin-top:1px;line-height:1.4">'+esc(e.note)+'</div>':'')+
+      fileLine+
+      '</div></div>';
+  }).join('');
+  return html+'<div style="font-size:11.5px;color:var(--t3);margin-top:12px">Showing '+rows.length+' record'+(rows.length===1?'':'s')+(CROP_AUDIT.from||CROP_AUDIT.to?' \u00b7 filtered by date':'')+(CROP_AUDIT.area!=='all'?' \u00b7 '+CROP_AUDIT.area:'')+'</div>';
+}
+// Resolve a photo by area+date+index for the lightbox (avoids inlining huge data URLs into onclick)
+function cropPhotoFromAudit(areaId, dateEnc, idx){
+  var date=decodeURIComponent(dateEnc);
+  var match=cropAllLogEntries().filter(function(e){return e.areaId===areaId && e.date===date && (e.photos||[]).length;})[0];
+  if(!match) return;
+  var p=match.photos[idx]||match.photos[0];
+  cropPhotoView(p.url, p.kind, p.name+' \u00b7 '+match.area+' \u00b7 '+cropDispDate(match.date));
+}
+function cropExportAudit(){
+  var rows=cropAuditFiltered();
+  var csv=lsCsvRow(['Audit log',FARM.name||'Farm','Range',(CROP_AUDIT.from||'start')+' to '+(CROP_AUDIT.to||'now'),'Area',CROP_AUDIT.area,'Search',CROP_AUDIT.q||''])+lsCsvRow([])+lsCsvRow(['Date','Area','Legislation','Record','Note','Files']);
+  rows.forEach(function(e){ csv+=lsCsvRow([e.date,e.area,e.law,e.what,e.note,(e.photos||[]).map(function(p){return p.name;}).join('; ')]); });
+  var htmlRows=rows.map(function(e){
+    var ph=(e.photos||[]);
+    var thumbs=ph.map(function(p){ return p.kind==='image' ? '<img src="'+p.url+'" style="width:46px;height:46px;object-fit:cover;border-radius:5px;margin:1px">' : '\uD83D\uDCC4 '+escTxHtml(p.name); }).join(' ');
+    return '<tr><td>'+cropDispDate(e.date)+'</td><td>'+escTxHtml(e.area)+'</td><td>'+escTxHtml(e.what)+'</td><td>'+escTxHtml(e.note)+'</td><td>'+(thumbs||'\u2014')+'</td></tr>';
+  }).join('');
+  var html='<h1>Compliance Audit Log</h1>'+
+    '<div class="lsr-meta">'+escTxHtml(FARM.name||'Farm')+' \u00b7 '+(CROP_AUDIT.from||'start')+' to '+(CROP_AUDIT.to||lsFmtDate(LS_TODAY))+(CROP_AUDIT.area!=='all'?' \u00b7 '+CROP_AUDIT.area:'')+(CROP_AUDIT.q?' \u00b7 \u201c'+escTxHtml(CROP_AUDIT.q)+'\u201d':'')+'</div>'+
+    '<table><thead><tr><th>Date</th><th>Area</th><th>Record</th><th>Note / result</th><th>Photos</th></tr></thead><tbody>'+(htmlRows||'<tr><td colspan="5">No records.</td></tr>')+'</tbody></table>'+
+    '<div class="lsr-disc"><b>Not legal advice.</b> A chronological record compiled from your logs for an inspector, buyer or auditor.</div>';
+  lsShowReport('Compliance audit log','linear-gradient(135deg,#9a3d6e,#7C2D5A)',html,csv,'compliance-audit-log.csv');
+}
+
+// Export a single area's full history (records + documents + logs with photos)
+function cropExportArea(id){
+  var it=cropComplianceDefById(id); if(!it) return;
+  var kv=it.kv.map(function(p){return '<tr><td>'+escTxHtml(p[0])+'</td><td class="amt">'+escTxHtml(p[1])+'</td></tr>';}).join('');
+  var html='<h1>'+escTxHtml(it.t)+'</h1>'+
+    '<div class="lsr-meta">'+escTxHtml(FARM.name||'Farm')+' \u00b7 '+escTxHtml(it.law)+' \u00b7 compiled '+lsFmtDate(LS_TODAY)+'</div>'+
+    '<div class="lsr-lead">'+escTxHtml(it.desc)+'</div>'+
+    '<h2>Current records</h2><table><tbody>'+kv+'</tbody></table>';
+  var docs=cropComplianceDocs(id);
+  if(docs.length){
+    html+='<div class="lsr-sub">Documents on file</div><table><thead><tr><th>Document</th><th>Type</th><th>Expiry</th></tr></thead><tbody>'+docs.map(function(d){var ex=cropDocExpiry(d.expiry);return '<tr><td>'+escTxHtml(d.name)+'</td><td>'+(d.kind==='pdf'?'PDF':'Image')+'</td><td>'+(d.expiry?escTxHtml(ex.label):'\u2014')+'</td></tr>';}).join('')+'</tbody></table>';
+  }
+  var log=cropComplianceLog(id);
+  if(log.length){
+    html+='<div class="lsr-sub">Check &amp; test log</div><table><thead><tr><th>Date</th><th>Check</th><th>Note / result</th><th>Photos</th></tr></thead><tbody>'+log.map(function(e){var ph=(e.photos||[]);var th=ph.map(function(x){return x.kind==='image'?'<img src="'+x.url+'" style="width:42px;height:42px;object-fit:cover;border-radius:5px;margin:1px;border:1px solid #eee">':'\uD83D\uDCC4 '+escTxHtml(x.name);}).join(' ');return '<tr><td>'+cropDispDate(e.date)+'</td><td>'+escTxHtml(e.what||'')+'</td><td>'+escTxHtml(e.note||'')+'</td><td>'+(th||'\u2014')+'</td></tr>';}).join('')+'</tbody></table>';
+  }
+  if(it.keep&&it.keep.length) html+='<div class="lsr-note"><b>Records to keep:</b> '+it.keep.map(function(k){return escTxHtml(k);}).join(' \u00b7 ')+'</div>';
+  html+='<div class="lsr-disc"><b>Not legal advice.</b> A focused record for this area, compiled from your logs.</div>';
+  var csv=lsCsvRow([it.t,it.law])+lsCsvRow([])+lsCsvRow(['Record','Value']);
+  it.kv.forEach(function(p){csv+=lsCsvRow([p[0],p[1]]);});
+  csv+=lsCsvRow([])+lsCsvRow(['Documents'])+lsCsvRow(['Name','Type','Expiry']);
+  docs.forEach(function(d){csv+=lsCsvRow([d.name,d.kind,d.expiry||'']);});
+  csv+=lsCsvRow([])+lsCsvRow(['Check & test log'])+lsCsvRow(['Date','Check','Note','Files']);
+  log.forEach(function(e){csv+=lsCsvRow([e.date,e.what||'',e.note||'',(e.photos||[]).map(function(x){return x.name;}).join('; ')]);});
+  lsShowReport(it.t+' \u2014 export','linear-gradient(135deg,#9a3d6e,#7C2D5A)',html,csv,'compliance-'+id+'.csv');
+}
+
+// ---- Per-area test/check log modal ----
+var CROP_LOG_PHOTOS=[];
+var CROP_DOC_STAGE=[];
+function cropOpenComplianceLog(id){ cropOpenCompliance(id); }  // alias -> unified modal
+
+function cropPickLogPhoto(){ var f=$('clog-file'); if(f){ f.value=''; f.click(); } }
+function cropReadLogPhotos(input){
+  var files=input.files; if(!files||!files.length) return;
+  var pending=files.length;
+  Array.prototype.forEach.call(files, function(file){
+    if(file.size>5*1024*1024){ toast(file.name+' is over 5MB','error'); pending--; return; }
+    var r=new FileReader();
+    r.onload=function(){ CROP_LOG_PHOTOS.push({name:file.name, kind:(file.type.indexOf('pdf')>=0?'pdf':'image'), url:r.result}); pending--; if(pending<=0) cropRenderComplianceModal(); };
+    r.onerror=function(){ pending--; };
+    r.readAsDataURL(file);
+  });
+}
+function cropRemoveLogPhoto(i){ CROP_LOG_PHOTOS.splice(i,1); cropRenderComplianceModal(); }
+function cropSaveLogEntry(){
+  var it=cropComplianceDefById(CROP_COMPLY_ID); if(!it) return;
+  cropCaptureComplyFields();
+  var date=$('clog-date')?$('clog-date').value:'';
+  var what=$('clog-what')?$('clog-what').value.trim():'';
+  var note=$('clog-note')?$('clog-note').value.trim():'';
+  if(!date){ toast('Pick a date','error'); return; }
+  if(!ST_CROP.compliance.logs) ST_CROP.compliance.logs={};
+  if(!ST_CROP.compliance.logs[it.id]) ST_CROP.compliance.logs[it.id]=[];
+  ST_CROP.compliance.logs[it.id].push({date:date, what:what||it.t, note:note, photos:CROP_LOG_PHOTOS.slice()});
+  CROP_LOG_PHOTOS=[];
+  dataChanged('crop');
+  if(typeof renderNotifications==='function') renderNotifications();
+  cropRenderComplianceModal();
+  toast('Logged \u2014 reminder reset','success');
+}
+function cropDeleteLogEntry(id,date){
+  var L=ST_CROP.compliance.logs && ST_CROP.compliance.logs[id]; if(!L) return;
+  if(!confirm('Delete this log entry?')) return;
+  ST_CROP.compliance.logs[id]=L.filter(function(e){return e.date!==date;});
+  dataChanged('crop');
+  if(typeof renderNotifications==='function') renderNotifications();
+  cropRenderComplianceModal();
+}
+function cropEditCadence(id){
+  var cur=cropComplianceCadence(id);
+  var v=prompt('Remind me to check this every how many months? (0 = no reminder)', cur);
+  if(v===null) return; v=parseInt(v,10); if(isNaN(v)||v<0){ toast('Enter a number','error'); return; }
+  if(!ST_CROP.compliance.cadence) ST_CROP.compliance.cadence={};
+  ST_CROP.compliance.cadence[id]=v;
+  dataChanged('crop');
+  if(typeof renderNotifications==='function') renderNotifications();
+  cropRenderComplianceModal();
+}
+
+// ---- Documents on file: upload / expiry / remove (item 2 & 3) ----
+function cropPickDoc(){ var f=$('cdoc-file'); if(f){ f.value=''; f.click(); } }
+function cropReadDocs(input){
+  var id=CROP_COMPLY_ID; if(!id) return;
+  var files=input.files; if(!files||!files.length) return;
+  if(!ST_CROP.compliance.docs) ST_CROP.compliance.docs={};
+  if(!ST_CROP.compliance.docs[id]) ST_CROP.compliance.docs[id]=[];
+  var pending=files.length;
+  Array.prototype.forEach.call(files, function(file){
+    if(file.size>5*1024*1024){ toast(file.name+' is over 5MB','error'); pending--; return; }
+    var r=new FileReader();
+    r.onload=function(){ ST_CROP.compliance.docs[id].push({name:file.name, kind:(file.type.indexOf('pdf')>=0?'pdf':'image'), url:r.result, expiry:'', added:LS_TODAY.toISOString().slice(0,10)}); pending--; if(pending<=0){ dataChanged('crop'); if(typeof renderNotifications==='function') renderNotifications(); cropRenderComplianceModal(); } };
+    r.onerror=function(){ pending--; };
+    r.readAsDataURL(file);
+  });
+}
+function cropSetDocExpiry(idx, val){
+  var id=CROP_COMPLY_ID; var D=ST_CROP.compliance.docs && ST_CROP.compliance.docs[id]; if(!D||!D[idx]) return;
+  D[idx].expiry=val;
+  dataChanged('crop');
+  if(typeof renderNotifications==='function') renderNotifications();
+  cropRenderComplianceModal();
+}
+function cropRemoveDoc(idx){
+  var id=CROP_COMPLY_ID; var D=ST_CROP.compliance.docs && ST_CROP.compliance.docs[id]; if(!D||!D[idx]) return;
+  if(!confirm('Remove '+(D[idx].name||'this document')+'?')) return;
+  D.splice(idx,1);
+  dataChanged('crop');
+  if(typeof renderNotifications==='function') renderNotifications();
+  cropRenderComplianceModal();
+}
+function cropViewDoc(idx){
+  var id=CROP_COMPLY_ID; var D=ST_CROP.compliance.docs && ST_CROP.compliance.docs[id]; if(!D||!D[idx]) return;
+  var doc=D[idx]; if(!doc.url){ toast('No file attached to this record yet','info'); return; }
+  var w=window.open(); if(w){ if(doc.kind==='image') w.document.write('<img src="'+doc.url+'" style="max-width:100%">'); else w.location=doc.url; }
+}
+
+/* ===================================================================
+   RENDER
+   =================================================================== */
+function renderCrop(){
+  if(!$('pg-crop')) return;
+  cropSetTab(ST_CROP.activeTab || 'overview');
+}
+function cropSetTab(tab){
+  ST_CROP.activeTab = tab;
+  ['overview','lands','inputs','comply','add'].forEach(function(t){
+    var b=$('crop-tab-'+t); if(b) b.classList.toggle('on', t===tab);
+    var v=$('crop-view-'+t); if(v) v.style.display = (t===tab?'block':'none');
+  });
+  var sub=$('crop-tab-sub');
+  if(sub){ sub.textContent = {overview:'Your lands, yields and margins \u2014 season '+ST_CROP.season,lands:'Land register \u2014 area, crop and rotation history',inputs:'Inputs & spray program \u2014 cost and compliance in one place',comply:'Compliance \u2014 your obligations across SA farming law',add:'Plant a land and start its season'}[tab] || ''; }
+  if(tab==='overview') cropRenderOverview();
+  if(tab==='lands')    cropRenderLands();
+  if(tab==='inputs')   cropRenderInputs();
+  if(tab==='comply')   cropRenderCompliance();
+  if(tab==='add')      cropRenderAddForm();
+}
+
+function cropRenderOverview(){
+  var el=$('crop-view-overview'); if(!el) return;
+  var html=''+
+    '<div class="crop-kpis">'+
+      cropKpi('Lands planted', ST_CROP.lands.filter(cropPlanted).length)+
+      cropKpi('Total area', cropAreaPlanted()+' ha')+
+      cropKpi('Expected yield', Math.round(cropExpectedTons()).toLocaleString('en-ZA')+' t')+
+      cropKpi('Forecast gross margin', cropFmtR(cropForecastGM()), true)+
+    '</div>'+
+    '<div class="crop-sec-h">Lands this season</div><div class="crop-lands">';
+  ST_CROP.lands.forEach(function(l){
+    var est = cropEffStage(l);
+    var planned = est==='planned', fallow=est==='fallow';
+    var ylabel = planned ? 'Target yield' : (l.actualYield!=null?'Actual yield':'Expected yield');
+    var yval = fallow ? '\u2014' : (cropLandYield(l)+' t/ha');
+    var gmLabel = planned ? 'Budgeted margin / ha' : 'Gross margin / ha';
+    var gmVal = l.crop ? cropFmtR(cropLandGMperHa(l))+'/ha' : '\u2014';
+    var grid = fallow
+      ? '<div class="grid"><div class="k">Status</div><div class="vv">Resting / grazing</div><div class="k">Last crop</div><div class="vv">'+esc(l.prevCrop||'\u2014')+'</div></div>'
+      : '<div class="grid">'+
+          '<div class="k">'+(planned?'Plant from':'Planted')+'</div><div class="vv">'+(planned?cropDispDate(l.harvest)&&'Next season':cropDispDate(l.planted))+'</div>'+
+          '<div class="k">Est. harvest</div><div class="vv">'+(est==='harvest'?'Now':cropDispDate(l.harvest))+'</div>'+
+          '<div class="k">'+ylabel+'</div><div class="vv">'+yval+'</div>'+
+          '<div class="k">'+(planned?'Budget input':'Input cost')+'</div><div class="vv">'+cropFmtR(l.inputPerHa)+'/ha</div>'+
+        '</div>';
+    var prog = (!planned && !fallow) ? '<div class="crop-progress"><i style="width:'+cropGrowthPct(l)+'%"></i></div>' : '';
+    html+=''+
+      '<div class="crop-land" onclick="cropOpenLand('+l.id+')">'+
+        '<div class="top"><div><div class="nm">'+esc(l.name)+'</div><div class="meta">'+(l.area||0)+' ha'+(l.crop?(' \u00b7 '+esc(l.crop)+(l.cultivar?(' ('+esc(l.cultivar)+(l.gmo?', Bt':'')+')'):(l.gmo?' (Bt)':''))):'')+'</div></div><span class="crop-ic">'+(l.crop?cropIcon(l.crop):'\uD83C\uDF31')+'</span></div>'+
+        '<span class="crop-stage '+cropStageClass(est)+'">'+cropStageLabel(est)+'</span>'+
+        grid+prog+
+        '<div class="crop-gm"><span class="lab">'+gmLabel+'</span><span class="val">'+gmVal+'</span></div>'+
+        (cropLandExcluded(l) ? '<div style="margin-top:9px;display:inline-block;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.03em;color:var(--pu);background:var(--pp);border:1px solid #e9c9da;border-radius:20px;padding:2px 8px">\uD83D\uDD2E Scenario</div>' : '')+
+        (cropForecastable(l) ? '<div onclick="event.stopPropagation();cropViewInPlanning('+l.id+')" style="margin-top:9px;font-size:11.5px;font-weight:700;color:var(--gl);display:flex;align-items:center;gap:5px;cursor:pointer">\uD83D\uDDD3\uFE0F View in Planning \u203a</div>' : '')+
+      '</div>';
+  });
+  html+='</div>'+
+    '<div class="crop-sec-h">Reports</div>'+
+    cropCta('gm-r','\uD83D\uDCCA','Gross Margin per Hectare Report','Income less direct inputs, per land and per hectare \u2014 your most important crop number.','openCropGMReport()')+
+    cropCta('spray','\uD83E\uDDEA','Spray Program & Pre-Harvest Interval Audit','Every agrochemical applied with PHI/MRL safe-to-harvest dates \u2014 export & GlobalGAP.','openCropSprayReport()')+
+    cropCta('cost','\uD83E\uDDFE','Crop Input Cost Report (SARS)','Seed, fertiliser, chemicals & fuel \u2014 Section 11(a) deductions and diesel-rebate litres.','openCropInputCostReport()')+
+    cropCta('water','\uD83D\uDCA7','Water Use Return','Registered vs metered abstraction \u2014 for your National Water Act water-use report.','openCropWaterReport()');
+  el.innerHTML=html;
+}
+function cropKpi(l,v,acc){ return '<div class="crop-kpi'+(acc?' acc':'')+'"><div class="l">'+l+'</div><div class="v">'+v+'</div></div>'; }
+function cropCta(cls,ic,t,s,onclick){ return '<button class="crop-rpt-cta '+cls+'" onclick="'+onclick+'"><span class="ic">'+ic+'</span><span class="tx"><span class="t">'+t+'</span><span class="s">'+s+'</span></span><span class="ar">\u203a</span></button>'; }
+
+function cropRenderLands(){
+  var el=$('crop-view-lands'); if(!el) return;
+  var rows=ST_CROP.lands.map(function(l){
+    return '<tr><td><b>'+esc(l.name)+'</b></td><td class="r">'+(l.area||0)+' ha</td><td>'+(l.crop?esc(l.crop)+(l.cultivar?' \u00b7 '+esc(l.cultivar):'')+(l.gmo?' (Bt)':''):'\u2014')+'</td>'+
+      '<td><span class="crop-stage '+cropStageClass(cropEffStage(l))+'">'+cropStageLabel(cropEffStage(l))+'</span></td><td>'+esc(l.prevCrop||'\u2014')+'</td>'+
+      '<td class="r">'+(l.actualYield!=null?(l.actualYield+' act'):(l.targetYield?(l.targetYield+(l.stage==='planned'?' tgt':' exp')):'\u2014'))+'</td></tr>';
+  }).join('');
+  var totArea=ST_CROP.lands.reduce(function(s,l){return s+(l.area||0);},0);
+  var evRows=ST_CROP.events.slice().sort(function(a,b){return a.date<b.date?1:-1;}).map(function(e){
+    var l=cropLandById(e.land); var icon={planted:'\uD83C\uDF31',harvested:'\uD83C\uDF3E',delivered:'\uD83D\uDE9C'}[e.kind]||'\u2022';
+    var label=icon+' '+e.kind.charAt(0).toUpperCase()+e.kind.slice(1)+' \u00b7 '+esc(l?l.name:'?')+(e.note?' \u00b7 '+esc(e.note):'')+(e.tons?(' \u00b7 '+e.tons+' t'):'')+(e.cert?(' (cert '+esc(e.cert)+')'):'');
+    return '<tr><td>'+label+'</td><td class="r" style="color:var(--t3)">'+cropDispDate(e.date)+'</td></tr>';
+  }).join('') || '<tr><td colspan="2" style="color:var(--t3)">No field events yet.</td></tr>';
+  el.innerHTML=''+
+    '<div class="crop-sec-h">Land register \u2014 what\u2019s planted where</div>'+
+    '<table class="crop-tbl"><thead><tr><th>Land</th><th class="r">Area</th><th>Crop / cultivar</th><th>Stage</th><th>Last season</th><th class="r">Yield t/ha</th></tr></thead><tbody>'+rows+'</tbody>'+
+      '<tfoot><tr><td>Total</td><td class="r">'+totArea+' ha</td><td colspan="4"></td></tr></tfoot></table>'+
+    '<div class="crop-row-actions"><button class="btn-sec" onclick="cropQuickPlant()">+ Record planting</button><button class="btn-sec" onclick="cropQuickHarvest()">\uD83C\uDF3E Record harvest</button><button class="btn-sec" onclick="cropSetTab(\'add\')">+ Add land</button></div>'+
+    '<div class="crop-sec-h">Recent field events</div>'+
+    '<table class="crop-tbl"><tbody>'+evRows+'</tbody></table>'+
+    '<div class="crop-infonote">Each land keeps a season-by-season history so rotation, yield trends and gross margin build up over time. Harvest entries capture tonnes, grade and the co-op/silo delivery certificate.</div>';
+}
+
+function cropRenderInputs(){
+  var el=$('crop-view-inputs'); if(!el) return;
+  var active=cropActivePHI();
+  var ban = active.length
+    ? '<div class="crop-miniban"><span>\u23F3</span><span>'+active.length+' land'+(active.length>1?'s':'')+' inside a pre-harvest interval \u2014 don\u2019t harvest '+active.map(function(i){var l=cropLandById(i.land);return esc(l?l.name:'?');}).join(', ')+' before its safe date.</span></div>'
+    : '';
+  var filt=ST_CROP.filter;
+  var list=ST_CROP.inputs.slice().sort(function(a,b){return a.date<b.date?1:-1;}).filter(function(i){
+    if(filt==='all') return true;
+    if(filt==='phi') return cropInputActive(i);
+    return i.kind===filt;
+  });
+  var rows=list.map(function(i){
+    var l=cropLandById(i.land); var meta=cropInputKindMeta(i.kind);
+    var safe = cropInputActive(i) ? ('\u23F3 '+cropDispDate(cropInputSafe(i).toISOString().slice(0,10))) : (i.phi?'\u2713 clear':'\u2713');
+    var safeCls = cropInputActive(i)?'st-wd':'st-ok';
+    var batch = (i.kind==='fertiliser'||i.kind==='seed') ? (i.batch||'\u2014') : (i.batch?esc(i.batch):'<span class="miss">missing</span>');
+    return '<tr><td>'+cropDispDate(i.date)+'</td><td>'+esc(l?l.name:'?')+'</td>'+
+      '<td>'+esc(i.product)+'<br><span style="color:var(--t4);font-size:10px">Act 36/1947 \u00b7 '+esc(i.reg||'\u2014')+'</span></td>'+
+      '<td><span class="crop-tagp '+meta[1]+'">'+meta[0]+'</span></td><td>'+esc(i.rate||'')+'</td><td>'+batch+'</td>'+
+      '<td>'+esc(i.by||'')+(i.operatorCert?'<br><span style="color:var(--t4);font-size:10px">'+esc(i.operatorCert)+' cert</span>':'')+'</td>'+
+      '<td>'+(i.phi?i.phi+' d':'None')+'</td><td class="'+safeCls+'">'+safe+'</td></tr>';
+  }).join('') || '<tr><td colspan="9" style="color:var(--t3)">No applications match this filter.</td></tr>';
+  function chip(k,lbl){ return '<span class="crop-chip'+(filt===k?' on':'')+'" onclick="cropSetFilter(\''+k+'\')">'+lbl+'</span>'; }
+  el.innerHTML=''+ban+
+    '<div class="crop-kpis k3">'+cropKpi('Applications logged', ST_CROP.inputs.length)+cropKpi('Input spend (season)', cropFmtR(cropInputCostTotal()), true)+cropKpi('Within PHI now', active.length)+'</div>'+
+    '<div class="crop-chips">'+chip('all','All')+chip('phi','Within PHI')+chip('seed','Seed')+chip('fertiliser','Fertiliser')+chip('herbicide','Herbicide')+chip('fungicide','Fungicide')+chip('insecticide','Insecticide')+'<button class="crop-logbtn" onclick="cropLogInput()">+ Log application</button></div>'+
+    '<table class="crop-tbl"><thead><tr><th>Date</th><th>Land</th><th>Product \u00b7 reg</th><th>Type</th><th>Rate</th><th>Batch</th><th>By</th><th>PHI</th><th>Safe harvest</th></tr></thead><tbody>'+rows+'</tbody></table>'+
+    '<div class="crop-infonote">Each line records the <b>cost</b> (your SARS S11(a) deduction) <b>and</b> the registered product, rate, batch, applicator and pre-harvest interval \u2014 so the safe-to-harvest date, export-residue (MRL) compliance and the Act 36 spray record all come from one entry.</div>'+
+    '<div class="crop-divider"></div><div class="crop-rpt-label">Report</div>'+
+    cropCta('spray','\uD83E\uDDEA','Spray Program & Pre-Harvest Interval Audit','Full application register with PHI/MRL safe-to-harvest dates \u2014 export & GlobalGAP.','openCropSprayReport()');
+}
+function cropSetFilter(f){ ST_CROP.filter=f; cropRenderInputs(); }
+
+function cropRenderCompliance(){
+  var el=$('crop-view-comply'); if(!el) return;
+  var toggle='<div style="display:flex;gap:6px;margin-bottom:14px">'+
+    '<div onclick="cropComplySetView(\'tracker\')" style="font-size:12px;font-weight:700;padding:7px 14px;border-radius:8px;cursor:pointer;border:1px solid '+(ST_CROP.complyView!=='audit'?'var(--gd)':'var(--br)')+';background:'+(ST_CROP.complyView!=='audit'?'var(--gd)':'#fff')+';color:'+(ST_CROP.complyView!=='audit'?'#fff':'var(--t3)')+'">Tracker</div>'+
+    '<div onclick="cropComplySetView(\'audit\')" style="font-size:12px;font-weight:700;padding:7px 14px;border-radius:8px;cursor:pointer;border:1px solid '+(ST_CROP.complyView==='audit'?'var(--gd)':'var(--br)')+';background:'+(ST_CROP.complyView==='audit'?'var(--gd)':'#fff')+';color:'+(ST_CROP.complyView==='audit'?'#fff':'var(--t3)')+'">\uD83D\uDDC2\uFE0F Audit log</div>'+
+  '</div>';
+  if(ST_CROP.complyView==='audit'){ el.innerHTML=toggle+cropRenderAuditLog(); return; }
+  var sc=cropComplianceScore();
+  var label = sc.total===0 ? 'Nothing tracked yet' : (sc.ok===sc.total ? 'Fully compliant' : (sc.ok>=sc.total-2 ? 'Mostly compliant' : 'Needs attention'));
+  var tracked=cropComplianceTrackedIds();
+  var items=tracked.map(function(it){
+    var due=cropComplianceCombinedDue(it.id);
+    // dot escalates to overdue/soon when a check or document is due
+    var dot = (due.state==='over') ? 'r' : ((due.state==='soon'||it.status==='a') ? 'a' : 'g');
+    var dueBadge = '';
+    if(due.state==='over') dueBadge='<span class="due over" style="font-size:10.5px;font-weight:800;padding:3px 9px;border-radius:20px;background:var(--rp);color:var(--rd)">\uD83D\uDD34 '+due.label+'</span>';
+    else if(due.state==='soon') dueBadge='<span class="due soon" style="font-size:10.5px;font-weight:800;padding:3px 9px;border-radius:20px;background:var(--ap);color:var(--am)">\uD83D\uDFE1 '+due.label+'</span>';
+    else if(due.state==='ok') dueBadge='<span class="due ok" style="font-size:10.5px;font-weight:800;padding:3px 9px;border-radius:20px;background:var(--gp);color:var(--gd)">'+due.label+'</span>';
+    else { var fixCount=it.kv.filter(function(kv){return /\u26a0/.test(kv[1]);}).length; dueBadge='<span class="cact">'+(it.status==='g'?'Open \u203a':(fixCount?(fixCount+' to fix \u203a'):'Review \u203a'))+'</span>'; }
+    var kv=it.kv.map(function(pp){return '<span class="k">'+pp[0]+'</span><span class="v">'+pp[1]+'</span>';}).join('');
+    var logBtn = cropComplianceCadence(it.id) ? '<button onclick="event.stopPropagation();cropOpenComplianceLog(\''+it.id+'\')" style="margin-top:10px;font-size:11.5px;font-weight:700;background:var(--gb);border:1px solid var(--gp);color:var(--gd);border-radius:8px;padding:6px 11px;cursor:pointer">\uD83D\uDDD3\uFE0F Log a check / upload photo</button>' : '';
+    return '<div class="crop-citem" onclick="cropOpenCompliance(\''+it.id+'\')" style="cursor:pointer">'+
+      '<div class="ch"><span class="cstat '+dot+'"></span><div class="ct">'+it.t+'<div class="law">'+it.law+'</div></div>'+dueBadge+'</div>'+
+      '<div class="cd">'+it.desc+'</div><div class="crop-kv2">'+kv+'</div>'+logBtn+'</div>';
+  }).join('');
+  if(!tracked.length) items='<div class="crop-infonote" style="margin:0">You haven\u2019t chosen any areas to track yet. Tap \u201cChoose what to track\u201d below to start.</div>';
+  el.innerHTML=toggle+
+    '<div class="crop-score"><div class="big">'+sc.ok+'/'+sc.total+'</div><div><div class="lab"><b>'+label+'</b> for the '+ST_CROP.season+' season.</div><div class="lab" style="color:var(--t3);margin-top:2px">'+(sc.total-sc.ok)+' item'+((sc.total-sc.ok)===1?'':'s')+' to review.'+(function(){var dl=cropComplianceDueList();return dl.length?' <b style="color:var(--rd)">\uD83D\uDD14 '+dl.length+' check'+(dl.length>1?'s':'')+' due/overdue.</b>':'';})()+' Tap any area to enter records or log a check.</div></div></div>'+
+    '<div style="display:flex;align-items:center;justify-content:space-between;margin:18px 0 10px"><div class="crop-sec-h" style="margin:0">Legislation &amp; certification tracker</div>'+
+      '<button onclick="cropManageCompliance()" style="font-size:12px;font-weight:700;background:var(--gb);border:1px solid var(--gp);color:var(--gd);border-radius:8px;padding:6px 11px;cursor:pointer">\u2699\uFE0F Choose what to track</button></div>'+
+    '<div class="crop-clist">'+items+'</div>'+
+    '<div class="crop-divider"></div><div class="crop-rpt-label">Report</div>'+
+    cropCta('spray','\uD83D\uDEE1\uFE0F','Compliance Audit Pack','One printable pack of all the above \u2014 for inspectors, export buyers, your co-op or bank.','openCropComplianceReport()')+
+    '<div class="crop-infonote" style="margin-top:14px">Plain-language status only. Exact legal thresholds (refuge %, water limits, refund rate) are entered or looked up, never assumed.</div>';
+}
+
+// ---- Choose-what-to-track modal ----
+function cropManageCompliance(){
+  var defs=cropComplianceDefs();
+  var t=(ST_CROP.compliance.tracked)||{};
+  var rows=defs.map(function(it){
+    var on=t[it.id]!==false;
+    return '<div style="display:flex;align-items:flex-start;gap:11px;padding:11px 0;border-bottom:1px solid var(--br2)">'+
+      '<div onclick="cropToggleTrack(\''+it.id+'\')" style="flex:none;cursor:pointer;width:38px;height:22px;border-radius:99px;background:'+(on?'var(--gm)':'#cbd5e1')+';position:relative;margin-top:1px"><i style="position:absolute;top:2px;left:'+(on?'18px':'2px')+';width:18px;height:18px;border-radius:50%;background:#fff;transition:left .15s"></i></div>'+
+      '<div style="flex:1"><div style="font-size:13px;font-weight:800">'+it.t+(it.auto?' <span style=\"font-size:10px;font-weight:700;color:var(--gd);background:var(--gp);border-radius:20px;padding:1px 7px;margin-left:4px\">relevant to you</span>':'')+'</div>'+
+        '<div style="font-size:11px;color:var(--t3);margin-top:2px">'+it.law+'</div></div></div>';
+  }).join('');
+  cropModalShell('Choose what to track',
+    '<div style="font-size:12.5px;color:var(--t3);margin-bottom:8px;line-height:1.5">Turn on the legislation & certifications that apply to your farm. Areas we can already see are relevant (sprays logged, irrigated land, Bt crops) are marked.</div>'+rows,
+    '<button onclick="cropCloseModal()" style="flex:1;padding:11px;border-radius:9px;font-weight:700;font-size:13px;border:none;background:var(--gd);color:#fff;cursor:pointer">Done</button>');
+}
+function cropToggleTrack(id){
+  if(!ST_CROP.compliance.tracked) ST_CROP.compliance.tracked={};
+  var t=ST_CROP.compliance.tracked;
+  t[id] = (t[id]===false) ? true : false;
+  dataChanged('crop');
+  cropManageCompliance(); // re-render the manage list
+}
+
+// ---- Per-area detail / input modal ----
+var CROP_COMPLY_ID=null;
+function cropOpenCompliance(id){ CROP_COMPLY_ID=id; cropRenderComplianceModal(); }
+function cropCaptureComplyFields(){
+  var it=cropComplianceDefById(CROP_COMPLY_ID); if(!it) return;
+  (it.fields||[]).forEach(function(f){
+    if(f.type==='bool') return; // bools applied live via toggle
+    var inp=$('cmp-f-'+f.k); if(!inp) return;
+    if(f.type==='number') ST_CROP.compliance[f.k]=parseFloat(inp.value)||0;
+    else ST_CROP.compliance[f.k]=inp.value.trim();
+  });
+}
+function cropOpenCompliance(id){ CROP_COMPLY_ID=id; CROP_LOG_PHOTOS=[]; cropRenderComplianceModal(); }
+function cropComplyToggleBool(key){
+  cropCaptureComplyFields();
+  ST_CROP.compliance[key] = !ST_CROP.compliance[key];
+  cropRenderComplianceModal();
+}
+function cropSaveCompliance(){
+  var it=cropComplianceDefById(CROP_COMPLY_ID); if(!it) return;
+  cropCaptureComplyFields();
+  dataChanged('crop');
+  if(typeof renderNotifications==='function') renderNotifications();
+  cropRenderComplianceModal();
+  toast(it.t+' records saved','success');
+}
+
+function cropRenderComplianceModal(){
+  var it=cropComplianceDefById(CROP_COMPLY_ID); if(!it) return;
+  var c=ST_CROP.compliance;
+  var combined=cropComplianceCombinedDue(it.id);
+  var statusTxt = it.status==='g' ? '\u2713 On track' : '\u26a0 Needs attention';
+  var statusCol = it.status==='g' ? 'var(--gd)' : 'var(--am,#B45309)';
+
+  // ---- status + due box ----
+  var dueBox='';
+  if(combined.state==='over') dueBox='<div style="display:flex;justify-content:space-between;align-items:center;border:1px solid #f4c7c2;background:var(--rp);border-radius:10px;padding:10px 12px;font-size:12px;font-weight:700;color:var(--rd);margin-bottom:12px"><span>\uD83D\uDD34 '+(combined.source==='doc'?'Document: ':'')+combined.label+'</span></div>';
+  else if(combined.state==='soon') dueBox='<div style="border:1px solid #f5e3a8;background:var(--ap);border-radius:10px;padding:10px 12px;font-size:12px;font-weight:700;color:var(--am);margin-bottom:12px">\uD83D\uDFE1 '+(combined.source==='doc'?'Document: ':'')+combined.label+'</div>';
+
+  // ---- Current readout ----
+  var kv=it.kv.map(function(pp){return '<div style="display:flex;justify-content:space-between;font-size:12.5px;padding:5px 0"><span style="color:var(--t3)">'+pp[0]+'</span><span style="font-weight:700">'+pp[1]+'</span></div>';}).join('');
+
+  // ---- Editable fields ----
+  var fields=(it.fields||[]).map(function(f){
+    var val=c[f.k];
+    if(f.type==='bool'){
+      var on=!!val;
+      return '<div class="crop-field" style="margin-bottom:11px"><label>'+f.label+'</label>'+
+        '<div onclick="cropComplyToggleBool(\''+f.k+'\')" style="cursor:pointer;display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:700;color:var(--t2)"><span style="width:38px;height:22px;border-radius:99px;background:'+(on?'var(--gm)':'#cbd5e1')+';position:relative;flex:none"><i style="position:absolute;top:2px;left:'+(on?'18px':'2px')+';width:18px;height:18px;border-radius:50%;background:#fff"></i></span>'+(on?'Yes':'No')+'</div></div>';
+    }
+    var typ=f.type==='number'?'number':'text';
+    return '<div class="crop-field" style="margin-bottom:11px"><label>'+f.label+'</label><input id="cmp-f-'+f.k+'" type="'+typ+'" value="'+(val==null?'':String(val).replace(/"/g,'&quot;'))+'" placeholder="'+(f.ph||'')+'"></div>';
+  }).join('');
+
+  // ---- Water readings series (item 7) ----
+  var readingsSec='';
+  if(it.id==='water'){
+    var R=cropWaterReadings();
+    var rows = R.length ? R.map(function(r){ return '<div style="display:flex;justify-content:space-between;align-items:center;font-size:12.5px;padding:6px 0;border-bottom:1px solid var(--br2)"><span>'+cropDispDate(r.date)+'</span><span style="font-weight:700">'+(r.m3||0).toLocaleString("en-ZA")+' m\u00b3</span><span onclick="cropDeleteWaterReading(\''+r.date+'\')" style="color:var(--t4);cursor:pointer">\u2715</span></div>'; }).join('') : '<div style="font-size:12px;color:var(--t4);padding:4px 0">No readings yet.</div>';
+    var trend=''; if(R.length>=2){ var diff=R[0].m3-R[1].m3; trend='<div style="font-size:11.5px;color:var(--t3);margin-top:4px">Last interval: <b style="color:var(--gd)">'+(diff>=0?'+':'')+diff.toLocaleString("en-ZA")+' m\u00b3</b></div>'; }
+    var auth=c.waterAuthorised||0, used=R.length?R[0].m3:(c.waterUsed||0);
+    readingsSec=
+      '<div class="crop-sec-h" style="margin:18px 0 8px">Meter readings</div>'+
+      (auth?'<div style="font-size:11.5px;color:var(--t3);margin-bottom:6px">Latest '+used.toLocaleString("en-ZA")+' m\u00b3 of '+auth.toLocaleString("en-ZA")+' m\u00b3 authorised ('+Math.round(used/auth*100)+'%)</div>':'')+
+      rows+trend+
+      '<div style="display:flex;gap:8px;margin-top:10px"><input id="cwr-date" type="date" value="'+LS_TODAY.toISOString().slice(0,10)+'" style="flex:1;padding:8px 10px;border:1px solid var(--br);border-radius:8px;font-family:inherit;font-size:12.5px"><input id="cwr-m3" type="number" placeholder="m\u00b3 reading" style="flex:1;padding:8px 10px;border:1px solid var(--br);border-radius:8px;font-family:inherit;font-size:12.5px"><button onclick="cropAddWaterReading()" style="flex:none;padding:8px 12px;border:none;border-radius:8px;background:var(--gd);color:#fff;font-weight:700;font-size:12.5px;cursor:pointer">Add</button></div>';
+  }
+
+  // ---- Documents on file (item 2 & 3) ----
+  var docs=cropComplianceDocs(it.id);
+  var docRows = docs.length ? docs.map(function(d,ix){
+    var ex=cropDocExpiry(d.expiry);
+    var exBadge = ex.state==='over' ? '<span style="font-size:10px;font-weight:800;color:var(--rd);background:var(--rp);border-radius:20px;padding:1px 7px">\uD83D\uDD34 '+ex.label+'</span>'
+      : ex.state==='soon' ? '<span style="font-size:10px;font-weight:800;color:var(--am);background:var(--ap);border-radius:20px;padding:1px 7px">\uD83D\uDFE1 '+ex.label+'</span>'
+      : ex.state==='ok' ? '<span style="font-size:10px;font-weight:700;color:var(--gd);background:var(--gp);border-radius:20px;padding:1px 7px">'+ex.label+'</span>' : '';
+    return '<div style="display:flex;align-items:center;gap:9px;padding:9px 0;border-bottom:1px solid var(--br2)">'+
+      '<div style="width:34px;height:34px;border-radius:8px;flex:none;background:#eef0f2;border:1px solid var(--br);display:flex;align-items:center;justify-content:center;font-size:16px">'+(d.kind==='image'?'\uD83D\uDDBC\uFE0F':'\uD83D\uDCC4')+'</div>'+
+      '<div style="flex:1;min-width:0"><div style="font-size:12.5px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">'+esc(d.name)+'</div>'+
+        '<div style="display:flex;align-items:center;gap:7px;margin-top:3px;flex-wrap:wrap"><label style="font-size:10px;color:var(--t4);font-weight:700">Expiry</label><input type="month" value="'+(d.expiry||'')+'" onchange="cropSetDocExpiry('+ix+',this.value)" style="font-size:11px;padding:2px 5px;border:1px solid var(--br);border-radius:6px">'+exBadge+'</div></div>'+
+      (d.url?'<div onclick="cropViewDoc('+ix+')" style="flex:none;color:var(--gl);font-weight:700;font-size:11px;cursor:pointer">View</div>':'')+
+      '<div onclick="cropRemoveDoc('+ix+')" style="flex:none;color:var(--t4);cursor:pointer;font-size:13px">\u2715</div>'+
+    '</div>';
+  }).join('') : '<div style="font-size:12px;color:var(--t4);padding:4px 0">No documents on file. Upload your licence, certificate or permit.</div>';
+  var docsSec=
+    '<div class="crop-sec-h" style="margin:18px 0 8px">Documents on file</div>'+docRows+
+    '<button onclick="cropPickDoc()" style="margin-top:10px;font-size:12px;font-weight:700;background:var(--gb);border:1px solid var(--gp);color:var(--gd);border-radius:8px;padding:7px 12px;cursor:pointer">\uD83D\uDCCE Upload licence / certificate</button>'+
+    '<input type="file" id="cdoc-file" accept="image/*,application/pdf" multiple style="display:none" onchange="cropReadDocs(this)">';
+
+  // ---- Check & test log ----
+  var cad=cropComplianceCadence(it.id);
+  var due=cropComplianceDue(it.id);
+  var log=cropComplianceLog(it.id);
+  var entries = log.length ? log.map(function(e){
+    var ph=(e.photos||[]);
+    var thumb = ph.length && ph[0].kind==='image' ? '<div onclick="cropPhotoFromAudit(\''+it.id+'\',\''+encodeURIComponent(e.date)+'\',0)" style="width:46px;height:46px;border-radius:8px;flex:none;border:1px solid var(--br);overflow:hidden;cursor:pointer"><img src="'+ph[0].url+'" style="width:100%;height:100%;object-fit:cover"></div>' : '<div style="width:46px;height:46px;border-radius:8px;flex:none;background:#eef0f2;border:1px solid var(--br);display:flex;align-items:center;justify-content:center;font-size:18px">'+(ph.length?'\uD83D\uDCC4':'\uD83D\uDDD3\uFE0F')+'</div>';
+    return '<div style="display:flex;gap:11px;padding:10px 0;border-bottom:1px solid var(--br2)">'+thumb+
+      '<div style="flex:1"><div style="font-size:12.5px;font-weight:700">'+cropDispDate(e.date)+' \u00b7 '+esc(e.what||'Check')+'</div>'+
+      (e.note?'<div style="font-size:11.5px;color:var(--t3);margin-top:1px;line-height:1.4">'+esc(e.note)+'</div>':'')+
+      (ph.length?'<div style="font-size:10.5px;color:var(--gm);font-weight:700;margin-top:3px">\uD83D\uDCCE '+ph.length+' file'+(ph.length>1?'s':'')+' \u00b7 '+ph.map(function(pp){return esc(pp.name);}).join(', ')+'</div>':'')+
+      '</div>'+
+      '<div onclick="cropDeleteLogEntry(\''+it.id+'\',\''+e.date+'\')" style="flex:none;color:var(--t4);cursor:pointer;font-size:13px" title="Delete entry">\u2715</div>'+
+    '</div>';
+  }).join('') : '<div style="font-size:12px;color:var(--t4);padding:6px 0">No checks logged yet.</div>';
+  var photoChips=CROP_LOG_PHOTOS.map(function(ph,i){
+    var inner = ph.kind==='image' ? '<img src="'+ph.url+'" style="width:100%;height:100%;object-fit:cover;border-radius:8px">' : '\uD83D\uDCC4';
+    return '<div style="width:60px;height:60px;border-radius:8px;border:1px solid var(--br);background:#f3f4f6;display:flex;align-items:center;justify-content:center;font-size:18px;position:relative;overflow:hidden">'+inner+'<span onclick="cropRemoveLogPhoto('+i+')" style="position:absolute;top:-6px;right:-6px;width:18px;height:18px;border-radius:50%;background:var(--rd);color:#fff;font-size:11px;display:flex;align-items:center;justify-content:center;cursor:pointer">\u00d7</span></div>';
+  }).join('');
+  var addPhoto='<div onclick="cropPickLogPhoto()" style="width:60px;height:60px;border-radius:8px;border:1.5px dashed var(--gl);color:var(--gl);display:flex;align-items:center;justify-content:center;font-size:20px;cursor:pointer">\uFF0B</div>';
+  var todayISO=LS_TODAY.toISOString().slice(0,10);
+  var logSec=
+    '<div class="crop-sec-h" style="margin:18px 0 8px">Check &amp; test log</div>'+
+    (cad?('<div style="font-size:11px;color:var(--t3);margin-bottom:10px">\u23F0 every '+cad+' month'+(cad>1?'s':'')+(due.last?' \u00b7 last '+cropDispDate(due.last.toISOString().slice(0,10)):'')+' \u00b7 <span onclick="cropEditCadence(\''+it.id+'\')" style="color:var(--gl);font-weight:700;cursor:pointer">change</span></div>'):'')+
+    entries+
+    '<div style="border:1px dashed var(--br);border-radius:10px;padding:12px;margin-top:12px">'+
+      '<div style="font-size:11.5px;font-weight:800;color:var(--t2);margin-bottom:8px">Add a log entry</div>'+
+      '<div class="crop-field" style="margin-bottom:9px"><label>Date</label><input id="clog-date" type="date" value="'+todayISO+'"></div>'+
+      '<div class="crop-field" style="margin-bottom:9px"><label>What was checked / tested</label><input id="clog-what" placeholder="e.g. Monthly meter reading"></div>'+
+      '<div class="crop-field" style="margin-bottom:9px"><label>Note / result</label><textarea id="clog-note" rows="2" style="width:100%;padding:9px 11px;border:1px solid var(--br);border-radius:8px;font-family:inherit;font-size:13px" placeholder="e.g. Reading 331,000 m\u00b3"></textarea></div>'+
+      '<div class="crop-field" style="margin-bottom:9px"><label>Photos / documents</label><div style="display:flex;gap:8px;flex-wrap:wrap">'+photoChips+addPhoto+'</div></div>'+
+      '<input type="file" id="clog-file" accept="image/*,application/pdf" multiple style="display:none" onchange="cropReadLogPhotos(this)">'+
+      '<button onclick="cropSaveLogEntry()" style="width:100%;margin-top:4px;padding:10px;border-radius:9px;font-weight:700;font-size:13px;border:none;background:var(--gd);color:#fff;cursor:pointer">Save entry &amp; mark done</button>'+
+    '</div>';
+
+  var keepSec = (it.keep&&it.keep.length) ? ('<div class="crop-infonote" style="margin-top:16px"><b>Records to keep:</b> '+it.keep.map(function(k){return esc(k);}).join(' \u00b7 ')+'</div>') : (it.note?'<div class="crop-infonote" style="margin-top:16px">'+it.note+'</div>':'');
+
+  var body=
+    '<div style="border:1px solid var(--br);border-radius:10px;padding:11px 13px;margin-bottom:12px;background:var(--bg)">'+
+      '<div style="font-size:12px;font-weight:800;color:'+statusCol+'">'+statusTxt+'</div>'+
+      '<div style="font-size:11.5px;color:var(--t3);margin-top:2px">'+it.law+'</div></div>'+
+    dueBox+
+    '<div style="font-size:12.5px;color:var(--t2);line-height:1.5;margin-bottom:14px">'+it.desc+'</div>'+
+    '<div class="crop-sec-h" style="margin:0 0 8px">Current</div><div style="margin-bottom:16px">'+kv+'</div>'+
+    '<div class="crop-sec-h" style="margin:0 0 8px">Your records</div>'+fields+
+    '<button onclick="cropSaveCompliance()" style="width:100%;margin-top:4px;padding:10px;border-radius:9px;font-weight:700;font-size:13px;border:1px solid var(--gp);background:var(--gb);color:var(--gd);cursor:pointer">Save records</button>'+
+    readingsSec+
+    docsSec+
+    logSec+
+    keepSec;
+
+  cropModalShell(it.t, body,
+    '<button onclick="cropExportArea(\''+it.id+'\')" style="flex:1;padding:11px;border-radius:9px;font-weight:700;font-size:13px;border:1px solid var(--gp);background:var(--gb);color:var(--gd);cursor:pointer">\u2B07 Export this area</button>'+
+    '<button onclick="cropCloseModal()" style="flex:1;padding:11px;border-radius:9px;font-weight:700;font-size:13px;border:none;background:var(--gd);color:#fff;cursor:pointer">Done</button>');
+}
+
+// ---- Shared simple modal shell for compliance ----
+function cropModalShell(title, bodyHtml, footerHtml){
+  var ov=$('crop-comply-overlay');
+  if(!ov){
+    ov=document.createElement('div'); ov.id='crop-comply-overlay';
+    ov.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:600;display:flex;align-items:center;justify-content:center;padding:20px';
+    ov.innerHTML='<div id="crop-comply-card" style="background:#fff;border-radius:18px;width:100%;max-width:440px;max-height:90vh;overflow-y:auto;box-shadow:0 25px 50px -12px rgba(0,0,0,.3)"></div>';
+    document.body.appendChild(ov);
+    ov.addEventListener('click',function(ev){ if(ev.target===ov) cropCloseModal(); });
+  }
+  ov.style.display='flex';
+  $('crop-comply-card').innerHTML=
+    '<div style="padding:16px 20px;border-bottom:1px solid var(--br2);display:flex;align-items:center;justify-content:space-between">'+
+      '<div style="font-size:16px;font-weight:800">'+title+'</div>'+
+      '<div onclick="cropCloseModal()" style="cursor:pointer;width:28px;height:28px;border-radius:50%;background:var(--br2);color:var(--t3);font-size:15px;display:flex;align-items:center;justify-content:center">\u2715</div>'+
+    '</div>'+
+    '<div style="padding:16px 20px">'+bodyHtml+'</div>'+
+    '<div style="display:flex;gap:8px;padding:14px 20px;border-top:1px solid var(--br2)">'+footerHtml+'</div>';
+}
+function cropCloseModal(){ var ov=$('crop-comply-overlay'); if(ov) ov.style.display='none'; if(typeof cropRenderCompliance==='function') cropRenderCompliance(); }
+
+function cropRenderAddForm(){
+  var el=$('crop-view-add'); if(!el) return;
+  var landOpts=ST_CROP.lands.map(function(l){return '<option value="'+l.id+'">'+esc(l.name)+' ('+(l.area||0)+' ha)</option>';}).join('')+'<option value="new">+ Add a new land\u2026</option>';
+  var cropOpts=ST_CROP.cropTypes.map(function(c){return '<option value="'+esc(c.t)+'">'+c.i+' '+esc(c.t)+'</option>';}).join('');
+  el.innerHTML=''+
+    '<div class="crop-sec-h">Plant a land</div>'+
+    '<div class="crop-field"><label>Which land?</label><select id="crop-f-land">'+landOpts+'</select></div>'+
+    '<div id="crop-f-newland-wrap" style="display:none"><div class="crop-field"><label>New land name</label><input id="crop-f-newname" placeholder="e.g. Noordkamp"></div></div>'+
+    '<div class="crop-two"><div class="crop-field"><label>Crop</label><select id="crop-f-crop">'+cropOpts+'</select></div>'+
+      '<div class="crop-field"><label>Cultivar (optional)</label><input id="crop-f-cultivar" placeholder="e.g. PAN 3Q-740"></div></div>'+
+    '<div class="crop-two"><div class="crop-field"><label>Area planted (ha)</label><input id="crop-f-area" type="number" placeholder="120"></div>'+
+      '<div class="crop-field"><label>GMO / Bt cultivar?</label><select id="crop-f-gmo"><option value="no">No</option><option value="yes">Yes \u2014 Bt / GM (track refuge)</option></select></div></div>'+
+    '<div class="crop-two"><div class="crop-field"><label>Planting date</label><input id="crop-f-planted" type="date"><div class="hint">Summer-rainfall maize: Oct\u2013Dec \u00b7 WC winter wheat: May\u2013Jul</div></div>'+
+      '<div class="crop-field"><label>Expected harvest</label><input id="crop-f-harvest" type="date"></div></div>'+
+    '<div class="crop-two"><div class="crop-field"><label>Target yield (t/ha)</label><input id="crop-f-yield" type="number" step="0.1" placeholder="6.2"></div>'+
+      '<div class="crop-field"><label>Budgeted input cost (R/ha)</label><input id="crop-f-input" type="number" placeholder="11200"></div></div>'+
+    '<div class="crop-field"><label>Price (R per ton)</label><input id="crop-f-price" type="number" inputmode="decimal" placeholder="e.g. 4180" oninput="cropPriceTouched=true"><div id="crop-f-price-chip"></div></div>'+
+    '<div class="crop-field"><label>Irrigated?</label><select id="crop-f-irr"><option value="no">Dryland (rain-fed)</option><option value="yes">Irrigated \u2014 links to water-use tracking</option></select></div>'+
+    '<button class="crop-formbtn" onclick="cropSaveLand()">Plant this land</button>'+
+    '<div class="crop-infonote">Answering \u201cGMO\u201d and \u201cIrrigated\u201d here is what switches on the matching Compliance items \u2014 ask once, use everywhere.</div>';
+  var sel=$('crop-f-land'); if(sel) sel.onchange=function(){ var w=$('crop-f-newland-wrap'); if(w) w.style.display=(this.value==='new'?'block':'none'); };
+  cropPriceTouched=false;
+  var cs=$('crop-f-crop'); if(cs) cs.onchange=function(){ if(!cropPriceTouched){ var ip=$('crop-f-price'); if(ip) ip.value=''; } cropRenderPriceChip(); };
+  cropRenderPriceChip();
+}
+
+// One-tap SAFEX market chip for the crop price field (mirrors livestock Option A)
+var cropPriceTouched=false;
+function cropRenderPriceChip(){
+  var box=$('crop-f-price-chip'); if(!box) return;
+  var crop=$('crop-f-crop') ? $('crop-f-crop').value : '';
+  var ref=cropPrice(crop);
+  if(ref>0){
+    box.innerHTML='<div onclick="cropUseMarketPrice()" title="Use today\u2019s SAFEX reference" style="display:inline-flex;align-items:center;gap:7px;margin-top:8px;background:var(--gb);border:1px solid #cfe9d8;border-radius:99px;padding:5px 11px;font-size:11.5px;font-weight:700;color:var(--gd);cursor:pointer">\uD83D\uDCB9 SAFEX \u2248 R'+ref.toLocaleString('en-ZA')+'/t<span style=\"background:var(--gd);color:#fff;border-radius:99px;padding:2px 8px;font-size:10px\">Use</span></div>';
+  } else {
+    box.innerHTML='<div style="margin-top:7px;font-size:11px;color:var(--t4)">No SAFEX reference for this crop \u2014 enter your own price.</div>';
+  }
+}
+function cropUseMarketPrice(){
+  var crop=$('crop-f-crop') ? $('crop-f-crop').value : '';
+  var ref=cropPrice(crop); if(!ref){ return; }
+  var ip=$('crop-f-price'); if(ip){ ip.value=ref; cropPriceTouched=true; }
+}
+var cropEditPriceTouched=false;
+function cropEditUseMarket(id){
+  var l=cropLandById(id); if(!l) return;
+  var ref=cropPrice(l.crop); if(!ref) return;
+  var ip=$('cle-price'); if(ip){ ip.value=ref; cropEditPriceTouched=true; }
+}
+
+/* ===================================================================
+   HANDLERS (mutations) — all persist via dataChanged → autosave
+   =================================================================== */
+function cropNextId(arr,prefix){ var max=0; arr.forEach(function(x){var n=parseInt(String(x.id).replace(/\D/g,''),10);if(n>max)max=n;}); return prefix?prefix+(max+1):(max+1); }
+
+function cropSaveLand(){
+  var landSel=$('crop-f-land').value;
+  var crop=$('crop-f-crop').value;
+  var area=parseFloat($('crop-f-area').value)||0;
+  var cultivar=$('crop-f-cultivar').value.trim();
+  var gmo=$('crop-f-gmo').value==='yes';
+  var irr=$('crop-f-irr').value==='yes';
+  var planted=$('crop-f-planted').value;
+  var harvest=$('crop-f-harvest').value;
+  var ty=parseFloat($('crop-f-yield').value)||0;
+  var inp=parseFloat($('crop-f-input').value)||0;
+  var prc=parseFloat($('crop-f-price') && $('crop-f-price').value)||0;
+  if(!crop){ toast('Please choose a crop','error'); return; }
+  if(area<=0){ toast('Please enter the area in hectares','error'); return; }
+  var land;
+  if(landSel==='new'){
+    var nm=($('crop-f-newname').value||'').trim(); if(!nm){ toast('Name the new land','error'); return; }
+    land={id:cropNextId(ST_CROP.lands), name:nm, area:area, prevCrop:''};
+    ST_CROP.lands.push(land);
+  } else {
+    land=cropLandById(parseInt(landSel,10)); if(!land){ toast('Land not found','error'); return; }
+    if(land.crop) land.prevCrop=land.crop;
+    land.area=area;
+  }
+  land.crop=crop; land.cultivar=cultivar; land.gmo=gmo; land.irrigated=irr;
+  land.planted=planted; land.harvest=harvest; land.targetYield=ty; land.actualYield=null; land.inputPerHa=inp; land.price=prc;
+  land.stage = planted ? 'growing' : 'planned';
+  if(planted) ST_CROP.events.unshift({id:cropNextId(ST_CROP.events,'ce'), land:land.id, kind:'planted', date:planted, note:crop+(cultivar?(' '+cultivar):'')});
+  cropSyncToPlan(land);
+  ST_CROP.activeTab='overview';
+  dataChanged('crop');
+  toast('Land planted \u2014 '+land.name, 'success');
+}
+
+function cropQuickPlant(){ ST_CROP.activeTab='add'; cropSetTab('add'); }
+function cropQuickHarvest(){
+  var growing=ST_CROP.lands.filter(function(l){var e=cropEffStage(l);return e==='growing'||e==='harvest';});
+  if(!growing.length){ toast('No lands ready to harvest','info'); return; }
+  var l=growing[0];
+  var y=prompt('Record harvest for '+l.name+' \u2014 actual yield (t/ha)?', l.targetYield||'');
+  if(y===null) return; y=parseFloat(y); if(isNaN(y)||y<0){ toast('Enter a valid yield','error'); return; }
+  l.actualYield=y; l.stage='fallow'; var prev=l.crop;
+  var qpi=cropFindPlanLine(l);
+  if(qpi>=0){ ST_PLAN.crops[qpi].yield=y; delete ST_PLAN.crops[qpi].linkId; }
+  l.planId=null;
+  ST_CROP.events.unshift({id:cropNextId(ST_CROP.events,'ce'), land:l.id, kind:'harvested', date:LS_TODAY.toISOString().slice(0,10), note:prev+' '+y+' t/ha', tons:Math.round(y*l.area*10)/10, yield:y});
+  l.prevCrop=prev; l.crop='';
+  dataChanged('crop'); toast('Harvest recorded \u2014 '+l.name,'success');
+}
+function cropLogInput(){
+  var planted=ST_CROP.lands.filter(cropPlanted);
+  if(!planted.length){ toast('Plant a land first','info'); return; }
+  var l=planted[0];
+  var product=prompt('Product applied to '+l.name+'?'); if(!product) return;
+  var kind=(prompt('Type? seed / fertiliser / herbicide / fungicide / insecticide','herbicide')||'herbicide').toLowerCase();
+  if(['seed','fertiliser','herbicide','fungicide','insecticide'].indexOf(kind)<0) kind='herbicide';
+  var phi=parseInt(prompt('Pre-harvest interval in days? (0 if none)','0'),10)||0;
+  var cost=parseFloat(prompt('Cost per hectare (R)?','0'))||0;
+  ST_CROP.inputs.unshift({id:cropNextId(ST_CROP.inputs,'ci'), land:l.id, date:LS_TODAY.toISOString().slice(0,10), product:product, reg:'', kind:kind, rate:'', batch:'', by:FARM.owner||'', operatorCert:'', phi:phi, costPerHa:cost});
+  ST_CROP.filter='all'; dataChanged('crop'); toast('Application logged','success');
+}
+var CROP_LAND_IDX = -1;
+var CROP_LAND_EDIT = false;
+function cropOpenLand(id){ CROP_LAND_IDX = id; CROP_LAND_EDIT = false; cropShowLandModal(); }
+function cropEditLand(){ CROP_LAND_EDIT = true; cropRenderLandModal(); }
+
+function cropShowLandModal(){
+  var ov = $('crop-land-overlay');
+  if(!ov){
+    ov = document.createElement('div');
+    ov.id = 'crop-land-overlay';
+    ov.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:600;display:flex;align-items:center;justify-content:center;padding:20px';
+    ov.innerHTML = '<div id="crop-land-card" style="background:#fff;border-radius:18px;width:100%;max-width:460px;max-height:90vh;overflow-y:auto;box-shadow:0 25px 50px -12px rgba(0,0,0,.3)"></div>';
+    document.body.appendChild(ov);
+    ov.addEventListener('click', function(ev){ if(ev.target===ov) cropHideLandModal(); });
+  }
+  ov.style.display = 'flex';
+  cropRenderLandModal();
+}
+function cropHideLandModal(){ var ov=$('crop-land-overlay'); if(ov) ov.style.display='none'; }
+
+function cropRenderLandModal(){
+  var card=$('crop-land-card'); if(!card) return;
+  var l=cropLandById(CROP_LAND_IDX); if(!l){ cropHideLandModal(); return; }
+  var est=cropEffStage(l);
+  var head='<div style="padding:18px 20px;color:#fff;position:relative;background:linear-gradient(135deg,var(--gm),var(--gd))">' +
+      '<div onclick="cropHideLandModal()" style="position:absolute;top:14px;right:14px;width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.18);color:#fff;font-size:15px;display:flex;align-items:center;justify-content:center;cursor:pointer">\u2715</div>' +
+      '<div style="font-size:30px;line-height:1">'+(l.crop?cropIcon(l.crop):'\uD83C\uDF31')+'</div>' +
+      '<div style="font-size:20px;font-weight:800;margin-top:6px">'+esc(l.name)+'</div>' +
+      '<div style="font-size:12px;opacity:.92;margin-top:2px">'+(l.area||0)+' ha'+(l.crop?(' \u00b7 '+esc(l.crop)+(l.cultivar?(' ('+esc(l.cultivar)+')'):'')):' \u00b7 fallow')+'</div>' +
+    '</div>';
+
+  if(!CROP_LAND_EDIT){
+    var DT='<dt style="color:var(--t3);font-weight:600;margin:0">', DD='<dd style="margin:0;text-align:right;font-weight:700;color:var(--t1)">';
+    var dl='';
+    dl+=DT+'Stage</dt>'+DD+'<span class="crop-stage '+cropStageClass(est)+'">'+cropStageLabel(est)+'</span></dd>';
+    if(l.crop){
+      dl+=DT+'Crop / cultivar</dt>'+DD+esc(l.crop)+(l.cultivar?(' \u00b7 '+esc(l.cultivar)):'')+(l.gmo?' (Bt)':'')+'</dd>';
+      dl+=DT+(l.stage==='planned'?'Plant from':'Planted')+'</dt>'+DD+cropDispDate(l.planted)+'</dd>';
+      dl+=DT+'Expected harvest</dt>'+DD+(est==='harvest'?'Now':cropDispDate(l.harvest))+'</dd>';
+      dl+=DT+(l.actualYield!=null?'Actual yield':'Expected yield')+'</dt>'+DD+(cropLandYield(l)||0)+' t/ha</dd>';
+      var price=cropLandPrice(l);
+      var priceSrc = (l.price>0) ? ' (your price)' : (cropPrice(l.crop)>0 ? ' (SAFEX)' : '');
+      dl+=DT+'Price used</dt>'+DD+(price?cropFmtR(price)+'/t'+priceSrc:'\u2014 (no price)')+'</dd>';
+      dl+=DT+'Income / ha</dt>'+DD+cropFmtR(cropLandIncomePerHa(l))+'</dd>';
+      dl+=DT+'Input cost / ha</dt>'+DD+cropFmtR(l.inputPerHa)+'</dd>';
+      dl+=DT+'Irrigation</dt>'+DD+(l.irrigated?'Irrigated':'Dryland')+'</dd>';
+    }
+    dl+=DT+'Last season</dt>'+DD+esc(l.prevCrop||'\u2014')+'</dd>';
+
+    var gmRow = l.crop ? ('<div style="margin:4px 20px 0;border:1px solid #cfe9d8;background:var(--gb);border-radius:12px;padding:12px 14px;display:flex;justify-content:space-between;align-items:center">' +
+        '<span style="font-size:12px;color:var(--t3);font-weight:600">Gross margin / ha</span>' +
+        '<span style="font-size:18px;font-weight:800;color:var(--gd)">'+cropFmtR(cropLandGMperHa(l))+'</span></div>') : '';
+    var excl=cropLandExcluded(l);
+    var scenRow = cropHasPlanLine(l) ? ('<div style="margin:10px 20px 0;border:1px '+(excl?'dashed #c4b5d4':'solid var(--br)')+';background:'+(excl?'#FCFAFD':'#fff')+';border-radius:12px;padding:11px 14px;display:flex;justify-content:space-between;align-items:center;gap:10px">' +
+        '<div><div style="font-size:12.5px;font-weight:700;color:'+(excl?'var(--pu)':'var(--t1)')+'">'+(excl?'\uD83D\uDD2E Scenario \u2014 not in forecast':'\u2713 Counted in your forecast')+'</div>' +
+        '<div style="font-size:11px;color:var(--t3);margin-top:2px">'+(excl?'Profit shown here only; excluded from cash-flow & budget.':'This crop feeds your forecast, cash-flow and budget.')+'</div></div>' +
+        '<button onclick="cropToggleForecast('+l.id+')" style="flex:none;padding:7px 12px;border-radius:8px;font-size:11.5px;font-weight:700;cursor:pointer;border:1px solid '+(excl?'#e9c9da':'var(--br)')+';background:'+(excl?'var(--pp)':'#fff')+';color:'+(excl?'var(--pu)':'var(--t2)')+'">'+(excl?'Add to forecast':'Make scenario')+'</button>' +
+      '</div>') : '';
+
+    var inputsForLand=ST_CROP.inputs.filter(function(i){return i.land===l.id;});
+    var inpNote = inputsForLand.length ? ('<div style="font-size:11.5px;color:var(--t3);margin:14px 20px 0">'+inputsForLand.length+' input/spray record'+(inputsForLand.length>1?'s':'')+' on this land. See Inputs &amp; Spray for detail.</div>') : '';
+
+    var actions='<div style="display:flex;gap:8px;padding:14px 20px;border-top:1px solid var(--br2)">';
+    actions+='<button onclick="cropEditLand()" style="flex:1;padding:10px;border-radius:9px;font-weight:700;font-size:13px;border:none;background:var(--gd);color:#fff;cursor:pointer">Edit</button>';
+    if(est==='harvest' || l.stage==='growing'){ actions+='<button onclick="cropHarvestLand()" style="flex:1;padding:10px;border-radius:9px;font-weight:700;font-size:13px;border:none;background:var(--ap,#FEF3C7);color:var(--am,#B45309);cursor:pointer">Record harvest</button>'; }
+    if(cropForecastable(l)){ actions+='<button onclick="cropViewInPlanning('+l.id+')" style="flex:1;padding:10px;border-radius:9px;font-weight:700;font-size:13px;border:1px solid var(--gp);background:var(--gb);color:var(--gd);cursor:pointer">\uD83D\uDDD3\uFE0F Planning</button>'; }
+    actions+='<button onclick="cropDeleteLand()" style="flex:1;padding:10px;border-radius:9px;font-weight:700;font-size:13px;border:none;background:var(--rp);color:var(--rd);cursor:pointer">Delete</button>';
+    actions+='<button onclick="cropHideLandModal()" style="flex:1;padding:10px;border-radius:9px;font-weight:700;font-size:13px;border:none;background:var(--br2);color:var(--t2);cursor:pointer">Done</button></div>';
+
+    card.innerHTML = head + gmRow + scenRow +
+      '<div style="padding:16px 20px"><dl style="display:grid;grid-template-columns:auto 1fr;gap:9px 14px;font-size:13px;margin:0">'+dl+'</dl></div>' +
+      inpNote + actions;
+    return;
+  }
+
+  // EDIT MODE
+  var cropOpts=ST_CROP.cropTypes.map(function(c){return '<option value="'+esc(c.t)+'"'+(c.t===l.crop?' selected':'')+'>'+c.i+' '+esc(c.t)+'</option>';}).join('');
+  function F(label,inner){ return '<div class="crop-field" style="margin-bottom:11px"><label>'+label+'</label>'+inner+'</div>'; }
+  var body='<div style="padding:16px 20px">'+
+    F('Land name','<input id="cle-name" value="'+esc(l.name)+'">')+
+    '<div class="crop-two">'+F('Crop','<select id="cle-crop"><option value="">\u2014 none (fallow)</option>'+cropOpts+'</select>')+F('Cultivar','<input id="cle-cultivar" value="'+esc(l.cultivar||'')+'">')+'</div>'+
+    '<div class="crop-two">'+F('Area (ha)','<input id="cle-area" type="number" value="'+(l.area||0)+'">')+F('GMO / Bt?','<select id="cle-gmo"><option value="no"'+(!l.gmo?' selected':'')+'>No</option><option value="yes"'+(l.gmo?' selected':'')+'>Yes \u2014 Bt / GM</option></select>')+'</div>'+
+    '<div class="crop-two">'+F('Planting date','<input id="cle-planted" type="date" value="'+(l.planted||'')+'">')+F('Expected harvest','<input id="cle-harvest" type="date" value="'+(l.harvest||'')+'">')+'</div>'+
+    '<div class="crop-two">'+F('Expected yield (t/ha)','<input id="cle-yield" type="number" step="0.1" value="'+(l.targetYield||0)+'">')+F('Input cost (R/ha)','<input id="cle-input" type="number" value="'+(l.inputPerHa||0)+'">')+'</div>'+
+    F('Price (R per ton)','<input id="cle-price" type="number" inputmode="decimal" value="'+(l.price>0?l.price:'')+'" placeholder="'+(cropPrice(l.crop)>0?('SAFEX \u2248 '+cropPrice(l.crop)):'enter your own price')+'" oninput="cropEditPriceTouched=true"><div id="cle-price-chip"></div>')+
+    F('Irrigated?','<select id="cle-irr"><option value="no"'+(!l.irrigated?' selected':'')+'>Dryland (rain-fed)</option><option value="yes"'+(l.irrigated?' selected':'')+'>Irrigated</option></select>')+
+    '</div>'+
+    '<div style="display:flex;gap:8px;padding:14px 20px;border-top:1px solid var(--br2)">'+
+      '<button onclick="cropSaveLandEdit()" style="flex:1;padding:10px;border-radius:9px;font-weight:700;font-size:13px;border:none;background:var(--gd);color:#fff;cursor:pointer">Save changes</button>'+
+      '<button onclick="CROP_LAND_EDIT=false;cropRenderLandModal()" style="flex:1;padding:10px;border-radius:9px;font-weight:700;font-size:13px;border:none;background:var(--br2);color:var(--t2);cursor:pointer">Cancel</button>'+
+    '</div>';
+  card.innerHTML = head + body;
+  cropEditPriceTouched=false;
+  (function(){ var box=$('cle-price-chip'); if(!box) return; var ref=cropPrice(l.crop);
+    if(ref>0){ box.innerHTML='<div onclick="cropEditUseMarket('+l.id+')" style="display:inline-flex;align-items:center;gap:7px;margin-top:8px;background:var(--gb);border:1px solid #cfe9d8;border-radius:99px;padding:5px 11px;font-size:11.5px;font-weight:700;color:var(--gd);cursor:pointer">\uD83D\uDCB9 SAFEX \u2248 R'+ref.toLocaleString('en-ZA')+'/t<span style=\"background:var(--gd);color:#fff;border-radius:99px;padding:2px 8px;font-size:10px\">Use</span></div>'; }
+    else { box.innerHTML='<div style="margin-top:7px;font-size:11px;color:var(--t4)">No SAFEX reference \u2014 enter your own price.</div>'; }
+  })();
+}
+
+function cropSaveLandEdit(){
+  var l=cropLandById(CROP_LAND_IDX); if(!l) return;
+  var nm=($('cle-name').value||'').trim(); if(!nm){ toast('Name the land','error'); return; }
+  var newCrop=$('cle-crop').value;
+  if(newCrop && newCrop!==l.crop && l.crop) l.prevCrop=l.crop;
+  l.name=nm; l.crop=newCrop; l.cultivar=$('cle-cultivar').value.trim();
+  l.area=parseFloat($('cle-area').value)||0;
+  l.gmo=$('cle-gmo').value==='yes'; l.irrigated=$('cle-irr').value==='yes';
+  l.planted=$('cle-planted').value; l.harvest=$('cle-harvest').value;
+  l.targetYield=parseFloat($('cle-yield').value)||0; l.inputPerHa=parseFloat($('cle-input').value)||0;
+  l.price=parseFloat($('cle-price') && $('cle-price').value)||0;
+  if(!l.crop){ l.stage='fallow'; }
+  else if(l.stage==='fallow'||!l.stage){ l.stage = l.planted ? 'growing' : 'planned'; }
+  else if(l.stage==='planned' && l.planted){ l.stage='growing'; }
+  cropSyncToPlan(l);
+  CROP_LAND_EDIT=false;
+  dataChanged('crop');
+  cropRenderLandModal();
+  toast('Land updated \u2014 '+l.name,'success');
+}
+
+function cropHarvestLand(){
+  var l=cropLandById(CROP_LAND_IDX); if(!l) return;
+  var y=prompt('Record harvest for '+l.name+' \u2014 actual yield (t/ha)?', l.targetYield||'');
+  if(y===null) return; y=parseFloat(y); if(isNaN(y)||y<0){ toast('Enter a valid yield','error'); return; }
+  l.actualYield=y; var prev=l.crop;
+  var pIdx=cropFindPlanLine(l);
+  if(pIdx>=0){ ST_PLAN.crops[pIdx].yield=y; delete ST_PLAN.crops[pIdx].linkId; }
+  l.planId=null;
+  ST_CROP.events.unshift({id:cropNextId(ST_CROP.events,'ce'), land:l.id, kind:'harvested', date:LS_TODAY.toISOString().slice(0,10), note:prev+' '+y+' t/ha', tons:Math.round(y*l.area*10)/10, yield:y});
+  l.stage='fallow'; l.prevCrop=prev; l.crop='';
+  dataChanged('crop'); cropRenderLandModal(); toast('Harvest recorded \u2014 '+l.name,'success');
+}
+
+function cropDeleteLand(){
+  var l=cropLandById(CROP_LAND_IDX); if(!l) return;
+  if(!confirm('Delete the land \u201c'+l.name+'\u201d and its history? This cannot be undone.')) return;
+  var dpi=cropFindPlanLine(l);
+  if(dpi>=0) ST_PLAN.crops.splice(dpi,1);
+  ST_CROP.lands = ST_CROP.lands.filter(function(x){return x.id!==l.id;});
+  ST_CROP.events = ST_CROP.events.filter(function(e){return e.land!==l.id;});
+  ST_CROP.inputs = ST_CROP.inputs.filter(function(i){return i.land!==l.id;});
+  cropHideLandModal();
+  dataChanged('crop');
+  toast('Land deleted','success');
+}
+
+/* ===================================================================
+   REPORTS — reuse the livestock full-screen report shell (lsShowReport)
+   =================================================================== */
+function cropRand(n){ return 'R '+Math.round(n||0).toLocaleString('en-ZA'); }
+
+function openCropGMReport(){
+  var planted=ST_CROP.lands.filter(cropPlanted);
+  var rows='', T={area:0,inc:0,inp:0,gm:0};
+  planted.forEach(function(l){
+    var inc=cropLandIncomePerHa(l)*l.area, inp=(l.inputPerHa||0)*l.area, gm=inc-inp;
+    T.area+=l.area; T.inc+=inc; T.inp+=inp; T.gm+=gm;
+    rows+='<tr><td>'+escTxHtml(l.name)+'</td><td>'+escTxHtml(l.crop)+'</td><td class="amt">'+l.area+'</td><td class="amt">'+cropLandYield(l)+'</td><td class="amt">'+(cropPrice(l.crop)?cropRand(cropPrice(l.crop)):'\u2014')+'</td><td class="amt">'+cropRand(l.inputPerHa)+'</td><td class="amt">'+cropRand(cropLandGMperHa(l))+'</td><td class="amt pos">'+cropRand(gm)+'</td></tr>';
+  });
+  var html='<h1>Gross Margin per Hectare</h1>'+
+    '<div class="lsr-meta">'+escTxHtml(FARM.name||'Farm')+' \u00b7 season '+ST_CROP.season+' \u00b7 figures to '+lsFmtDate(LS_TODAY)+'</div>'+
+    '<div class="lsr-lead">Income (yield \u00d7 SAFEX/own price) less direct input cost, per land and per hectare. Yields are actual where harvested, otherwise expected.</div>'+
+    '<table><thead><tr><th>Land</th><th>Crop</th><th class="amt">Ha</th><th class="amt">t/ha</th><th class="amt">Price/t</th><th class="amt">Input/ha</th><th class="amt">GM/ha</th><th class="amt">Total GM</th></tr></thead><tbody>'+rows+'</tbody>'+
+    '<tfoot><tr class="total"><td colspan="2">Total / weighted</td><td class="amt">'+T.area+'</td><td class="amt"></td><td class="amt"></td><td class="amt">'+cropRand(T.area?T.inp/T.area:0)+'</td><td class="amt">'+cropRand(T.area?T.gm/T.area:0)+'</td><td class="amt">'+cropRand(T.gm)+'</td></tr></tfoot></table>'+
+    '<div class="lsr-note">Gross margin excludes overheads (finance, salaries, depreciation). It is the best like-for-like comparison between crops and lands. Forecast gross margin across planted lands: <b>'+cropRand(T.gm)+'</b>.</div>';
+  var csv=lsCsvRow(['Gross Margin per Hectare',FARM.name||'Farm','Season',ST_CROP.season])+lsCsvRow([])+lsCsvRow(['Land','Crop','Ha','t/ha','Price/t','Input/ha','GM/ha','Total GM']);
+  planted.forEach(function(l){ csv+=lsCsvRow([l.name,l.crop,l.area,cropLandYield(l),cropPrice(l.crop),l.inputPerHa,cropLandGMperHa(l),cropLandGMperHa(l)*l.area]); });
+  csv+=lsCsvRow(['Total','',T.area,'','','','',T.gm]);
+  lsShowReport('Gross margin per hectare','linear-gradient(135deg,#2D6A4F,#1B4332)',html,csv,'crop-gross-margin.csv');
+}
+
+function openCropSprayReport(){
+  var all=ST_CROP.inputs.slice().sort(function(a,b){return a.date<b.date?1:-1;});
+  var active=cropActivePHI();
+  var missing=all.filter(function(i){return i.product && i.kind!=='fertiliser' && i.kind!=='seed' && !i.batch;});
+  var awRows=active.length?active.map(function(i){var l=cropLandById(i.land);return '<tr><td>'+escTxHtml(l?l.name:'?')+'</td><td>'+escTxHtml(i.product)+'</td><td>'+cropDispDate(i.date)+'</td><td class="amt">'+i.phi+' d</td><td class="lsr-wd">\u23F3 '+cropDispDate(cropInputSafe(i).toISOString().slice(0,10))+'</td></tr>';}).join(''):'<tr><td colspan="5" style="color:#16a34a;font-weight:700">\u2713 No land is inside a pre-harvest interval.</td></tr>';
+  var regRows=all.map(function(i){
+    var l=cropLandById(i.land); var meta=cropInputKindMeta(i.kind);
+    var batch=(i.kind==='fertiliser'||i.kind==='seed')?(i.batch||'\u2014'):(i.batch?escTxHtml(i.batch):'<span class="lsr-miss">missing</span>');
+    var safe=cropInputActive(i)?('\u23F3 '+cropDispDate(cropInputSafe(i).toISOString().slice(0,10))):(i.phi?'cleared':'\u2014');
+    var status=cropInputActive(i)?'<span class="lsr-wd">\u23F3 within PHI</span>':'<span class="lsr-ok">\u2713 clear</span>';
+    return '<tr><td>'+cropDispDate(i.date)+'</td><td>'+escTxHtml(l?l.name:'?')+'</td><td>'+escTxHtml(i.product)+'<br><span style="color:#9ca3af;font-size:10px">Act 36/1947 \u00b7 '+escTxHtml(i.reg||'\u2014')+'</span></td><td><span class="lsr-pill '+meta[1].replace('p-','lsr-')+'">'+meta[0]+'</span></td><td>'+escTxHtml(i.rate||'')+'</td><td>'+batch+'</td><td>'+escTxHtml(i.by||'')+(i.operatorCert?' ('+escTxHtml(i.operatorCert)+')':'')+'</td><td>'+(i.phi?i.phi+' d':'None')+'</td><td>'+safe+'</td><td>'+status+'</td></tr>';
+  }).join('');
+  var banner=active.length?'<div class="lsr-banner warn"><b>\u23F3 '+active.length+' land(s) within a pre-harvest interval.</b> Do not harvest before the safe date (Section 1).'+(missing.length?(' '+missing.length+' record(s) missing a batch number.'):'')+'</div>':'<div class="lsr-banner ok"><b>\u2713 No active pre-harvest intervals.</b> All treated lands are safe to harvest.'+(missing.length?(' Note: '+missing.length+' record(s) missing a batch number.'):'')+'</div>';
+  var html='<h1>Spray Program &amp; Pre-Harvest Interval Audit</h1>'+
+    '<div class="lsr-meta">'+escTxHtml(FARM.name||'Farm')+' \u00b7 season '+ST_CROP.season+' \u00b7 Act 36/1947 \u00b7 figures to '+lsFmtDate(LS_TODAY)+'</div>'+banner+
+    '<h2>1 \u00b7 Lands within a pre-harvest interval</h2><table><thead><tr><th>Land</th><th>Product</th><th>Applied</th><th class="amt">PHI</th><th>Safe from</th></tr></thead><tbody>'+awRows+'</tbody></table>'+
+    '<h2>2 \u00b7 Full application register</h2><table><thead><tr><th>Date</th><th>Land</th><th>Product \u00b7 reg</th><th>Type</th><th>Rate</th><th>Batch</th><th>By</th><th>PHI</th><th>Safe from</th><th>Status</th></tr></thead><tbody>'+regRows+'</tbody></table>'+
+    '<div class="lsr-note">A line is flagged if it is missing a batch number or (for a scheduled product) the registration/applicator. Use of an unregistered product, or harvesting before the safe date, is a residue-compliance risk for export (MRL) and GlobalGAP.</div>'+
+    '<h2>3 \u00b7 Records to keep</h2><ul class="lsr-keep"><li>Registered product (Act 36 / L-number) used at label rate.</li><li>Date, land, batch and applicator for every application.</li><li>Pre-harvest interval observed before harvest/delivery.</li><li>Operator training and PPE for restricted products.</li></ul>'+
+    '<div class="lsr-disc"><b>Not agronomic or legal advice.</b> Confirm registration, rates and PHIs against the current product label. Final responsibility rests with the farm.</div>';
+  var csv=lsCsvRow(['Spray Program & PHI Audit',FARM.name||'Farm','Season',ST_CROP.season])+lsCsvRow([])+lsCsvRow(['Date','Land','Product','Reg','Type','Rate','Batch','By','Cert','PHI (d)','Safe from','Status']);
+  all.forEach(function(i){var l=cropLandById(i.land);csv+=lsCsvRow([i.date,l?l.name:'',i.product,i.reg||'',cropInputKindMeta(i.kind)[0],i.rate||'',i.batch||'',i.by||'',i.operatorCert||'',i.phi||0,cropInputActive(i)?cropInputSafe(i).toISOString().slice(0,10):'cleared',cropInputActive(i)?'within PHI':'clear']);});
+  lsShowReport('Spray program & PHI audit','linear-gradient(135deg,#9a3d6e,#7C2D5A)',html,csv,'crop-spray-phi-audit.csv');
+}
+
+function openCropInputCostReport(){
+  var byKind={}; var total=0;
+  ST_CROP.inputs.forEach(function(i){var l=cropLandById(i.land);var c=(i.costPerHa||0)*((l&&l.area)||0);var k=cropInputKindMeta(i.kind)[0];byKind[k]=(byKind[k]||0)+c;total+=c;});
+  var rows=Object.keys(byKind).map(function(k){return '<tr><td>'+k+'</td><td class="amt neg">'+cropRand(byKind[k])+'</td></tr>';}).join('');
+  var diesel=ST_CROP.compliance.dieselLitres||0;
+  var html='<h1>Crop Input Cost (SARS)</h1>'+
+    '<div class="lsr-meta">'+escTxHtml(FARM.name||'Farm')+' \u00b7 season '+ST_CROP.season+' \u00b7 Section 11(a) deductible inputs</div>'+
+    '<h2>1 \u00b7 Input cost by category</h2><table><tbody>'+rows+'</tbody><tfoot><tr class="total"><td>Total direct crop inputs</td><td class="amt">'+cropRand(total)+'</td></tr></tfoot></table>'+
+    '<div class="lsr-note">Seed, fertiliser and agrochemicals are deductible production costs under Section 11(a). They are recorded against the land and season for audit trail.</div>'+
+    '<h2>2 \u00b7 Diesel refund (primary production)</h2><table><tbody><tr><td>Eligible diesel litres logged</td><td class="amt">'+diesel.toLocaleString('en-ZA')+' L</td></tr><tr><td>Logbook detail</td><td class="amt">'+(ST_CROP.compliance.dieselLogbook?'\u2713 per activity':'incomplete')+'</td></tr></tbody></table>'+
+    '<div class="lsr-note">Eligible farming diesel qualifies for a refund claimed on the VAT201. The cents-per-litre rate changes with the annual Budget \u2014 enter the current rate when claiming.</div>'+
+    '<div class="lsr-disc"><b>Not tax advice.</b> Compiled from your records to support your tax practitioner. Confirm the current diesel-refund rate and eligibility with SARS.</div>';
+  var csv=lsCsvRow(['Crop Input Cost (SARS)',FARM.name||'Farm','Season',ST_CROP.season])+lsCsvRow([])+lsCsvRow(['Category','Cost (R)']);
+  Object.keys(byKind).forEach(function(k){csv+=lsCsvRow([k,Math.round(byKind[k])]);});
+  csv+=lsCsvRow(['Total',Math.round(total)])+lsCsvRow([])+lsCsvRow(['Eligible diesel litres',diesel]);
+  lsShowReport('Crop input cost (SARS)','linear-gradient(135deg,#2563EB,#1E3A8A)',html,csv,'crop-input-cost.csv');
+}
+
+function openCropWaterReport(){
+  var c=ST_CROP.compliance;
+  var irr=ST_CROP.lands.filter(function(l){return l.irrigated;});
+  var rows=irr.map(function(l){return '<tr><td>'+escTxHtml(l.name)+'</td><td>'+escTxHtml(l.crop||'\u2014')+'</td><td class="amt">'+l.area+' ha</td><td>Irrigated</td></tr>';}).join('') || '<tr><td colspan="4" style="color:#6b7280">No irrigated lands recorded.</td></tr>';
+  var pct=c.waterAuthorised?Math.round(c.waterUsed/c.waterAuthorised*100):0;
+  var html='<h1>Water Use Return</h1>'+
+    '<div class="lsr-meta">'+escTxHtml(FARM.name||'Farm')+' \u00b7 National Water Act 36 of 1998 \u00b7 season '+ST_CROP.season+'</div>'+
+    '<h2>1 \u00b7 Authorisation &amp; abstraction</h2><table><tbody>'+
+      '<tr><td>Water-use licence / registration</td><td class="amt">'+escTxHtml(c.waterWUL||'\u2014')+'</td></tr>'+
+      '<tr><td>Authorised volume</td><td class="amt">'+(c.waterAuthorised||0).toLocaleString('en-ZA')+' m\u00b3/yr</td></tr>'+
+      '<tr><td>Abstracted this season</td><td class="amt">'+(c.waterUsed||0).toLocaleString('en-ZA')+' m\u00b3</td></tr>'+
+      '<tr class="total"><td>Used vs authorised</td><td class="amt">'+pct+'%</td></tr>'+
+    '</tbody></table>'+
+    '<h2>2 \u00b7 Irrigated lands</h2><table><thead><tr><th>Land</th><th>Crop</th><th class="amt">Area</th><th>Use</th></tr></thead><tbody>'+rows+'</tbody></table>'+
+    '<div class="lsr-note">Keep monthly meter readings and stay within the authorised volume. Use above the authorisation, or unregistered use beyond Schedule-1, is an offence under the Act.</div>'+
+    '<div class="lsr-disc"><b>Not legal advice.</b> Confirm your authorisation conditions and reporting deadlines with the Department of Water and Sanitation / your Water User Association.</div>';
+  var csv=lsCsvRow(['Water Use Return',FARM.name||'Farm','Season',ST_CROP.season])+lsCsvRow([])+lsCsvRow(['WUL',c.waterWUL||''])+lsCsvRow(['Authorised m3/yr',c.waterAuthorised||0])+lsCsvRow(['Used m3',c.waterUsed||0])+lsCsvRow(['% used',pct])+lsCsvRow([])+lsCsvRow(['Irrigated land','Crop','Ha']);
+  irr.forEach(function(l){csv+=lsCsvRow([l.name,l.crop||'',l.area]);});
+  lsShowReport('Water use return','linear-gradient(135deg,#0891B2,#0E7490)',html,csv,'crop-water-use.csv');
+}
+
+function openCropComplianceReport(){
+  var sc=cropComplianceScore();
+  var secs=cropComplianceItems().map(function(it){
+    var dot=it.status==='g'?'\u2705':(it.status==='a'?'\u26a0\uFE0F':'\u26d4');
+    var kv=it.kv.map(function(p){return '<tr><td>'+escTxHtml(p[0])+'</td><td class="amt">'+escTxHtml(p[1])+'</td></tr>';}).join('');
+    var html='<h2>'+dot+' '+escTxHtml(it.t)+'</h2><div class="lsr-lead">'+escTxHtml(it.law)+' \u2014 '+escTxHtml(it.desc)+'</div><table><tbody>'+kv+'</tbody></table>';
+    // Documents on file
+    var docs=cropComplianceDocs(it.id);
+    if(docs.length){
+      html+='<div class="lsr-sub">Documents on file</div><table><thead><tr><th>Document</th><th>Type</th><th>Expiry</th></tr></thead><tbody>'+docs.map(function(d){var ex=cropDocExpiry(d.expiry);return '<tr><td>'+escTxHtml(d.name)+'</td><td>'+(d.kind==='pdf'?'PDF':'Image')+'</td><td>'+(d.expiry?escTxHtml(ex.label):'\u2014')+'</td></tr>';}).join('')+'</tbody></table>';
+    }
+    // Check & test log
+    var log=cropComplianceLog(it.id);
+    if(log.length){
+      html+='<div class="lsr-sub">Check &amp; test log</div><table><thead><tr><th>Date</th><th>Check</th><th>Note / result</th><th>Photos</th></tr></thead><tbody>'+log.map(function(e){var ph=(e.photos||[]);var thumbs=ph.map(function(x){return x.kind==='image'?'<img src="'+x.url+'" style="width:42px;height:42px;object-fit:cover;border-radius:5px;margin:1px;border:1px solid #eee">':'\uD83D\uDCC4 '+escTxHtml(x.name);}).join(' ');return '<tr><td>'+cropDispDate(e.date)+'</td><td>'+escTxHtml(e.what||'')+'</td><td>'+escTxHtml(e.note||'')+'</td><td>'+(thumbs||'\u2014')+'</td></tr>';}).join('')+'</tbody></table>';
+    }
+    return html;
+  }).join('');
+  var html='<h1>Crop Compliance Audit Pack</h1>'+
+    '<div class="lsr-meta">'+escTxHtml(FARM.name||'Farm')+' \u00b7 season '+ST_CROP.season+' \u00b7 compiled '+lsFmtDate(LS_TODAY)+'</div>'+
+    '<div class="lsr-banner ok"><b>Compliance score: '+sc.ok+'/'+sc.total+'.</b> Status summary across the Acts that touch crop farming. Tap each section for the records behind it.</div>'+
+    secs+
+    '<div class="lsr-disc"><b>Not legal advice.</b> A status summary compiled from your records for inspectors, buyers, your co-op or bank. Exact thresholds (refuge %, water limits, diesel rate) must be verified against current regulations.</div>';
+  var csv=lsCsvRow(['Crop Compliance Audit Pack',FARM.name||'Farm','Season',ST_CROP.season,'Score',sc.ok+'/'+sc.total])+lsCsvRow([])+lsCsvRow(['Area','Law','Status','Detail']);
+  cropComplianceItems().forEach(function(it){csv+=lsCsvRow([it.t,it.law,it.status==='g'?'OK':(it.status==='a'?'Attention':'Action'),it.kv.map(function(p){return p[0]+': '+p[1];}).join(' | ')]);});
+  csv+=lsCsvRow([])+lsCsvRow(['Check & test log']);
+  csv+=lsCsvRow(['Area','Date','Check','Note','Files']);
+  cropComplianceItems().forEach(function(it){ cropComplianceLog(it.id).forEach(function(e){ csv+=lsCsvRow([it.t,e.date,e.what||'',e.note||'',(e.photos||[]).map(function(x){return x.name;}).join('; ')]); }); });
+  csv+=lsCsvRow([])+lsCsvRow(['Documents on file']);
+  csv+=lsCsvRow(['Area','Document','Type','Expiry']);
+  cropComplianceItems().forEach(function(it){ cropComplianceDocs(it.id).forEach(function(d){ csv+=lsCsvRow([it.t,d.name,d.kind,d.expiry||'']); }); });
+  lsShowReport('Crop compliance audit pack','linear-gradient(135deg,#9a3d6e,#7C2D5A)',html,csv,'crop-compliance-pack.csv');
+}
+
+/* ===================================================================
+   VISIBILITY — gate Crop & Livestock nav by getFarmType()
+   =================================================================== */
+function applyFarmTypeVisibility(){
+  var ft = (typeof getFarmType==='function') ? getFarmType() : 'generic';
+  var showCrop = (ft==='crops' || ft==='mixed');
+  var showLive = (ft==='livestock' || ft==='mixed' || ft==='generic');
+  // generic → show both (farmer hasn't told us; don't hide tools)
+  if (ft==='generic') showCrop = true;
+  var nc=$('nav-crop');  if(nc) nc.style.display = showCrop ? '' : 'none';
+  var nl=$('nav-livestock'); if(nl && !document.body.classList.contains('simple-view')) nl.style.display = showLive ? '' : 'none';
+  // If current page is now hidden, fall back to dashboard
+  var cur = document.querySelector('.pg.on');
+  if (cur && cur.id==='pg-crop' && !showCrop) nav('dashboard');
+  if (cur && cur.id==='pg-livestock' && !showLive) nav('dashboard');
+}
+function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+
 function bootAgriInsights() {
   var loaded = loadState();
   if (!loaded) {
     // First visit on this device — shift the demo data into "today"
     migrateDemoData();
   }
+  try { cropInitialPlanSync(!loaded); } catch(e){}
   attachAutosave();
   registerServiceWorker();
+  try { applyFarmTypeVisibility(); } catch(e){}
 }
 
 // ============================================================
@@ -4141,6 +5675,7 @@ var ST = {
   incPeriod: '6',
   expPeriod: '6',
   cfPeriod: '1',
+  bankBalance: null,  // user's actual current bank balance; anchors the forecast when set
   showExpBar: true,
   budgetExpenseTarget: 1080000,
 
@@ -4867,6 +6402,14 @@ function dataChanged(event) {
       if (pageId === 'planning')  { safeCall(window.recomputePlan); }
       // Seasonal advice card lives on the Dashboard
       safeCall(window.renderSeasonalCard);
+      safeCall(window.applyFarmTypeVisibility);
+      break;
+
+    case 'crop':
+      safeCall(window.recomputePlan);
+      if (pageId === 'crop')     { safeCall(window.renderCrop); }
+      if (pageId === 'planning') { safeCall(window.recomputePlan); safeCall(function(){ setPlanTab(ST_PLAN.activeTab||'crops'); }); }
+      if (pageId === 'cashflow') { safeCall(window.updateCfPage); safeCall(window.renderCfForecast); }
       break;
 
     case 'recurring':
@@ -5436,6 +6979,7 @@ function nav(id) {
     if (id === 'budgets')     { renderBudgetsPage(); }
     if (id === 'reports')     { updateRptDisplay(); }
     if (id === 'livestock')   { renderHerdCards(); renderHerdSummary(); renderHealthMed(); }
+    if (id === 'crop')        { renderCrop(); }
     if (id === 'planning')    { recomputePlan(); setPlanTab(ST_PLAN.activeTab || 'crops'); updatePlanCombinedBanner(); updatePlanTabCounts(); }
     if (id === 'expenses')    { try { lazyInitCharts('expenses'); } catch (e) {} renderTable('expense'); renderExpBar(); updateExpPage(); }
     if (id === 'cashflow')    { try { lazyInitCharts('cashflow'); } catch (e) {} updateCfPage(); }
@@ -6397,6 +7941,7 @@ var LS_RPT_EXTRA_CSS =
   '.lsr-note{font-size:11.5px;color:#374151;background:#F9FAFB;border-left:3px solid #40916C;padding:9px 12px;line-height:1.55;margin-top:8px;border-radius:0 6px 6px 0}' +
   '.lsr-disc{margin-top:10px;font-size:11px;color:#6b7280;background:#FFFBEB;border:1px solid #FDE68A;border-radius:8px;padding:11px 13px;line-height:1.55}' +
   '.lsr-keep{font-size:12px;color:#374151;line-height:1.7;padding-left:18px;margin:6px 0 0}' +
+  '.lsr-sub{font-size:11px;font-weight:800;color:#1B4332;text-transform:uppercase;letter-spacing:.04em;margin:14px 0 4px}' +
   '.pos{color:#16a34a}.neg{color:#E74C3C}';
 var LS_RPT_SCREEN_CSS =
   '#ls-report-body{font-family:"Plus Jakarta Sans",system-ui,sans-serif;background:#fff;max-width:880px;margin:0 auto;padding:28px 32px;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,.07);color:#1a1a1a}' +
@@ -6954,6 +8499,7 @@ function recomputePlan() {
 
   // ── Step 2: Distribute crop cycle figures across months ───
   ST_PLAN.crops.forEach(function(c){
+    if(c.inForecast===false) return; // scenario / what-if crop — excluded from forecast
     var plantIdx   = ST_PLAN.months.findIndex(function(m){return m.label===c.plant;});
     var harvestIdx = ST_PLAN.months.findIndex(function(m){return m.label===c.harvest;});
     if(plantIdx<0||harvestIdx<0) return;
@@ -7175,6 +8721,31 @@ function getCropColor(cropName) {
   return fallbacks[key] || '#9CA3AF';
 }
 
+// Crop logo for Planning cards. Handles both naming styles (e.g. "Maize (white)" and "White maize").
+function planCropIcon(cropName){
+  if(!cropName) return '\uD83C\uDF31';
+  // exact match against the crop section's list first
+  if(typeof cropIcon==='function' && typeof ST_CROP!=='undefined' && ST_CROP.cropTypes){
+    var exact=ST_CROP.cropTypes.filter(function(c){return c.t===cropName;})[0];
+    if(exact) return exact.i;
+  }
+  var s=String(cropName).toLowerCase();
+  var map=[
+    ['maize','\uD83C\uDF3D'],['mielie','\uD83C\uDF3D'],['corn','\uD83C\uDF3D'],
+    ['wheat','\uD83C\uDF3E'],['barley','\uD83C\uDF3E'],['sorghum','\uD83C\uDF3E'],['oats','\uD83C\uDF3E'],['rye','\uD83C\uDF3E'],
+    ['sunflower','\uD83C\uDF3B'],['canola','\uD83C\uDF3C'],
+    ['soy','\uD83E\uDED8'],['bean','\uD83E\uDED8'],['groundnut','\uD83E\uDD5C'],['peanut','\uD83E\uDD5C'],
+    ['lucerne','\uD83C\uDF3F'],['alfalfa','\uD83C\uDF3F'],['hay','\uD83C\uDF3F'],['pasture','\uD83C\uDF3F'],
+    ['potato','\uD83E\uDD54'],['vegetable','\uD83E\uDD6C'],['cabbage','\uD83E\uDD6C'],['tomato','\uD83C\uDF45'],
+    ['citrus','\uD83C\uDF4A'],['orange','\uD83C\uDF4A'],['lemon','\uD83C\uDF4B'],
+    ['apple','\uD83C\uDF4E'],['pear','\uD83C\uDF50'],['deciduous','\uD83C\uDF4E'],['grape','\uD83C\uDF47'],['vine','\uD83C\uDF47'],
+    ['macadamia','\uD83C\uDF30'],['nut','\uD83C\uDF30'],['avo','\uD83E\uDD51'],
+    ['sugar','\uD83C\uDF3E'],['cane','\uD83C\uDF3E'],['cotton','\uD83C\uDF3C'],['tobacco','\uD83C\uDF43']
+  ];
+  for(var i=0;i<map.length;i++){ if(s.indexOf(map[i][0])>=0) return map[i][1]; }
+  return '\uD83C\uDF31';
+}
+
 function renderCalGrid() {
   var el = $('plan-cal-grid'); if (!el) return;
 
@@ -7232,24 +8803,28 @@ var monthLabels = allMonths.map(function(m) {
 var profitBg  = profitable ? 'var(--gb)' : 'var(--op)';
     var profitCol = profitable ? 'var(--gd)' : 'var(--or)';
 
-    return '<div style="background:#fff;border:1px solid var(--br);border-radius:var(--rl);padding:16px;box-shadow:var(--sh)">' +
+    var excl = (c.inForecast===false);
+    return '<div data-linkid="'+(c.linkId||'')+'" style="background:'+(excl?'#FCFAFD':'#fff')+';border:1px '+(excl?'dashed #c4b5d4':'solid var(--br)')+';border-radius:var(--rl);padding:16px;box-shadow:var(--sh)">' +
 
       '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap;gap:8px">' +
         '<div style="display:flex;align-items:center;gap:9px">' +
-          '<div style="width:14px;height:14px;border-radius:3px;background:' + col + ';flex-shrink:0"></div>' +
+          '<div style="width:34px;height:34px;border-radius:9px;background:' + col + '22;border:1.5px solid ' + col + '55;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">' + planCropIcon(c.crop) + '</div>' +
           '<div>' +
             '<div style="font-size:15px;font-weight:800;display:flex;align-items:center;gap:6px;flex-wrap:wrap">' +
               c.crop +
               (c.field ? '<span style="font-size:11px;font-weight:700;color:var(--gd);background:var(--gb);border:1px solid var(--gp);padding:2px 8px;border-radius:99px">\ud83d\udccd ' + c.field + '</span>' : '') +
               (c.repeat === 'annual' ? '<span title="Repeats every year" style="font-size:11px;font-weight:700;color:var(--bl);background:var(--bp);border:1px solid #BFDBFE;padding:2px 8px;border-radius:99px">\ud83d\udd01 Annual</span>' : '') +
+              (excl ? '<span title="Excluded from your forecast" style="font-size:11px;font-weight:700;color:var(--pu);background:var(--pp);border:1px solid #e9c9da;padding:2px 8px;border-radius:99px">\uD83D\uDD2E Scenario</span>' : '') +
             '</div>' +
             '<div style="font-size:12px;color:var(--t3);margin-top:3px">' + c.ha + 'ha &nbsp;·&nbsp; ' + c.yield + 't/ha &nbsp;·&nbsp; R' + c.price.toLocaleString('en-ZA') + '/ton</div>' +
+            (c.linkId ? '<div onclick="cropOpenLandFromPlan(\''+c.linkId+'\')" style="font-size:11px;font-weight:700;color:var(--gl);margin-top:5px;cursor:pointer">\uD83C\uDF3D Linked to a Land \u00b7 open \u203a</div>' : '') +
           '</div>' +
         '</div>' +
         '<div style="display:flex;align-items:center;gap:8px">' +
           '<div style="background:' + profitBg + ';color:' + profitCol + ';font-size:13px;font-weight:800;padding:4px 12px;border-radius:20px">' +
             'Est. ' + (profitable ? 'profit' : 'loss') + ': R' + (Math.abs(net)/1000).toFixed(0) + 'k' +
           '</div>' +
+          '<button onclick="planToggleForecast(' + idx + ')" title="'+(excl?'Add this crop back into your forecast':'Exclude this crop from your forecast (keep it as a what-if)')+'" style="background:'+(excl?'var(--pp)':'#fff')+';border:1px solid '+(excl?'#e9c9da':'var(--br)')+';border-radius:6px;padding:5px 11px;font-size:12px;font-weight:700;color:'+(excl?'var(--pu)':'var(--t2)')+';cursor:pointer">'+(excl?'\uD83D\uDD2E Scenario':'\u2713 In forecast')+'</button>' +
           '<button onclick="openEditCrop(' + idx + ')" style="background:var(--gb);border:1px solid var(--gp);border-radius:6px;padding:5px 11px;font-size:12px;font-weight:600;color:var(--gd);cursor:pointer">Edit</button>' +
           '<button onclick="deleteCrop(' + idx + ')" style="background:var(--rp);border:1px solid #FECACA;border-radius:6px;padding:5px 11px;font-size:12px;font-weight:600;color:var(--rd);cursor:pointer">Remove</button>' +
         '</div>' +
@@ -7286,6 +8861,19 @@ function updatePlanSummary() {
   el=$('ps-actual'); if(el){
     el.textContent=(actualYTD>=0?'+R ':'-R ')+(Math.abs(actualYTD)/1000).toFixed(0)+'k YTD';
     el.style.color=actualYTD>=0?'var(--bl)':'var(--rd)';
+  }
+  // Scenario (excluded) crops — show a what-if line without affecting the forecast totals
+  var scen=(ST_PLAN.crops||[]).filter(function(c){return c.inForecast===false;});
+  var sEl=$('ps-scenario');
+  if(sEl){
+    if(scen.length){
+      var sNet=scen.reduce(function(s2,c){return s2 + (c.ha*c.yield*c.price - c.ha*((c.inputCost||0)+(c.otherCost||0)));},0);
+      var combined=profit+sNet;
+      sEl.style.display='block';
+      sEl.innerHTML='<div style="font-weight:800;color:var(--pu);margin-bottom:4px">\uD83D\uDD2E '+scen.length+' scenario crop'+(scen.length>1?'s':'')+' (not in forecast)</div>'+
+        '<div style="display:flex;justify-content:space-between;color:var(--t2)"><span>Their combined net</span><span style="font-weight:700;color:'+(sNet>=0?'var(--gd)':'var(--rd)')+'">'+(sNet>=0?'+R ':'-R ')+(Math.abs(sNet)/1000).toFixed(0)+'k</span></div>'+
+        '<div style="display:flex;justify-content:space-between;color:var(--t2);margin-top:2px"><span>If you commit them</span><span style="font-weight:700">'+(combined>=0?'R ':'-R ')+(Math.abs(combined)/1000).toFixed(0)+'k</span></div>';
+    } else { sEl.style.display='none'; sEl.innerHTML=''; }
   }
   el=$('ps-badge');
   if(el){
@@ -7482,6 +9070,18 @@ function setModalMode(mode, idx) {
   calcAcProfit();
 }
 
+function planToggleForecast(idx){
+  if(idx<0||idx>=ST_PLAN.crops.length) return;
+  var c=ST_PLAN.crops[idx];
+  c.inForecast = (c.inForecast===false) ? true : false;
+  recomputePlan();
+  if(typeof renderPlanCrops==='function') renderPlanCrops();
+  if(typeof renderCalGrid==='function') renderCalGrid();
+  if(typeof updatePlanSummary==='function') updatePlanSummary();
+  dataChanged('plan');
+  toast(c.inForecast===false ? (c.crop+' set as a scenario \u2014 left out of your forecast') : (c.crop+' added back into your forecast'), 'success');
+}
+
 function deleteCrop(idx) {
   if(idx<0||idx>=ST_PLAN.crops.length) return;
   var name=ST_PLAN.crops[idx].crop;
@@ -7508,15 +9108,8 @@ function autoFillCropDefaults() {
   if (hv && d.harvestMonth && !window.CROP_USER_TOUCHED_HARVEST) {
     selectMonthByShortName(hv, d.harvestMonth);
   }
-  // Market toggle UI: show only if this crop has a SAFEX listing
+  // Show the one-tap SAFEX chip if this crop has a listing
   refreshCropMarketUI();
-  // If user is in market mode and the crop changed, refresh the price
-  if (window.CROP_USE_MARKET) {
-    var info = getCropMarketPrice(crop);
-    if (info && pr) pr.value = info.marketPrice;
-    else            window.CROP_USE_MARKET = false;
-    refreshCropMarketUI();
-  }
   calcAcProfit();
 }
 
@@ -7549,98 +9142,31 @@ function refreshFieldSuggestions() {
 window.CROP_USE_MARKET = false;
 
 function refreshCropMarketUI() {
-  var crop = $('ac-crop') && $('ac-crop').value;
+  var crop = $("ac-crop") && $("ac-crop").value;
   var info = getCropMarketPrice(crop);
-  var toggle = $('ac-mkt-toggle');
-  var hint   = $('ac-mkt-hint');
-  var priceInp = $('ac-price');
-  var myBtn  = $('ac-toggle-my');
-  var mktBtn = $('ac-toggle-mkt');
-  if (!toggle || !hint) return;
-
+  var chip = $("ac-mkt-chip");
+  if (!chip) return;
   if (!info) {
-    // No SAFEX listing — hide everything market-related
-    toggle.style.display = 'none';
-    hint.style.display   = 'none';
-    if (priceInp) priceInp.removeAttribute('readonly');
-    if (priceInp) priceInp.style.background = '';
-    if (priceInp) priceInp.style.color = '';
-    if (priceInp) priceInp.style.cursor = '';
-    if (priceInp) priceInp.style.borderColor = '';
-    window.CROP_USE_MARKET = false;
+    chip.style.display = "none";
+    chip.innerHTML = "";
     return;
   }
-
-  // Show toggle + hint
-  toggle.style.display = 'inline-flex';
-  hint.style.display   = 'block';
-
-  // Sync the toggle visual state
-  if (myBtn && mktBtn) {
-    if (window.CROP_USE_MARKET) {
-      myBtn.style.background = 'transparent'; myBtn.style.color = 'var(--t3)'; myBtn.style.boxShadow = 'none';
-      mktBtn.style.background = 'var(--gd)';  mktBtn.style.color = '#fff';     mktBtn.style.boxShadow = '0 1px 2px rgba(0,0,0,.06)';
-    } else {
-      myBtn.style.background = '#fff';        myBtn.style.color = 'var(--t1)'; myBtn.style.boxShadow = '0 1px 2px rgba(0,0,0,.06)';
-      mktBtn.style.background = 'transparent'; mktBtn.style.color = 'var(--t3)'; mktBtn.style.boxShadow = 'none';
-    }
-  }
-
-  // Sync the price input visual state (read-only when in market mode)
-  if (priceInp) {
-    if (window.CROP_USE_MARKET) {
-      priceInp.setAttribute('readonly', 'readonly');
-      priceInp.style.background  = 'var(--gb)';
-      priceInp.style.color       = 'var(--gd)';
-      priceInp.style.cursor      = 'not-allowed';
-      priceInp.style.borderColor = 'var(--gp)';
-    } else {
-      priceInp.removeAttribute('readonly');
-      priceInp.style.background  = '';
-      priceInp.style.color       = '';
-      priceInp.style.cursor      = '';
-      priceInp.style.borderColor = '';
-    }
-  }
-
-  // Build the hint text
-  var trendArr   = info.trend === 'up' ? '\u2191' : '\u2193';
-  var trendColor = info.trend === 'up' ? 'var(--gd)' : 'var(--rd)';
-  var pctText    = (info.pct >= 0 ? '+' : '') + info.pct + '%';
-  if (window.CROP_USE_MARKET) {
-    hint.innerHTML =
-      '<svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="var(--gd)" stroke-width="2.5" style="vertical-align:-1px;margin-right:3px"><polyline points="20 6 9 17 4 12"/></svg>' +
-      '<strong style="color:var(--gd)">Auto: SAFEX ' + info.mktKey + ' R' + info.marketPrice.toLocaleString('en-ZA') + '/ton</strong>';
-  } else {
-    hint.innerHTML =
-      'Today\u2019s SAFEX: <strong style="color:var(--t1)">' + info.mktKey + ' R' + info.marketPrice.toLocaleString('en-ZA') + '/ton</strong> ' +
-      '<span style="color:' + trendColor + ';font-weight:700">' + trendArr + ' ' + pctText + '</span>';
-  }
+  chip.style.display = "block";
+  chip.innerHTML =
+    '<div onclick="setCropUseMarket(true)" title="Use today\u2019s SAFEX reference" style="display:inline-flex;align-items:center;gap:7px;margin-top:8px;background:var(--gb);border:1px solid #cfe9d8;border-radius:99px;padding:5px 11px;font-size:11.5px;font-weight:700;color:var(--gd);cursor:pointer">' +
+      '\uD83D\uDCB9 SAFEX ' + info.mktKey + ' \u2248 R' + info.marketPrice.toLocaleString("en-ZA") + '/t' +
+      '<span style="background:var(--gd);color:#fff;border-radius:99px;padding:2px 8px;font-size:10px">Use</span>' +
+    '</div>';
 }
 
 function setCropUseMarket(useIt) {
   var crop  = $('ac-crop') && $('ac-crop').value;
   var info  = getCropMarketPrice(crop);
   var price = $('ac-price');
-  if (useIt) {
-    if (!info) { toast('No SAFEX listing for this crop','error'); return; }
-    window.CROP_USE_MARKET = true;
-    if (price) price.value = info.marketPrice;
-  } else {
-    window.CROP_USE_MARKET = false;
-    // Keep current value — user can adjust from there
-  }
-  refreshCropMarketUI();
-  calcAcProfit();
+  if (useIt && info && price) { price.value = info.marketPrice; calcAcProfit(); }
 }
 
-function onCropPriceTyped() {
-  // If user types in the price field, that's an explicit override — flip back to "My price"
-  if (window.CROP_USE_MARKET) {
-    window.CROP_USE_MARKET = false;
-    refreshCropMarketUI();
-  }
-}
+function onCropPriceTyped() { /* manual entry — chip stays available to re-fill */ }
 
 function calcAcProfit() {
   var ha=parseFloat($('ac-ha')&&$('ac-ha').value)||0;
@@ -8691,6 +10217,7 @@ function hideEvtModal() {
 // Transaction detail + receipt / invoice
 // ============================================================
 var TXD_IDX = -1;
+var TXD_EDIT = false;
 
 function txdEsc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
 
@@ -8704,6 +10231,7 @@ function txdLongDate(str){
 
 function openTxnDetail(idx){
   TXD_IDX = idx;
+  TXD_EDIT = false;
   var ov = $('txd-modal-overlay');
   if(!ov){
     ov = document.createElement('div');
@@ -8726,6 +10254,7 @@ function hideTxnDetail(){
 function renderTxnDetail(){
   var card = $('txd-modal-card'); if(!card) return;
   var t = ST.txns[TXD_IDX]; if(!t){ hideTxnDetail(); return; }
+  if (TXD_EDIT) { renderTxnEdit(t); return; }
   var inc = t.type === 'income';
   var headBg = inc ? 'linear-gradient(135deg,var(--gm),var(--gd))' : 'linear-gradient(135deg,#E74C3C,#c0392b)';
   var pill   = inc ? 'Money in \u00b7 Income' : 'Money out \u00b7 Expense';
@@ -8840,11 +10369,71 @@ function txdRemoveReceipt(){
   toast('Receipt removed','success');
 }
 
-function txdEdit(){
-  var idx = TXD_IDX;
-  hideTxnDetail();
-  nav('transactions');
-  setTimeout(function(){ if(typeof txStartEdit==='function') txStartEdit(idx); }, 60);
+var TXD_DRAFT = null;
+function txdEdit(){ var t=ST.txns[TXD_IDX]; if(!t) return; TXD_DRAFT={type:t.type,desc:t.desc,amt:t.amt,cat:t.cat,date:t.date,method:t.method}; TXD_EDIT=true; renderTxnDetail(); }
+function txdCancelEdit(){ TXD_EDIT=false; TXD_DRAFT=null; renderTxnDetail(); }
+function txdCaptureEdit(){
+  if(!TXD_DRAFT) return;
+  var d=$('txde-desc'), a=$('txde-amt'), c=$('txde-cat'), dt=$('txde-date'), m=$('txde-method');
+  if(d)  TXD_DRAFT.desc=d.value;
+  if(a)  { var v=parseFloat(a.value); if(!isNaN(v)) TXD_DRAFT.amt=v; }
+  if(c)  TXD_DRAFT.cat=c.value;
+  if(dt) TXD_DRAFT.date=dt.value;
+  if(m)  TXD_DRAFT.method=m.value;
+}
+
+function renderTxnEdit(t){
+  var card = $('txd-modal-card'); if(!card) return;
+  var dr = TXD_DRAFT || t;
+  t = dr;
+  var inc = t.type === 'income';
+  var headBg = inc ? 'linear-gradient(135deg,var(--gm),var(--gd))' : 'linear-gradient(135deg,#E74C3C,#c0392b)';
+  var cats = (typeof txAllCats==='function') ? txAllCats() : [t.cat];
+  var methods = ['Bank transfer','Cash','Cheque','Card','Debit order','Other'];
+  if (t.method && methods.indexOf(t.method)<0) methods.unshift(t.method);
+  var FLD='margin-bottom:12px';
+  var LB='font-size:11px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:.04em;margin-bottom:4px';
+  var IN='width:100%;padding:9px 11px;border:1px solid var(--br);border-radius:8px;font-family:inherit;font-size:13px;background:#fff';
+  card.innerHTML =
+    '<div style="padding:16px 20px;color:#fff;position:relative;background:'+headBg+'">' +
+      '<div onclick="txdCancelEdit()" style="position:absolute;top:14px;right:14px;width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.18);color:#fff;font-size:15px;display:flex;align-items:center;justify-content:center;cursor:pointer">\u2715</div>' +
+      '<div style="font-size:15px;font-weight:800">Edit transaction</div>' +
+      '<div style="font-size:11.5px;opacity:.9;margin-top:2px">Changes sync across Transactions, Income, Expenses, Money Flow &amp; reports.</div>' +
+    '</div>' +
+    '<div style="padding:18px 20px">' +
+      '<div style="'+FLD+'"><div style="'+LB+'">Type</div>' +
+        '<div style="display:flex;gap:8px">' +
+          '<button onclick="txdSetType(\'income\')" id="txde-type-in" style="flex:1;padding:9px;border-radius:8px;font-weight:700;font-size:12.5px;cursor:pointer;border:1px solid '+(inc?'var(--gd)':'var(--br)')+';background:'+(inc?'var(--gd)':'#fff')+';color:'+(inc?'#fff':'var(--t3)')+'">Money in</button>' +
+          '<button onclick="txdSetType(\'expense\')" id="txde-type-ex" style="flex:1;padding:9px;border-radius:8px;font-weight:700;font-size:12.5px;cursor:pointer;border:1px solid '+(!inc?'var(--rd)':'var(--br)')+';background:'+(!inc?'var(--rd)':'#fff')+';color:'+(!inc?'#fff':'var(--t3)')+'">Money out</button>' +
+        '</div></div>' +
+      '<div style="'+FLD+'"><div style="'+LB+'">Description</div><input id="txde-desc" style="'+IN+'" value="'+txdEsc(t.desc||'')+'"></div>' +
+      '<div style="'+FLD+'"><div style="'+LB+'">Amount (R)</div><input id="txde-amt" type="number" style="'+IN+'" value="'+(t.amt||0)+'"></div>' +
+      '<div style="'+FLD+'"><div style="'+LB+'">Category</div><select id="txde-cat" style="'+IN+'">'+cats.map(function(c){return '<option'+(c===t.cat?' selected':'')+'>'+txdEsc(c)+'</option>';}).join('')+'</select></div>' +
+      '<div style="'+FLD+'"><div style="'+LB+'">Date</div><input id="txde-date" type="text" style="'+IN+'" value="'+txdEsc(t.date||'')+'" placeholder="e.g. 12 May 2024"></div>' +
+      '<div style="'+FLD+'"><div style="'+LB+'">'+(inc?'Received via':'Paid with')+'</div><select id="txde-method" style="'+IN+'">'+methods.map(function(m){return '<option'+(m===t.method?' selected':'')+'>'+txdEsc(m)+'</option>';}).join('')+'</select></div>' +
+    '</div>' +
+    '<div style="display:flex;gap:8px;padding:14px 20px;border-top:1px solid var(--br2)">' +
+      '<button onclick="txdSaveEdit()" style="flex:2;padding:10px;border-radius:9px;font-weight:700;font-size:13px;border:none;background:var(--gd);color:#fff;cursor:pointer">Save changes</button>' +
+      '<button onclick="txdCancelEdit()" style="flex:1;padding:10px;border-radius:9px;font-weight:700;font-size:13px;border:none;background:var(--br2);color:var(--t2);cursor:pointer">Cancel</button>' +
+    '</div>';
+}
+function txdSetType(tp){ txdCaptureEdit(); if(TXD_DRAFT) TXD_DRAFT.type=tp; renderTxnEdit(TXD_DRAFT); }
+function txdSaveEdit(){
+  var t = ST.txns[TXD_IDX]; if(!t) return;
+  txdCaptureEdit();
+  if(TXD_DRAFT){
+    t.type   = TXD_DRAFT.type;
+    t.desc   = (TXD_DRAFT.desc||'').trim();
+    t.amt    = TXD_DRAFT.amt;
+    t.cat    = TXD_DRAFT.cat;
+    t.date   = (TXD_DRAFT.date||'').trim();
+    t.method = TXD_DRAFT.method;
+  }
+  TXD_EDIT = false; TXD_DRAFT = null;
+  dataChanged('transaction');
+  if(typeof saveState==='function') saveState();
+  renderTxnDetail();
+  toast('Transaction updated \u2014 synced everywhere','success');
 }
 
 function txdDelete(){
@@ -8853,6 +10442,7 @@ function txdDelete(){
   ST.txns.splice(TXD_IDX, 1);
   hideTxnDetail();
   dataChanged('transaction');
+  if(typeof saveState==='function') saveState();
   toast('Transaction deleted','success');
 }
 
@@ -10626,6 +12216,7 @@ if (!hasTxns && !hasPlan && !hasRecurring) {
 
 if (fwdChart)   fwdChart.style.display   = '';
   if (recurPanel) recurPanel.style.display = '';
+  renderCfBankBalance();
 
   var p = ST.cfFwdPeriod || '6';
   var n = parseInt(p, 10);
@@ -10644,7 +12235,7 @@ var rowsEl = $('cf-fwd-rows');
     var maxAbs = months.reduce(function(s, m){ return Math.max(s, Math.abs(m.balance)); }, 1);
     if (maxAbs < 1000000) maxAbs = 1000000;
 
-    rowsEl.innerHTML = months.map(function(m) {
+    rowsEl.innerHTML = months.map(function(m, idx) {
       var pct = Math.min(50, Math.abs(m.balance) / maxAbs * 50);
       var fillCls = m.status === 'danger' ? 'danger'
                    : (m.status === 'tight' ? 'tight' : 'ok');
@@ -10652,7 +12243,17 @@ var rowsEl = $('cf-fwd-rows');
       var pipText = m.status === 'danger' ? 'Below zero'
                    : (m.status === 'tight' ? 'Tight' : 'Healthy');
       var balText = (m.balance < 0 ? '\u2212' : '') + fmtK(Math.abs(m.balance));
-      return '<div class="fwd-row">' +
+      function ln(lbl, val, neg){ if(!val) return ''; return '<div class="dr"><span>' + lbl + '</span><span class="' + (neg?'neg':'pos') + '">' + (neg?'\u2212':'+') + fmtK(Math.abs(val)) + '</span></div>'; }
+      var net = m.income - m.expenses;
+      var drill = '<div class="fwd-drill" id="cf-drill-' + idx + '">' +
+        ln('\uD83C\uDF3E Crop plan income', m.cropIncome, false) +
+        ln('\uD83D\uDD01 Recurring income', m.recurringIncome, false) +
+        ln('\uD83E\uDDFE Crop plan expenses', m.cropExpenses, true) +
+        ln('\uD83D\uDD01 Recurring expenses', m.recurringExpenses, true) +
+        '<div class="dr tot"><span>Net for ' + m.name + '</span><span class="' + (net<0?'neg':'pos') + '">' + (net<0?'\u2212':'+') + fmtK(Math.abs(net)) + '</span></div>' +
+        '<div style="font-size:10.5px;color:var(--t4);margin-top:6px">Projected balance end of ' + m.label + ': ' + (m.balance<0?'\u2212':'') + fmtK(Math.abs(m.balance)) + (m.source==='fallback'?' \u00b7 estimated (no crop plan)':'') + '</div>' +
+      '</div>';
+      return '<div class="fwd-row" onclick="cfToggleFwdRow(' + idx + ')">' +
         '<div class="month">' + m.name + '</div>' +
         '<div class="fwd-bar-track">' +
           '<div class="fwd-bar-zero"></div>' + fill +
@@ -10660,7 +12261,7 @@ var rowsEl = $('cf-fwd-rows');
         '<div class="balance ' + m.status + '">' + balText +
           ' <span class="pip ' + m.status + '">' + pipText + '</span>' +
         '</div>' +
-      '</div>';
+      '</div>' + drill;
     }).join('');
   }
   setEl('cf-fwd-title', 'Next ' + n + (n === 1 ? ' month' : ' months') + ' \u2014 projected balance');
@@ -10696,9 +12297,20 @@ var sug = $('cf-suggestion');
   if (sug) {
     if (firstWarn) {
       sug.style.display = 'flex';
-      setEl('cf-suggestion-text',
-        'Talk to Senwes or GWK about 60-day payment terms on your fertiliser and seed orders. ' +
-        'That pushes input expenses by a month and could be enough to keep you above the line through ' + firstWarn.label + '.');
+      // Find the biggest upcoming expense month up to (and including) the first tight month
+      var ft = (typeof getFarmType === 'function') ? getFarmType() : 'generic';
+      var upto = months.slice(0, Math.max(1, months.indexOf(firstWarn) + 1));
+      var bigExp = upto.reduce(function(a, b){ return b.expenses > a.expenses ? b : a; }, upto[0]);
+      var costNoun = (ft === 'crops') ? 'fertiliser & seed'
+                   : (ft === 'livestock') ? 'feed & licks'
+                   : (ft === 'mixed') ? 'your inputs (feed, fertiliser & seed)'
+                   : 'costs';
+      var lead = (ft === 'crops' || ft === 'mixed')
+        ? ('Your biggest upcoming cost is ' + costNoun + ' (about ' + fmtK(bigExp.expenses) + ' in ' + bigExp.name + '). Asking your input supplier about 60-day terms would push it back a month and could keep you above the line through ' + firstWarn.label + '.')
+        : (ft === 'livestock')
+        ? ('Your biggest upcoming cost is ' + costNoun + ' (about ' + fmtK(bigExp.expenses) + ' in ' + bigExp.name + '). Staggering feed orders or spreading the auction purchase could keep you above the line through ' + firstWarn.label + '.')
+        : ('Your biggest upcoming cost is about ' + fmtK(bigExp.expenses) + ' in ' + bigExp.name + '. Delaying or splitting it by a month would keep your balance above zero through ' + firstWarn.label + '.');
+      setEl('cf-suggestion-text', lead);
     } else {
       sug.style.display = 'none';
     }
@@ -10711,8 +12323,8 @@ var planEl = $('cf-plan-status');
     if (planHasIncome) {
       planEl.textContent = 'Your forecast is using your current crop plan.';
     } else {
-      planEl.innerHTML = 'No crop plan set \u2014 using your last 3 months\u2019 average. ' +
-        '<a onclick="nav(\u0027planning\u0027)" style="color:var(--gd);font-weight:700;cursor:pointer;text-decoration:underline">Add crops to your plan</a> for a more accurate forecast.';
+      planEl.innerHTML = 'You don\u2019t have a crop plan yet, so future months are a rough estimate from your recent activity (income held a little below average, costs near average) \u2014 treat the runway as cautious, not exact. ' +
+        '<a onclick="nav(\u0027planning\u0027)" style="color:var(--gd);font-weight:700;cursor:pointer;text-decoration:underline">Add your crop plan</a> for a forecast based on your real planting &amp; harvest months.';
     }
   }
 
@@ -10792,14 +12404,55 @@ function toggleCfRecur() {
   panel.classList.toggle('expanded', !open);
 }
 
+function cfCurrentCashEstimate(){
+  var b=0; (ST.txns||[]).forEach(function(t){ if(t.type==='income') b+=t.amt; else b-=t.amt; });
+  if (typeof ST.openingBalance==='number') b+=ST.openingBalance;
+  return b;
+}
+function renderCfBankBalance(){
+  var inp=$('cf-bb-val'); if(!inp) return;
+  var sub=$('cf-bb-sub');
+  if (typeof ST.bankBalance==='number' && !isNaN(ST.bankBalance)){
+    inp.value = Math.round(ST.bankBalance).toLocaleString('en-ZA').replace(/,/g,' ');
+    if(sub) sub.textContent = 'The forecast below starts from this. Update it whenever you like.';
+  } else {
+    // prefill with the computed estimate so the farmer can confirm or correct it
+    var est=cfCurrentCashEstimate();
+    inp.value = Math.round(est).toLocaleString('en-ZA').replace(/,/g,' ');
+    if(sub) sub.innerHTML = 'We\u2019ve estimated this from your records \u2014 <b>check it against your bank and tap Save</b> so the forecast is accurate.';
+  }
+}
+function cfSaveBankBalance(){
+  var inp=$('cf-bb-val'); if(!inp) return;
+  var raw=(inp.value||'').replace(/[^0-9.\-]/g,'');
+  var val=parseFloat(raw);
+  if(isNaN(val)){ toast('Enter your bank balance','error'); return; }
+  ST.bankBalance=val;
+  if(typeof saveState==='function') saveState();
+  renderCfForecast();
+  toast('Bank balance saved \u2014 forecast updated','success');
+}
+function cfToggleFwdRow(idx){
+  var d=$('cf-drill-'+idx); if(!d) return;
+  var open=d.classList.contains('open');
+  // close others for a clean single-open view
+  var all=document.querySelectorAll('#pg-cashflow .fwd-drill');
+  for(var i=0;i<all.length;i++) all[i].classList.remove('open');
+  if(!open) d.classList.add('open');
+}
 function buildCfForecast(numMonths) {
 
-var balance = 0;
-  ST.txns.forEach(function(t) {
-    if (t.type === 'income') balance += t.amt;
-    else                      balance -= t.amt;
-  });
-  if (typeof ST.openingBalance === 'number') balance += ST.openingBalance;
+var balance;
+  if (typeof ST.bankBalance === 'number' && !isNaN(ST.bankBalance)) {
+    balance = ST.bankBalance; // anchor to the farmer's real current balance
+  } else {
+    balance = 0;
+    ST.txns.forEach(function(t) {
+      if (t.type === 'income') balance += t.amt;
+      else                      balance -= t.amt;
+    });
+    if (typeof ST.openingBalance === 'number') balance += ST.openingBalance;
+  }
 
 var planHasIncome = ST_PLAN && ST_PLAN.months &&
                       ST_PLAN.months.some(function(m){ return m.income > 0; });
@@ -10845,8 +12498,8 @@ var cropInc = 0, cropExp = 0, src = 'fallback';
     }
     if (src === 'fallback') {
 
-cropInc = Math.round(avgIn  * 0.3);
-      cropExp = Math.round(avgOut * 0.85);
+cropInc = Math.round(avgIn  * 0.55);
+      cropExp = Math.round(avgOut * 0.90);
     }
 
 var rec = recurringFor(mIdx);
@@ -11852,6 +13505,7 @@ var body = $('stmt-preview-body');
   if(body) body.innerHTML = buildPreviewHTML(type, R, lbl);
 
 var waBtn2 = $('stmt-preview-wa-btn'); if(waBtn2) waBtn2.style.display='';
+  var prBtn2 = $('stmt-preview-print-btn'); if(prBtn2) prBtn2.style.display='';
   var bg = $('stmt-preview-bg');
   if(bg) bg.style.display = 'flex';
 }
@@ -12883,8 +14537,8 @@ var TOUR_STEPS = [
     page:   'reports',
     icon:   '📋',
     title:  'Reports — Print-ready for SARS',
-    desc:   'Three official statements — Profit & Loss, Cash Flow and Tax Summary — all calculated from your recorded transactions. Click any one to open a full print preview.',
-    tip:    'The Tax Summary includes your VAT 201 figures, Section 11 deductions and a provisional tax estimate — all in SARS format.',
+    desc:   'Three official statements — Profit & Loss, Cash Flow and Tax Summary — all calculated from your recorded transactions. Click any one for a full print preview. Further down, the Accountant Pack bundles your year-end exports.',
+    tip:    'The Accountant Pack previews everything your accountant needs — P&L, transactions, general ledger, asset register and a Pastel/Xero import — then downloads it in one go, or invite your accountant by email.',
     pos:    'right'
   },
   {
@@ -12906,7 +14560,18 @@ var TOUR_STEPS = [
     pos:    'right'
   },
   {
+    target: 'nav-crop',
+    requireNav: 'nav-crop',
+    page:   'crop',
+    icon:   '🌾',
+    title:  'Crops — Lands, inputs & compliance',
+    desc:   'Everything for your cropping enterprise in one place: each land with its crop, area and growth stage; your spray & input log; and a full compliance tracker for the Acts that touch crop farming — water, agrochemicals, GMO, seed and more.',
+    tip:    'The Compliance tab keeps your records, reminds you when a check is due, stores your licences with expiry alerts, and builds an audit pack you can hand to an inspector or buyer.',
+    pos:    'right'
+  },
+  {
     target: 'nav-livestock',
+    requireNav: 'nav-livestock',
     page:   'livestock',
     icon:   '🐄',
     title:  'Livestock — Herd value & health',
@@ -13018,9 +14683,23 @@ function tourCloseQC() {
   var card = $('tour-card');
   if (card) { card.style.maxWidth=''; card.style.width=''; }
 }
+// Skip tour steps whose required nav item is hidden for this farm type
+function tourStepHidden(i){
+  var st=TOUR_STEPS[i]; if(!st||!st.requireNav) return false;
+  // Mirror applyFarmTypeVisibility(): data-driven, not layout-dependent
+  var ft=(typeof getFarmType==='function')?getFarmType():'generic';
+  if(st.requireNav==='nav-crop')      return !(ft==='crops'||ft==='mixed'||ft==='generic');
+  if(st.requireNav==='nav-livestock') return !(ft==='livestock'||ft==='mixed'||ft==='generic');
+  var el=$(st.requireNav); if(!el) return true;
+  try{ if(getComputedStyle(el).display==='none') return true; }catch(e){}
+  return false;
+}
+function tourVisibleSteps(){ var out=[]; for(var i=0;i<TOUR_STEPS.length;i++){ if(!tourStepHidden(i)) out.push(i); } return out; }
+
 function tourStart() {
   TOUR_ACTIVE = true;
-  TOUR_STEP = 0;
+  var vis0=tourVisibleSteps();
+  TOUR_STEP = vis0.length ? vis0[0] : 0;
   var ov = $('tour-overlay');
   if (ov) ov.style.display = 'block';
   tourRender();
@@ -13035,32 +14714,39 @@ function tourEnd() {
 }
 
 function tourNext() {
-  if (TOUR_STEP < TOUR_STEPS.length - 1) {
-    TOUR_STEP++;
-    tourRender();
-  } else {
-    tourFinish();
-  }
+  var i=TOUR_STEP+1;
+  while(i<TOUR_STEPS.length && tourStepHidden(i)) i++;
+  if (i < TOUR_STEPS.length) { TOUR_STEP=i; tourRender(); }
+  else { tourFinish(); }
 }
 
 function tourPrev() {
-  if (TOUR_STEP > 0) {
-    TOUR_STEP--;
-    tourRender();
-  }
+  var i=TOUR_STEP-1;
+  while(i>=0 && tourStepHidden(i)) i--;
+  if (i>=0) { TOUR_STEP=i; tourRender(); }
 }
 
 function tourFinish() {
   tourEnd();
-
-  setTimeout(function(){
-    tourShowDemoSuggest();
-  }, 500);
+  setTimeout(function(){ tourShowComplete(); }, 450);
+}
+function tourShowComplete(){
+  var bg=$('tour-complete-bg'); if(bg) bg.style.display='flex';
+  // draw the eye to the per-tab demo button
+  var ptf=$('page-tour-fixed');
+  if(ptf){ ptf.classList.remove('hidden'); ptf.classList.add('pulse'); setTimeout(function(){ ptf.classList.remove('pulse'); }, 7000); }
+}
+function tourCompleteClose(){ var bg=$('tour-complete-bg'); if(bg) bg.style.display='none'; }
+function tourCompleteDemoNow(){
+  tourCompleteClose();
+  if(typeof startCurrentPageTour==='function') startCurrentPageTour();
 }
 
 function tourRender() {
   var step = TOUR_STEPS[TOUR_STEP];
-  var total = TOUR_STEPS.length;
+  var _vis = tourVisibleSteps();
+  var total = _vis.length;
+  var _curPos = _vis.indexOf(TOUR_STEP); if(_curPos<0) _curPos=0;
 
 var prevStep = TOUR_STEPS[TOUR_STEP - 1] || TOUR_STEPS[TOUR_STEP + 1];
 
@@ -13081,11 +14767,11 @@ var dotsEl = $('tour-dots');
     dotsEl.innerHTML = '';
     for (var i = 0; i < total; i++) {
       var dot = document.createElement('div');
-      dot.className = 'tour-prog-dot' + (i <= TOUR_STEP ? ' on' : '');
+      dot.className = 'tour-prog-dot' + (i <= _curPos ? ' on' : '');
       dotsEl.appendChild(dot);
     }
   }
-  setEl('tour-prog-lbl', (TOUR_STEP + 1) + ' / ' + total);
+  setEl('tour-prog-lbl', (_curPos + 1) + ' / ' + total);
 
 setEl('tour-icon',  step.icon  || '📌');
   setEl('tour-title', step.title || '');
@@ -13108,7 +14794,7 @@ setEl('tour-icon',  step.icon  || '📌');
 var prevBtn = $('tour-prev');
   var nextBtn = $('tour-next');
   if (prevBtn) prevBtn.style.visibility = TOUR_STEP === 0 ? 'hidden' : 'visible';
-  if (nextBtn) nextBtn.textContent = TOUR_STEP === total - 1 ? 'Finish tour ✓' : 'Next →';
+  if (nextBtn) nextBtn.textContent = _curPos === total - 1 ? 'Finish tour ✓' : 'Next →';
 
 var card = $('tour-card');
   if (card) { card.className = ''; void card.offsetWidth; card.className = 'tour-card-enter'; }
@@ -13614,9 +15300,12 @@ var PAGE_TOURS = {
     { target:'cfHistChart', title:'Performance chart', icon:'📊',
       text:'Green bars are income, red bars are expenses, and the dark green line is your profit trend across months. The same format as the dashboard chart so it feels familiar.',
       pos:'smart' },
+    { target:'cf-bankbal', title:'Your current bank balance', icon:'💰',
+      text:'Enter your real bank balance here and the forecast starts from that number — so the projected runway matches your actual account, not just the transactions you have logged.',
+      tip:'We prefill an estimate from your records — check it against your bank and tap Save so the projection is accurate.', pos:'smart' },
     { target:'cf-fwd-answer', title:'Looking ahead — your runway', icon:'🔮',
       text:'One row per future month with a colour pip — Healthy, Tight, or Below zero. Tells you exactly when cash gets uncomfortable so you can act before it happens.',
-      tip:'June, July and August are usually tightest on grain farms — planting costs go out but no harvest income arrives yet.', pos:'smart' },
+      tip:'Tap any month to expand it and see exactly what is driving the balance — crop-plan income, recurring items, and the costs going out that month.', pos:'smart' },
     { target:'cf-recur-panel', title:'Recurring items', icon:'🔁',
       text:'Click to see every recurring item factored into the forecast — loans, salaries, insurance, rental income, grants. The more complete this list, the more accurate your projection.',
       pos:'smart' }
@@ -13633,7 +15322,10 @@ var PAGE_TOURS = {
       pos:'smart' },
     { target:'pg-reports', title:'The three statements', icon:'📄',
       text:'Click P&L Statement, Cash Flow Statement or Tax Summary to open a full print preview. The Tax Summary includes VAT 201 figures and Section 11 deduction calculations.',
-      tip:'Your accountant needs these three documents for your annual tax return. Keep them up to date throughout the year to avoid a rush at year-end.', pos:'center' }
+      tip:'Your accountant needs these three documents for your annual tax return. Keep them up to date throughout the year to avoid a rush at year-end.', pos:'center' },
+    { target:'acc-pack', title:'Accountant Pack', icon:'📦',
+      text:'Further down the page, the Accountant Pack bundles your year-end exports. Tap the Year-end pack to preview everything first — Profit & Loss, transactions, general ledger, asset register and a Pastel import — then download it all in one go.',
+      tip:'You can also export directly for Pastel or Xero, or invite your accountant by email so they can pull the records themselves.', pos:'smart' }
   ],
   budgets: [
     { target:'bgt-status-card', title:'Budget status card', icon:'🎯',
@@ -13680,6 +15372,30 @@ var PAGE_TOURS = {
     { target:'ast-total', title:'Total values', icon:'💰',
       text:'Your total farm assets, total book value after depreciation, and the annual S12B/S11e deduction you can claim from SARS.',
       tip:'Section 12B allows 50/30/20 accelerated depreciation on farming equipment. Section 11(e) is straight-line wear and tear. Both reduce your taxable income.', pos:'smart' }
+  ],
+  transactions: [
+    { target:'pg-transactions', title:'All your transactions', icon:'📝',
+      text:'Every sale and expense in one searchable list, newest first. Whatever you record from the + button or any other screen lands here.', pos:'center' },
+    { target:'tx-filter-bar', title:'Filter & search', icon:'🔍',
+      text:'Filter by income or expense, tap a category chip to narrow further, or search by description, date or amount. The red “Clear filters” button resets everything in one tap.', pos:'smart' },
+    { target:'tx-tbl', title:'Tap a row to open it', icon:'👁️',
+      text:'Tap any transaction to see its full detail — category, method, date and any receipt. From there you can edit or delete it.',
+      tip:'Editing works from anywhere — the same detail opens from the Income and Expenses pages too, and a change syncs across every screen and report instantly.', pos:'smart' }
+  ],
+  crop: [
+    { target:'pg-crop', title:'Crops — your cropping enterprise', icon:'🌾', tab:'overview',
+      text:'Everything for your crops in one place. The Overview shows each land with its crop, area, growth stage and expected gross margin for the season.', pos:'center' },
+    { target:'crop-tab-lands', title:'Lands register', icon:'🗺️',
+      text:'The Lands tab is your register of every field — area, current crop and rotation history. Tap a land to record a planting or harvest, or link it to your plan.', pos:'smart' },
+    { target:'crop-tab-inputs', title:'Inputs & spray log', icon:'🧪',
+      text:'Log every spray and input — product, rate, batch number and pre-harvest interval. These records double as your Act 36 agrochemical evidence and feed your costs.', pos:'smart' },
+    { target:'crop-view-comply', title:'Compliance tracker', icon:'✅', tab:'comply',
+      text:'A card for each Act that touches crop farming — water, agrochemicals, GMO, seed, soil, worker safety and more. The score up top shows how many are on track, and the colour dot flags anything due or needing attention.',
+      tip:'Tap “Choose what to track” to switch areas on or off for your farm — only what applies to you shows.', pos:'center' },
+    { target:'crop-view-comply', title:'Records, reminders & documents', icon:'📋', tab:'comply',
+      text:'Tap any area to enter your records, log a dated check with a photo, and store your licence or certificate — with expiry alerts. The app reminds you when a check is due and resets the reminder once you log it.', pos:'center' },
+    { target:'crop-view-comply', title:'Audit log & pack', icon:'🗂️', tab:'comply',
+      text:'Switch to the Audit log to search every record by legislation, certificate or note and filter by date — tap a photo to view it full size. Export a single area, or build a full audit pack with the photos embedded for an inspector or buyer.', pos:'center' }
   ]
 };
 
@@ -13744,7 +15460,11 @@ if (prevBtn) prevBtn.onclick = function(){ pageTourPrev(); };
   var card = $('tour-card');
   if (card) { card.className = ''; void card.offsetWidth; card.className = 'tour-card-enter'; }
 
-  setTimeout(function(){ tourPosition(step); }, 100);
+  // Let a step switch a sub-tab (e.g. crop Compliance) before spotlighting
+  var _posDelay = 100;
+  if (step.tab && PAGE_TOUR_PAGE==='crop' && typeof cropSetTab==='function') { try{ cropSetTab(step.tab); }catch(e){} _posDelay = 220; }
+  if (step.onEnter && window[step.onEnter]) { try{ window[step.onEnter](); }catch(e){} _posDelay = 220; }
+  setTimeout(function(){ tourPosition(step); }, _posDelay);
 }
 
 function pageTourNext() {
@@ -14376,7 +16096,7 @@ var AF_EXTRAS = [
   ['Add Expense','Voeg Uitgawe By'],['Upload Receipt','Laai Kwitansie Op'],
   ['How to add income','Hoe om inkomste by te voeg'],
   ['How to add expense','Hoe om uitgawe by te voeg'],
-  ['Tour this page','Toer hierdie bladsy'],
+  ['Demo this page','Demonstreer hierdie bladsy'],
 
   ['Money In (Last 3 Months)','Geld In (Laaste 3 Maande)'],
   ['Money In (Last 6 Months)','Geld In (Laaste 6 Maande)'],
@@ -15068,9 +16788,10 @@ function txSaveEdit(idx) {
   if (catEl)  t.cat    = catEl.value;
   if (dateEl) t.date   = dateEl.value;
   TX_EDIT_IDX = -1;
-  txRender();
+  dataChanged('transaction');
+  if(typeof saveState==='function') saveState();
   updateDashboardFigures();
-  toast('Transaction updated.', 'success');
+  toast('Transaction updated \u2014 synced everywhere','success');
 }
 
 function txCancelEdit() {
@@ -15515,6 +17236,23 @@ function computeNotifications(){
     action: function(){ nav('market'); }
   });
 
+  // Compliance reminders (only when a crop section exists & is tracked)
+  try {
+    if (typeof cropComplianceDueList === 'function' && (getFarmType()==='crops'||getFarmType()==='mixed'||getFarmType()==='generic')) {
+      cropComplianceDueList().forEach(function(x){
+        var over = x.due.state==='over';
+        n.push({
+          color: over ? 'var(--rd)' : 'var(--am)',
+          score: over ? 95 : 70,
+          title: (over?'\uD83D\uDD34 ':'\uD83D\uDFE1 ') + x.t + (over?' overdue':' due soon'),
+          body:  x.law + ' \u00b7 ' + x.due.label + ' \u00b7 tap to log it',
+          time:  'Compliance',
+          action: function(){ nav('crop'); setTimeout(function(){ ST_CROP.activeTab='comply'; cropSetTab('comply'); cropOpenComplianceLog(x.id); }, 90); }
+        });
+      });
+    }
+  } catch(e){}
+
   n.sort(function(a,b){ return b.score - a.score; });
   return n.slice(0, 6);
 }
@@ -15648,6 +17386,82 @@ function accCsvXero(){
     return [t.date, amt, t.cat || '', t.desc || '', t.method || ''];
   });
   return toCSV(['*Date','*Amount','Payee','Description','Reference'], rows);
+}
+
+function accCsvParse(text, maxRows){
+  var lines=(text||'').split('\n');
+  function row(line){
+    var out=[], cur='', q=false;
+    for(var i=0;i<line.length;i++){
+      var ch=line[i];
+      if(q){
+        if(ch==='"'){ if(line[i+1]==='"'){cur+='"';i++;} else q=false; }
+        else cur+=ch;
+      } else {
+        if(ch==='"') q=true;
+        else if(ch===','){ out.push(cur); cur=''; }
+        else cur+=ch;
+      }
+    }
+    out.push(cur); return out;
+  }
+  var headers=lines.length?row(lines[0]):[];
+  var body=[]; for(var i=1;i<lines.length;i++){ if(lines[i].length) body.push(row(lines[i])); }
+  var total=body.length;
+  if(maxRows && body.length>maxRows) body=body.slice(0,maxRows);
+  return {headers:headers, rows:body, total:total};
+}
+function accPreviewTable(text, maxRows){
+  var d=accCsvParse(text, maxRows);
+  if(!d.headers.length) return '<div style="font-size:12px;color:#9CA3AF;padding:6px 0">No data.</div>';
+  var th=d.headers.map(function(h){return '<th>'+esc(h)+'</th>';}).join('');
+  var tr=d.rows.map(function(r){
+    return '<tr>'+r.map(function(c,ci){
+      var num=ci===d.headers.length-1 && /[0-9]/.test(c) && /amount|debit|credit|price/i.test(d.headers[ci]||'');
+      return '<td'+(num?' class="amt"':'')+'>'+esc(c)+'</td>';
+    }).join('')+'</tr>';
+  }).join('');
+  var more = d.total>d.rows.length ? '<tr><td colspan="'+d.headers.length+'" style="text-align:center;color:#9CA3AF;font-style:italic">\u2026 and '+(d.total-d.rows.length)+' more row'+((d.total-d.rows.length)===1?'':'s')+'</td></tr>' : '';
+  return '<table class="pv-table"><thead><tr>'+th+'</tr></thead><tbody>'+tr+more+'</tbody></table>';
+}
+function accPreviewYearEnd(){
+  var lbl = (typeof getPeriodLabel==='function') ? getPeriodLabel() : '';
+  var files=[
+    {ic:'\uD83D\uDCC8', t:'Profit & Loss', d:'Income & expenses by category, year-to-date', csv:accCsvPL(), rows:30},
+    {ic:'\uD83D\uDCDD', t:'Transactions', d:'Every transaction with date, category & method', csv:accCsvTransactions(), rows:8},
+    {ic:'\uD83D\uDCD2', t:'General Ledger', d:'Double-entry ledger with debit & credit accounts', csv:accCsvGL(), rows:8},
+    {ic:'\uD83C\uDFE2', t:'Asset Register', d:'Fixed assets with cost & depreciation', csv:accCsvAssets(), rows:8},
+    {ic:'\uD83D\uDCCA', t:'Pastel import', d:'Sage Pastel-compatible CSV', csv:accCsvPastel(), rows:8}
+  ];
+  // header
+  var el;
+  el=$('stmt-preview-title'); if(el) el.textContent='Year-end Accountant Pack';
+  el=$('stmt-preview-sub');   if(el) el.textContent=(FARM&&FARM.name?FARM.name:'Farm')+(lbl?' \u00b7 '+lbl:'');
+  var icon=$('stmt-preview-icon'); if(icon) icon.style.background='var(--gd)';
+  // footer: statement-only buttons hidden for the pack
+  var wa=$('stmt-preview-wa-btn'); if(wa) wa.style.display='none';
+  var pr=$('stmt-preview-print-btn'); if(pr) pr.style.display='none';
+  // body
+  var manifest=files.map(function(f){
+    return '<div style="display:flex;gap:11px;align-items:center;padding:9px 0;border-bottom:1px solid #F3F4F6">'+
+      '<div style="font-size:20px;flex:none">'+f.ic+'</div>'+
+      '<div style="flex:1"><div style="font-weight:700;font-size:13px;color:#1a1a1a">'+f.t+'</div>'+
+      '<div style="font-size:11.5px;color:#6B7280">'+f.d+'</div></div>'+
+      '<div style="font-size:11px;color:#16a34a;font-weight:700">CSV</div></div>';
+  }).join('');
+  var previews=files.map(function(f){
+    return '<div class="pv-section"><h2>'+f.t+'</h2>'+accPreviewTable(f.csv, f.rows)+'</div>';
+  }).join('');
+  var dlBtn='<button onclick="accDownloadYearEnd()" style="width:100%;padding:13px;border:none;border-radius:10px;background:var(--gd);color:#fff;font-weight:800;font-size:14px;cursor:pointer;margin-bottom:6px">\u2B07 Download pack \u2014 5 CSV files</button>'+
+    '<div style="font-size:11px;color:#9CA3AF;text-align:center;margin-bottom:20px">Files download individually \u00b7 ready to email or import into Pastel / Xero</div>';
+  var body=$('stmt-preview-body');
+  if(body) body.innerHTML='<style>'+PREVIEW_CSS+'</style>'+
+    '<div style="background:#F0FAF4;border:1px solid #cfe9d8;border-radius:12px;padding:14px 16px;margin-bottom:18px">'+
+      '<div style="font-size:13px;font-weight:800;color:#1B4332;margin-bottom:8px">What\u2019s in this pack</div>'+manifest+'</div>'+
+    dlBtn+
+    '<div style="font-size:11px;font-weight:800;color:#6B7280;text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px">Preview</div>'+
+    previews;
+  var bg=$('stmt-preview-bg'); if(bg) bg.style.display='flex';
 }
 
 function accDownloadYearEnd(){
