@@ -548,6 +548,49 @@ label{font-size:13px;color:var(--t3);font-weight:500;display:block;margin-bottom
 .pc-range{font-size:10px;color:var(--t4);margin-top:5px}
 
 .stmt-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:18px}
+.ast-totrow td{background:#F0FDF4;border-top:2px solid var(--gd);border-bottom:none;font-weight:800;color:var(--gd);font-size:13px}
+.ast-totrow td .sub{font-size:10.5px;color:var(--gm);font-weight:700}
+.ai-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}
+.ai-kpi{background:#fff;border:1px solid var(--br);border-radius:14px;padding:14px 15px;box-shadow:0 1px 3px rgba(0,0,0,.05);cursor:pointer;transition:border-color .15s}
+.ai-kpi:hover{border-color:var(--gl)}
+.ai-kpi .l{font-size:10.5px;color:var(--t3);font-weight:700;text-transform:uppercase;letter-spacing:.04em;margin-bottom:4px}
+.ai-kpi .v{font-size:23px;font-weight:800;color:var(--gd);line-height:1}
+.ai-kpi .s{font-size:10.5px;color:var(--t3);margin-top:5px}
+.ai-grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;align-items:stretch}
+.ai-card{background:#fff;border:1px solid var(--br);border-radius:16px;padding:18px;box-shadow:0 1px 3px rgba(0,0,0,.05);margin-bottom:16px}
+.ai-card.in2{margin-bottom:0;display:flex;flex-direction:column}
+.ai-card.in2 .ai-sw{margin-top:auto}
+.ai-title{font-size:15px;font-weight:800;margin:0 0 3px}
+.ai-why{font-size:12px;color:var(--t3);line-height:1.45;margin:0 0 14px}
+.ai-sw{margin-top:14px;background:var(--gb);border-left:3px solid var(--gl);border-radius:0 10px 10px 0;padding:11px 13px;font-size:12.5px;color:var(--gm);line-height:1.5}
+.ai-sw b{color:var(--gd)}
+.ai-legend{display:flex;flex-direction:column;gap:7px}
+.ai-lg{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--t2);cursor:pointer;border-radius:6px;padding:3px 5px}
+.ai-lg:hover{background:var(--br2)}
+.ai-lg i{width:11px;height:11px;border-radius:3px;display:inline-block;flex:none}
+.ai-bar{display:flex;align-items:center;gap:10px;margin-bottom:9px;font-size:12px;cursor:pointer;border-radius:7px;padding:3px}
+.ai-bar:hover{background:var(--br2)}
+.ai-bar .nm{width:130px;color:var(--t2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ai-bar .tk{flex:1;background:var(--br2);border-radius:6px;height:16px;overflow:hidden}
+.ai-bar .fl{height:100%;border-radius:6px}
+.ai-bar .vv{width:66px;text-align:right;font-weight:700;color:var(--t2)}
+.ai-bar.two{align-items:center}
+.ai-bar.two .nm{white-space:normal;width:155px;line-height:1.2;display:flex;flex-direction:column;overflow:visible}
+.ai-bar.two .nm .sl{font-size:10px;color:var(--t4);font-weight:600;margin-top:1px}
+.ai-bar .vv2{width:88px;text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:2px}
+.ai-bar .vv2 .p{font-weight:700;color:var(--t2);font-size:12px}
+.ai-wo{display:inline-block;font-size:8.5px;font-weight:700;text-transform:uppercase;letter-spacing:.02em;color:#6b5b14;background:#FBF3D6;border:1px solid #EBDDA6;border-radius:4px;padding:0 5px}
+.ai-leg2{display:flex;flex-wrap:wrap;gap:8px 14px;font-size:10.5px;color:var(--t2);background:var(--br2);border-radius:8px;padding:8px 11px;margin-bottom:13px}
+.ai-leg2 i{display:inline-block;width:10px;height:10px;border-radius:3px;vertical-align:-1px;margin-right:4px}
+.ai-bd{margin-top:12px;background:var(--br2);border-radius:10px;padding:12px 14px}
+.ai-bd .bh{font-size:10.5px;font-weight:800;color:var(--gd);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center}
+.ai-bd .bh .x{color:var(--t4);font-size:16px;cursor:pointer;line-height:1}
+.ai-bd .r{display:flex;justify-content:space-between;align-items:center;font-size:12.5px;padding:7px 0;border-bottom:1px solid #e6eaee}
+.ai-bd .r:last-child{border-bottom:none}
+.ai-bd .r .sub{font-size:10.5px;color:var(--t4)}
+.ai-bd .r .amt{font-weight:700;color:var(--t1)}
+.ai-bd .tt{display:flex;justify-content:space-between;font-size:12.5px;font-weight:800;color:var(--gd);padding-top:8px;margin-top:3px;border-top:2px solid var(--gp)}
+@media(max-width:560px){.ai-kpis{grid-template-columns:1fr}.ai-grid2{grid-template-columns:1fr}}
 .stmt{border:1.5px solid var(--br);border-radius:var(--rl);padding:16px;cursor:pointer;transition:all .15s;background:#fff}
 .stmt:hover{border-color:var(--gl);box-shadow:var(--shm)}
 .stmt-icon{width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;margin-bottom:10px}
@@ -1735,6 +1778,7 @@ body.simple-view #nav-crop{display:none !important}
 
         <div class="ob-actions">
           <button class="ob-btn-pri" id="ob-finish-btn" onclick="obFinish()">Take me to my farm →</button>
+          <button class="ob-btn-sec" id="ob-ready-back" onclick="obBack()">← Back</button>
         </div>
       </div>
 
@@ -1935,7 +1979,7 @@ body.simple-view #nav-crop{display:none !important}
       </div>
     </div>
 
-    <div class="cf-grid">
+    <div class="cf-grid" id="dash-cf-grid">
       <div class="cf-item">
         <div class="cf-lbl"><div class="cf-dot g"><svg viewBox="0 0 24 24"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg></div>Money In</div>
         <div class="cf-val" id="dash-cf-in">R1,328,750</div>
@@ -2345,7 +2389,7 @@ body.simple-view #nav-crop{display:none !important}
   <!-- METRIC CARDS -->
   <div class="metrics m4" style="margin-bottom:18px">
     <div class="mc"><div class="mc-icon r"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg></div><div class="mc-lbl" id="exp-lbl-total">Total Expenses</div><div class="mc-val" style="color:var(--rd)" id="exp-metric-total">R1,043,320</div><div class="mc-chg dn" id="exp-chg-total">↑ 9% vs last month</div></div>
-    <div class="mc"><div class="mc-icon b"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div><div class="mc-lbl" id="exp-lbl-ratio">Expense Ratio (This Month)</div><div class="mc-val b">78.5%</div><div class="mc-chg" id="exp-chg-ratio" style="color:var(--t3)">% of income</div></div>
+    <div class="mc"><div class="mc-icon b"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div><div class="mc-lbl" id="exp-lbl-ratio">Expense Ratio (This Month)</div><div class="mc-val b" id="exp-metric-ratio">78.5%</div><div class="mc-chg" id="exp-chg-ratio" style="color:var(--t3)">% of income</div></div>
     <div class="mc"><div class="mc-icon r"><svg viewBox="0 0 24 24"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/></svg></div><div class="mc-lbl" id="exp-lbl-top">Biggest Category (This Month)</div><div class="mc-val" style="color:var(--rd);font-size:15px">Fertiliser</div><div class="mc-chg dn">R18,500 · 46%</div></div>
     <div class="mc"><div class="mc-icon o"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="mc-lbl">Expenses per Hectare</div><div class="mc-val o">R191/ha</div><div class="mc-chg" style="color:var(--t3)">Based on 5,462 ha</div></div>
   </div>
@@ -2539,7 +2583,7 @@ body.simple-view #nav-crop{display:none !important}
   <!-- Statement cards -->
   <div style="font-size:14px;font-weight:700;margin-bottom:4px">Your Statements</div>
   <div style="font-size:13px;color:var(--t3);margin-bottom:12px" id="rpt-stmt-sub">Showing figures for <strong>May 2024</strong> — preview inline or open to print.</div>
-  <div class="stmt-cards">
+  <div class="stmt-cards" id="rpt-stmt-cards">
     <div class="stmt">
       <div class="stmt-icon g"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
       <div class="stmt-title">Profit &amp; Loss Statement</div>
@@ -2837,11 +2881,15 @@ body.simple-view #nav-crop{display:none !important}
       <div class="page-sub">Track what you own, its current value and SARS depreciation.</div>
     </div>
     <div style="display:flex;gap:8px">
+      <button id="ast-lender-btn" onclick="astExportLenderPack()" style="display:flex;align-items:center;gap:5px;background:var(--gd);border:1.5px solid var(--gd);border-radius:var(--rs);padding:8px 14px;font-size:13px;font-weight:600;color:#fff;cursor:pointer">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3"/></svg>
+        Lender pack
+      </button>
       <button onclick="printAssetRegister()" style="display:flex;align-items:center;gap:5px;background:#fff;border:1.5px solid var(--br);border-radius:var(--rs);padding:8px 14px;font-size:13px;font-weight:600;color:var(--t2);cursor:pointer">
         <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
         Print
       </button>
-      <button onclick="openAddAsset()" class="btn-pri">+ Add Asset</button>
+      <button id="ast-add-btn" onclick="openAddAsset()" class="btn-pri">+ Add Asset</button>
     </div>
   </div>
 
@@ -2864,6 +2912,13 @@ body.simple-view #nav-crop{display:none !important}
     </div>
   </div>
 
+  <div class="tabs" style="margin-bottom:16px">
+    <div class="tab on" id="ast-tab-register" onclick="astTab('register')">Register</div>
+    <div class="tab" id="ast-tab-insights" onclick="astTab('insights')">Insights</div>
+  </div>
+
+  <div id="ast-view-register">
+
   <!-- Asset register -->
   <div class="card" style="padding:0;overflow:hidden;margin-bottom:16px">
     <div style="padding:14px 18px;border-bottom:1px solid var(--br2);display:flex;align-items:center;justify-content:space-between">
@@ -2873,6 +2928,8 @@ body.simple-view #nav-crop{display:none !important}
         <option>Land &amp; Buildings</option>
         <option>Vehicles &amp; Tractors</option>
         <option>Machinery &amp; Equipment</option>
+        <option value="Renewable Energy">Renewable Energy</option>
+        <option value="Capital Development">Capital Development</option>
         <option>Irrigation &amp; Water</option>
         <option>Storage &amp; Silos</option>
         <option>Tools &amp; Implements</option>
@@ -2905,6 +2962,10 @@ body.simple-view #nav-crop{display:none !important}
     <div class="ib-d">Farm equipment, irrigation and storage qualify for accelerated depreciation: <strong>50%</strong> year 1, <strong>30%</strong> year 2, <strong>20%</strong> year 3. This reduces your taxable income and flows directly into your Tax Summary report.</div>
   </div>
 
+  </div><!-- /ast-view-register -->
+
+  <div id="ast-view-insights" style="display:none"></div>
+
   <!-- Add/Edit Asset Modal -->
   <div id="ast-modal-bg" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:500;align-items:flex-start;justify-content:center;padding:60px 12px;overflow-y:auto">
     <div style="background:#fff;border-radius:var(--rl);padding:24px;width:500px;max-width:95vw;box-shadow:var(--shl)">
@@ -2914,41 +2975,116 @@ body.simple-view #nav-crop{display:none !important}
       </div>
       <input type="hidden" id="ast-edit-idx" value="-1"/>
       <div class="fg2" style="margin-bottom:10px">
-        <div><label>Asset name</label><input id="ast-name" placeholder="e.g. John Deere 6140M Tractor"/></div>
+        <div><label>Asset name</label><input id="ast-name" placeholder="e.g. John Deere 6140M Tractor" onblur="astMaybeInferSubtype()"/></div>
         <div><label>Category</label>
-          <select id="ast-cat">
+          <select id="ast-cat" onchange="astSuggestTreatment()">
             <option value="">Select category</option>
-            <option>Land &amp; Buildings</option>
-            <option>Vehicles &amp; Tractors</option>
-            <option>Machinery &amp; Equipment</option>
-            <option>Irrigation &amp; Water</option>
-            <option>Storage &amp; Silos</option>
-            <option>Tools &amp; Implements</option>
-            <option>Financial Assets</option>
-            <option>Other</option>
+            <option value="Land &amp; Buildings">&#x1F3E1; Land &amp; Buildings</option>
+            <option value="Vehicles &amp; Tractors">&#x1F69C; Vehicles &amp; Tractors</option>
+            <option value="Machinery &amp; Equipment">&#x2699;&#xFE0F; Machinery &amp; Equipment</option>
+            <option value="Renewable Energy">&#x26A1; Renewable Energy (solar, battery, generator)</option>
+            <option value="Capital Development">&#x1F3D7;&#xFE0F; Capital Development (dams, boreholes, fences, roads)</option>
+            <option value="Irrigation &amp; Water">&#x1F4A7; Irrigation &amp; Water</option>
+            <option value="Storage &amp; Silos">&#x1F6E2;&#xFE0F; Storage &amp; Silos</option>
+            <option value="Tools &amp; Implements">&#x1F527; Tools &amp; Implements</option>
+            <option value="Financial Assets">&#x1F4B0; Financial Assets</option>
+            <option value="Other">&#x1F4E6; Other</option>
           </select>
         </div>
+      </div>
+      <div id="ast-subtype-wrap" style="margin-bottom:10px">
+        <div style="display:flex;align-items:center;gap:7px;margin-bottom:5px">
+          <label style="margin:0">Type <span style="font-weight:400;color:var(--t3);font-size:11px">&mdash; for the age &amp; replacement chart</span></label>
+          <span id="ast-subtype-chip" style="display:none;font-size:10px;font-weight:700;color:var(--gm);background:var(--gp);border-radius:20px;padding:2px 8px">&#x2713; detected</span>
+        </div>
+        <select id="ast-subtype" onchange="astSubtypeChanged()"></select>
+        <div id="ast-subtype-note" style="font-size:11px;color:var(--t3);margin-top:5px"></div>
       </div>
       <div class="fg2" style="margin-bottom:10px">
         <div><label>Purchase date</label><input id="ast-date" type="date"/></div>
         <div><label>Purchase price (R)</label><input id="ast-price" type="number" placeholder="0" oninput="calcAssetDepr()"/></div>
       </div>
-      <div class="fg2" style="margin-bottom:10px">
-        <div><label>Depreciation type</label>
-          <select id="ast-depr-type" onchange="calcAssetDepr()">
-            <option value="s12b">Section 12B (50/30/20) — Agricultural</option>
-            <option value="s11e">Section 11(e) — Straight line</option>
-            <option value="none">None (Land, Financial assets)</option>
+      <div class="fg2" style="margin-bottom:10px" id="ast-depr-row">
+        <div><label>How it's written off for tax <span style="font-weight:400;color:var(--t3);font-size:11px">— we pick the usual one</span></label>
+          <select id="ast-depr-type" onchange="astTreatChanged()">
+            <option value="s12b">Farming equipment — fast write-off (50% / 30% / 20%)</option>
+            <option value="s11e">Standard wear &amp; tear (even amount each year)</option>
+            <option value="renew">Solar / renewable — accelerated write-off</option>
+            <option value="s12u">Farm development — dams, fences, roads (Sec 12U)</option>
+            <option value="none">Doesn't lose value (land, shares, policies)</option>
           </select>
         </div>
-        <div><label>Useful life (years)</label><input id="ast-life" type="number" value="5" oninput="calcAssetDepr()"/></div>
+        <div id="ast-life-wrap"><label>Write-off period (years)</label><input id="ast-life" type="number" value="5" oninput="calcAssetDepr()"/><div style="font-size:10.5px;color:var(--t3);margin-top:4px;line-height:1.35">We've set the usual period — your accountant can fine-tune it.</div></div>
       </div>
+      <div id="ast-treat-note" style="display:none;background:#FFFDF5;border:1px solid #EFE3C0;border-radius:var(--rs);padding:9px 11px;margin-bottom:10px;font-size:11.5px;color:#7a5d12;line-height:1.45"></div>
       <div id="ast-depr-preview" style="background:var(--gb);border:1px solid var(--gp);border-radius:var(--rs);padding:10px 12px;margin-bottom:12px;font-size:13px;display:none"></div>
+      <!-- #4 Finance / instalment -->
+      <div style="border-top:1px solid var(--br);margin:4px 0 12px;padding-top:13px">
+        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-weight:600;font-size:13px;margin:0">
+          <input type="checkbox" id="ast-financed" onchange="astToggleFinance()" style="width:auto;margin:0"/> This asset is financed (loan / instalment sale)
+        </label>
+        <div id="ast-finance-fields" style="display:none;margin-top:10px">
+          <div class="fg2" style="margin-bottom:10px">
+            <div><label>Lender</label><input id="ast-lender" placeholder="e.g. Land Bank, ABSA"/></div>
+            <div><label>Outstanding balance (R)</label><input id="ast-outstanding" type="number" placeholder="0" oninput="astCalcNet()"/></div>
+          </div>
+          <div class="fg2" style="margin-bottom:9px">
+            <div><label>Monthly instalment (R)</label><input id="ast-instalment" type="number" placeholder="0"/></div>
+            <div><label>Interest rate (%)</label><input id="ast-rate" type="number" step="0.01" placeholder="0"/></div>
+          </div>
+          <div style="background:var(--gp);border-radius:var(--rs);padding:8px 11px;font-size:12px;font-weight:700;color:var(--gd);display:flex;justify-content:space-between"><span>Net value you own</span><span id="ast-net-val">R0</span></div>
+        </div>
+      </div>
+      <!-- #5 Insurance -->
+      <div style="border-top:1px solid var(--br);margin:0 0 12px;padding-top:13px">
+        <label style="font-weight:600;font-size:13px;color:var(--bl)">&#x1F6E1;&#xFE0F; Insurance (optional)</label>
+        <div class="fg2" style="margin-top:8px;margin-bottom:10px">
+          <div><label>Insured / replacement value (R)</label><input id="ast-insured" type="number" placeholder="0"/></div>
+          <div><label>Renewal date</label><input id="ast-renewal" type="date"/></div>
+        </div>
+        <div><label>Insurer</label><input id="ast-insurer" placeholder="e.g. Santam Agri"/></div>
+      </div>
+      <!-- #6 Documents -->
+      <div style="border-top:1px solid var(--br);margin:0 0 13px;padding-top:13px">
+        <label style="font-weight:600;font-size:13px">&#x1F4CE; Documents &amp; photos (optional)</label>
+        <div style="font-size:11px;color:var(--t3);margin:3px 0 8px">Invoice, registration, title deed, warranty or a photo.</div>
+        <input type="file" id="ast-doc-input" multiple accept="image/*,application/pdf" onchange="astAddDocs(event)" style="font-size:12px"/>
+        <div id="ast-doc-thumbs" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px"></div>
+      </div>
       <div style="margin-bottom:14px"><label>Notes (optional)</label><textarea id="ast-notes" rows="2" style="resize:none" placeholder="Serial number, location, condition..."></textarea></div>
       <div style="display:flex;gap:10px">
         <button onclick="closeAddAsset()" class="btn-sec" style="flex:1;justify-content:center">Cancel</button>
         <button id="ast-save-btn" onclick="saveAsset()" class="btn-pri" style="flex:2;justify-content:center">Save Asset</button>
       </div>
+    </div>
+  </div>
+
+  <div id="ast-detail-bg" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:500;align-items:flex-start;justify-content:center;padding:60px 12px;overflow-y:auto">
+    <div style="background:#fff;border-radius:var(--rl);width:540px;max-width:95vw;box-shadow:var(--shl);overflow:hidden">
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:18px 22px;border-bottom:1px solid var(--br2)">
+        <div id="ast-detail-title" style="font-size:17px;font-weight:800">Asset</div>
+        <button onclick="closeAssetDetail()" style="background:none;border:none;font-size:22px;color:var(--t3);cursor:pointer;line-height:1">&times;</button>
+      </div>
+      <div id="ast-detail-body" style="padding:20px 22px"></div>
+      <div style="display:flex;gap:10px;padding:0 22px 20px">
+        <button onclick="closeAssetDetail()" class="btn-sec" style="flex:1;justify-content:center">Close</button>
+        <button id="ast-detail-edit" class="btn-pri" style="flex:1;justify-content:center">Edit asset</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="ast-lender-bg" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:600;align-items:flex-start;justify-content:center;padding:24px 12px;overflow-y:auto">
+    <div style="background:#fff;border-radius:var(--rl);width:100%;max-width:680px;box-shadow:0 20px 60px rgba(0,0,0,.25);overflow:hidden">
+      <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:2px solid #1B4332;background:var(--gb)">
+        <div style="display:flex;align-items:center;gap:10px">
+          <div style="width:36px;height:36px;border-radius:8px;background:var(--gd);display:flex;align-items:center;justify-content:center">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="white" stroke-width="2"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11"/></svg>
+          </div>
+          <div><div style="font-size:15px;font-weight:800;color:var(--t1)">Lender Pack — Asset Schedule</div><div id="ast-lender-sub" style="font-size:12px;color:var(--t3)">For a finance / loan application</div></div>
+        </div>
+        <button onclick="closeAstLender()" style="background:none;border:none;font-size:22px;color:var(--t3);cursor:pointer;padding:0 4px;line-height:1">&times;</button>
+      </div>
+      <div id="ast-lender-body" style="padding:20px 22px"></div>
     </div>
   </div>
 
@@ -3008,7 +3144,7 @@ body.simple-view #nav-crop{display:none !important}
     <div id="ls-hm-filter" class="lshm-filt"></div>
     <div style="display:flex;margin-bottom:14px"><button class="btn-pri" style="margin-left:auto" onclick="toast('Log treatment / event \u2014 demo','info')">+ Log treatment</button></div>
     <div id="ls-hm-table"></div>
-    <div style="font-size:12px;color:var(--t3);background:var(--br2);border-radius:var(--rs);padding:10px 13px;line-height:1.55;margin-top:14px">Each entry does two jobs: the <b>Cost</b> feeds your SARS S11(a) deductions and the <b>Status</b> tracks the safe-to-sell date \u2014 log a vaccination once, not twice. Births, deaths and sales are recorded in the <b>Stock Register</b>.</div>
+    <div style="font-size:12px;color:var(--t3);background:var(--br2);border-radius:var(--rs);padding:10px 13px;line-height:1.55;margin-top:14px">Each entry does two jobs: the <b>Cost</b> feeds your SARS S11(a) deductions and the <b>Status</b> tracks the safe-to-sell date — log a vaccination once, not twice. Births, deaths and sales are recorded in the <b>Stock Register</b>.</div>
     <div class="ls-rpt-divider"></div>
     <div class="ls-rpt-label">Report</div>
     <button class="ls-report-cta med" onclick="openMedicineAuditReport()"><span class="ic">💉</span><span class="tx"><span class="t">Medicine &amp; Vaccine Audit Report</span><span class="s">Full treatment register, active withdrawals and antibiotic-use summary — export PDF / CSV.</span></span><span class="ar">›</span></button>
@@ -4690,6 +4826,8 @@ function cropPhotoDownload(){ if(!CROP_LIGHT||!CROP_LIGHT.url) return; var a=doc
 
 // ---- Audit log view + filters ----
 function cropComplySetView(v){ ST_CROP.complyView=v; cropRenderCompliance(); }
+function tourComplyTracker(){ if(typeof cropComplySetView==='function') cropComplySetView('tracker'); }
+function tourComplyAudit(){ if(typeof cropComplySetView==='function') cropComplySetView('audit'); }
 function cropAuditSetArea(id){ CROP_AUDIT.area=id; cropRenderCompliance(); }
 function cropAuditSearch(v){ CROP_AUDIT.q=v; cropRenderAuditLogList(); }
 function cropAuditSetFrom(v){ CROP_AUDIT.from=v; cropRenderAuditLogList(); }
@@ -5007,7 +5145,7 @@ function cropRenderCompliance(){
   var el=$('crop-view-comply'); if(!el) return;
   var toggle='<div style="display:flex;gap:6px;margin-bottom:14px">'+
     '<div onclick="cropComplySetView(\'tracker\')" style="font-size:12px;font-weight:700;padding:7px 14px;border-radius:8px;cursor:pointer;border:1px solid '+(ST_CROP.complyView!=='audit'?'var(--gd)':'var(--br)')+';background:'+(ST_CROP.complyView!=='audit'?'var(--gd)':'#fff')+';color:'+(ST_CROP.complyView!=='audit'?'#fff':'var(--t3)')+'">Tracker</div>'+
-    '<div onclick="cropComplySetView(\'audit\')" style="font-size:12px;font-weight:700;padding:7px 14px;border-radius:8px;cursor:pointer;border:1px solid '+(ST_CROP.complyView==='audit'?'var(--gd)':'var(--br)')+';background:'+(ST_CROP.complyView==='audit'?'var(--gd)':'#fff')+';color:'+(ST_CROP.complyView==='audit'?'#fff':'var(--t3)')+'">\uD83D\uDDC2\uFE0F Audit log</div>'+
+    '<div id="crop-audit-toggle" onclick="cropComplySetView(\'audit\')" style="font-size:12px;font-weight:700;padding:7px 14px;border-radius:8px;cursor:pointer;border:1px solid '+(ST_CROP.complyView==='audit'?'var(--gd)':'var(--br)')+';background:'+(ST_CROP.complyView==='audit'?'var(--gd)':'#fff')+';color:'+(ST_CROP.complyView==='audit'?'#fff':'var(--t3)')+'">\uD83D\uDDC2\uFE0F Audit log</div>'+
   '</div>';
   if(ST_CROP.complyView==='audit'){ el.innerHTML=toggle+cropRenderAuditLog(); return; }
   var sc=cropComplianceScore();
@@ -7355,21 +7493,24 @@ var ST_ASSETS = {
     {id:1,  name:'Vlakfontein Farm — 450ha',           cat:'Land & Buildings',      date:'2005-06-01', price:3200000, deprType:'none', life:0,  notes:'Title deed: T4521/2005 · North West'},
     {id:2,  name:'Main Farmhouse (5-bedroom)',          cat:'Land & Buildings',      date:'2005-06-01', price:1800000, deprType:'none', life:0,  notes:'280m2 main residence'},
     {id:3,  name:'Labour Quarters (8-room block)',      cat:'Land & Buildings',      date:'2010-03-12', price:320000,  deprType:'s11e', life:20, notes:'Brick construction'},
-    {id:4,  name:'John Deere 6140M Tractor',           cat:'Vehicles & Tractors',   date:'2022-03-15', price:1050000, deprType:'s12b', life:5,  notes:'Reg: JD6140-NW · 4WD, 140HP'},
+    {id:4,  name:'John Deere 6140M Tractor',           cat:'Vehicles & Tractors',   date:'2022-03-15', price:1050000, deprType:'s12b', life:5,  notes:'Reg: JD6140-NW · 4WD, 140HP', financed:true, lender:'John Deere Financial', outstanding:612000, instalment:18200, rate:11.75, insuredValue:1250000, insurer:'Santam Agri', renewalDate:'2026-06-25', docs:[{name:'Invoice-JD6140.pdf',kind:'doc',data:''},{name:'Vehicle-registration.pdf',kind:'doc',data:''}]},
     {id:5,  name:'Massey Ferguson 5711 Tractor',       cat:'Vehicles & Tractors',   date:'2019-08-20', price:680000,  deprType:'s12b', life:5,  notes:'Reg: MF5711-22 · 110HP utility'},
-    {id:6,  name:'Toyota Hilux 2.8 GD-6 (4x4)',       cat:'Vehicles & Tractors',   date:'2023-07-01', price:560000,  deprType:'s11e', life:5,  notes:'Reg: FP 45 NW · White'},
+    {id:6,  name:'Toyota Hilux 2.8 GD-6 (4x4)',       cat:'Vehicles & Tractors',   date:'2023-07-01', price:560000,  deprType:'s11e', life:5,  notes:'Reg: FP 45 NW · White', financed:true, lender:'WesBank', outstanding:280000, instalment:9800, rate:12.5, insuredValue:560000, insurer:'Santam Agri'},
     {id:7,  name:'4-Furrow Reversible Plough',         cat:'Machinery & Equipment', date:'2022-04-01', price:145000,  deprType:'s12b', life:5,  notes:'Kuhn Vari-Master'},
     {id:8,  name:'6-Row Maize Planter',                cat:'Machinery & Equipment', date:'2021-01-18', price:280000,  deprType:'s12b', life:5,  notes:'John Deere 7000 series'},
-    {id:9,  name:'Combine Harvester (50% share)',      cat:'Machinery & Equipment', date:'2018-05-10', price:1400000, deprType:'s12b', life:5,  notes:'John Deere S680 · shared with neighbour'},
+    {id:9,  name:'Combine Harvester (50% share)',      cat:'Machinery & Equipment', date:'2018-05-10', price:1400000, deprType:'s12b', life:5,  notes:'John Deere S680 · shared with neighbour', financed:true, lender:'Land Bank', outstanding:410000, instalment:14500, rate:10.5},
     {id:10, name:'Boom Sprayer 24m (1500L)',           cat:'Machinery & Equipment', date:'2020-03-08', price:185000,  deprType:'s12b', life:5,  notes:''},
-    {id:11, name:'Centre-Pivot Irrigation (250ha)',    cat:'Irrigation & Water',    date:'2021-08-10', price:820000,  deprType:'s12b', life:5,  notes:'Valley pivot · Electric drive'},
+    {id:11, name:'Centre-Pivot Irrigation (250ha)',    cat:'Irrigation & Water',    date:'2021-08-10', price:820000,  deprType:'s12b', life:5,  notes:'Valley pivot · Electric drive', insuredValue:600000, insurer:'Santam Agri', renewalDate:'2026-08-10'},
     {id:12, name:'Borehole & Pump System',             cat:'Irrigation & Water',    date:'2015-06-01', price:95000,   deprType:'s12b', life:5,  notes:'120m depth, 8kW submersible'},
     {id:13, name:'Steel Grain Silo (500 ton)',         cat:'Storage & Silos',       date:'2020-01-20', price:480000,  deprType:'s12b', life:5,  notes:'Behlen galvanised · Aeration system'},
     {id:14, name:'Workshop & Tool Store (300m2)',      cat:'Storage & Silos',       date:'2012-04-15', price:380000,  deprType:'s11e', life:20, notes:'Steel frame, concrete floor'},
     {id:15, name:'Afgri Co-op Shares (500)',           cat:'Financial Assets',      date:'2010-01-01', price:250000,  deprType:'none', life:0,  notes:'500 x R500 par value shares'},
-    {id:16, name:'Crop Insurance Policy (2024/25)',    cat:'Financial Assets',      date:'2024-03-01', price:68000,   deprType:'none', life:0,  notes:'Hail + drought cover · Santam Agri'}
+    {id:16, name:'Crop Insurance Policy (2024/25)',    cat:'Financial Assets',      date:'2024-03-01', price:68000,   deprType:'none', life:0,  notes:'Hail + drought cover · Santam Agri'},
+    {id:17, name:'Solar PV System (60kW + 120kWh battery)', cat:'Renewable Energy',   date:'2024-09-01', price:780000, deprType:'renew', life:1,  notes:'Sunsynk 60kW inverter + battery bank', insuredValue:850000, insurer:'Santam Agri'},
+    {id:18, name:'Earth Dam & Pipeline (12 Ml)',            cat:'Capital Development', date:'2023-05-15', price:540000, deprType:'s12u',  life:10, notes:'12 Ml storage dam + 3km HDPE pipeline'},
+    {id:19, name:'Boundary & Camp Fencing (28km)',          cat:'Capital Development', date:'2022-08-01', price:310000, deprType:'s12u',  life:10, notes:'Game + stock fencing'}
   ],
-  nextId: 17
+  nextId: 20
 };
 
 var CAT_ICONS = {
@@ -7380,8 +7521,109 @@ var CAT_ICONS = {
   'Storage & Silos':       {bg:'#F3E8FF',  stroke:'#7C3AED',  path:'<path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>'},
   'Tools & Implements':    {bg:'var(--rp)', stroke:'var(--rd)', path:'<path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>'},
   'Financial Assets':      {bg:'var(--gp)', stroke:'var(--gd)', path:'<line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>'},
+  'Renewable Energy':      {bg:'#FEF9E7', stroke:'#C8962C', path:'<path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/><circle cx="12" cy="12" r="3.5"/>'},
+  'Capital Development':   {bg:'#F0FDF4', stroke:'#15803D', path:'<path d="M2 20h20M4 20V10l8-5 8 5v10M9 20v-6h6v6"/>'},
   'Other':                 {bg:'var(--bg)', stroke:'var(--t3)', path:'<circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/>'}
 };
+
+// ── Category -> suggested SARS tax treatment (auto-fill in Add Asset) ──
+var ASSET_TAX_MAP = {
+  'Land & Buildings':      {type:'none', life:0,  note:'Land itself does not depreciate. Farm buildings & fixed improvements may qualify for Section 11(e) wear-and-tear \u2014 your accountant can switch it.'},
+  'Vehicles & Tractors':   {type:'s12b', life:5,  note:'Tractors & farm vehicles use the Section 12B 50/30/20 accelerated allowance. A private bakkie or car would instead use Section 11(e) wear-and-tear.'},
+  'Machinery & Equipment': {type:'s12b', life:5,  note:'Most farming machinery & implements qualify for the Section 12B 50/30/20 accelerated allowance.'},
+  'Renewable Energy':      {type:'renew',life:1,  note:'Solar, battery & generator plant can qualify for an accelerated (often 100% in year one) allowance \u2014 confirm the exact rate for your system with your accountant.'},
+  'Capital Development':   {type:'s12u', life:10, note:'Dams, boreholes, fences, roads & soil-conservation works are deductible farm development (Section 12U / First Schedule). The timing depends on your farming income \u2014 your accountant confirms it.'},
+  'Irrigation & Water':    {type:'s12b', life:5,  note:'Irrigation equipment qualifies for the Section 12B 50/30/20 allowance.'},
+  'Storage & Silos':       {type:'s12b', life:5,  note:'Silos & storage equipment typically qualify for Section 12B. A fixed storage building may use Section 11(e) instead.'},
+  'Tools & Implements':    {type:'s12b', life:5,  note:'Farming tools & implements generally qualify for the Section 12B allowance.'},
+  'Financial Assets':      {type:'none', life:0,  note:'Financial assets such as shares or policies do not depreciate.'},
+  'Other':                 {type:'s11e', life:5,  note:'Defaulting to Section 11(e) wear-and-tear over 5 years. Adjust the treatment if your accountant advises otherwise.'}
+};
+var ASSET_TREAT_LABEL = {s12b:'fast farming write-off (50/30/20)', s11e:'standard wear & tear', s12u:'farm development allowance (Section 12U)', renew:'solar / renewable allowance', none:'no write-off'};
+var ASSET_TREAT_BADGE = {s12b:'S12B', s11e:'S11(e)', s12u:'S12U', renew:'Solar/RE'};
+
+// ── Sub-type working lives (physical/economic, NOT tax) + keyword inference ──
+var ASSET_SUBTYPES = {
+  'Land & Buildings':      [{v:'building',label:'Farm building / shed',life:30},{v:'improvement',label:'Fixed improvement',life:25},{v:'land',label:'Land (no wear)',life:0}],
+  'Vehicles & Tractors':   [{v:'tractor',label:'Tractor',life:12},{v:'bakkie',label:'Bakkie / LDV',life:8},{v:'truck',label:'Truck / lorry',life:13},{v:'quad',label:'Quad / motorbike',life:6}],
+  'Machinery & Equipment': [{v:'combine',label:'Combine harvester',life:12},{v:'planter',label:'Planter',life:12},{v:'sprayer',label:'Self-propelled sprayer',life:10},{v:'baler',label:'Baler',life:10},{v:'mower',label:'Mower / cutter',life:8},{v:'machinery',label:'Other machinery',life:11}],
+  'Irrigation & Water':    [{v:'pivot',label:'Centre pivot',life:18},{v:'drip',label:'Drip / micro',life:10},{v:'pump',label:'Borehole pump / motor',life:8},{v:'pipeline',label:'Tank / pipeline',life:20}],
+  'Storage & Silos':       [{v:'silo',label:'Steel grain silo',life:25},{v:'coldroom',label:'Cold room / pack-house',life:15},{v:'shed',label:'Shed / barn / workshop',life:30}],
+  'Tools & Implements':    [{v:'plough',label:'Plough / disc / ripper',life:15},{v:'trailer',label:'Trailer',life:15},{v:'tool',label:'Feed mixer / general',life:8}],
+  'Capital Development':   [{v:'dam',label:'Earth dam',life:30},{v:'fence',label:'Fencing',life:15},{v:'earthworks',label:'Roads / kraals / earthworks',life:20}],
+  'Renewable Energy':      [{v:'solar',label:'Solar PV system',life:25},{v:'inverter',label:'Inverter / battery',life:11}],
+  'Financial Assets':      [{v:'financial',label:'Financial asset (no wear)',life:0}],
+  'Other':                 [{v:'other',label:'General',life:10}]
+};
+var CAT_DEFAULT_SUBTYPE = {'Land & Buildings':'building','Vehicles & Tractors':'tractor','Machinery & Equipment':'machinery','Irrigation & Water':'pivot','Storage & Silos':'silo','Tools & Implements':'plough','Capital Development':'fence','Renewable Energy':'solar','Financial Assets':'financial','Other':'other'};
+var ASSET_SUBTYPE_KW = [
+  [['hilux','bakkie','ldv','ranger','d-max','dmax','navara','amarok','triton','single cab','double cab','isuzu kb'],'bakkie'],
+  [['tractor','trekker'],'tractor'],
+  [['truck','lorry','tipper','flatbed','horse and trailer'],'truck'],
+  [['quad','atv','motorbike','scrambler'],'quad'],
+  [['combine','harvester','header','stroper'],'combine'],
+  [['planter','seeder','seed drill','no-till'],'planter'],
+  [['sprayer','boom spray','spuit'],'sprayer'],
+  [['baler','baal'],'baler'],
+  [['mower','slasher','cutter','swather','snyer'],'mower'],
+  [['pivot','spilpunt'],'pivot'],
+  [['drip','micro','sprinkler','besproei'],'drip'],
+  [['pump','borehole','boorgat','submersible','windpomp','windmill'],'pump'],
+  [['pipeline','tank','reservoir','dam liner'],'pipeline'],
+  [['silo','grain bin','graan'],'silo'],
+  [['cold room','coldroom','pack house','packhouse','pakhuis','refriger'],'coldroom'],
+  [['shed','barn','workshop','werkswinkel','store room','storeroom','loods'],'shed'],
+  [['plough','plow','ploeg','disc','skottel','ripper','harrow','cultivator','tiller','eg'],'plough'],
+  [['trailer','sleepwa','wagon','cart'],'trailer'],
+  [['mixer','feed mix','voermeng','auger','loader bucket'],'tool'],
+  [['dam','weir','keerwal'],'dam'],
+  [['fence','fencing','heining','kamp'],'fence'],
+  [['road','pad','kraal','earthwork','contour','terrace','grondwerk'],'earthworks'],
+  [['solar','pv','photovolta','paneel','panel'],'solar'],
+  [['inverter','battery','battery bank','lithium','omsetter'],'inverter'],
+  [['shares','aandele','policy','polis','unit trust','investment','belegging','bond'],'financial'],
+  [['house','dwelling','woonhuis','cottage','homestead'],'building']
+];
+function _astSubList(cat){ return ASSET_SUBTYPES[cat] || ASSET_SUBTYPES['Other']; }
+function astSubtypeLife(cat,sub){
+  var L=_astSubList(cat); var i;
+  for(i=0;i<L.length;i++){ if(L[i].v===sub) return L[i].life; }
+  var dv=CAT_DEFAULT_SUBTYPE[cat]; for(i=0;i<L.length;i++){ if(L[i].v===dv) return L[i].life; }
+  return (L[0]&&L[0].life)||10;
+}
+function astInferSubtype(name,cat){
+  var L=_astSubList(cat); var lower=(name||'').toLowerCase(); var hit=null, i, j;
+  for(i=0;i<ASSET_SUBTYPE_KW.length;i++){ var kws=ASSET_SUBTYPE_KW[i][0]; for(j=0;j<kws.length;j++){ if(lower.indexOf(kws[j])>=0){ hit=ASSET_SUBTYPE_KW[i][1]; break; } } if(hit) break; }
+  if(hit){ for(i=0;i<L.length;i++){ if(L[i].v===hit) return {v:L[i].v,label:L[i].label,life:L[i].life,detected:true}; } }
+  var dv=CAT_DEFAULT_SUBTYPE[cat]; for(i=0;i<L.length;i++){ if(L[i].v===dv) return {v:L[i].v,label:L[i].label,life:L[i].life,detected:false}; }
+  var f=L[0]||{v:'other',label:'General',life:10}; return {v:f.v,label:f.label,life:f.life,detected:false};
+}
+function astLifeFor(a){ if(!a) return 0; if(a.deprType==='none') return 0; if(a.subtype) return astSubtypeLife(a.cat,a.subtype); return astInferSubtype(a.name||'',a.cat).life; }
+function astSubtypeLabel(a){ if(!a) return ''; var sub=a.subtype; if(!sub) return astInferSubtype(a.name||'',a.cat).label; var L=_astSubList(a.cat); for(var i=0;i<L.length;i++){ if(L[i].v===sub) return L[i].label; } return (L[0]&&L[0].label)||''; }
+
+// ── Add/Edit form wiring for the Type field ──
+var astSubtypeEdited=false;
+function astPopulateSubtypes(){
+  var cat=$('ast-cat')&&$('ast-cat').value; var sel=$('ast-subtype'); if(!sel) return;
+  var L=_astSubList(cat);
+  sel.innerHTML=L.map(function(x){ return '<option value="'+x.v+'">'+esc(x.label)+(x.life?' (~'+x.life+' yr)':' (no wear)')+'</option>'; }).join('');
+}
+function astSubtypeNote(){
+  var cat=$('ast-cat')&&$('ast-cat').value; var sv=$('ast-subtype')&&$('ast-subtype').value; var el=$('ast-subtype-note'); if(!el) return;
+  var life=astSubtypeLife(cat,sv);
+  if(!life){ el.innerHTML='This type doesn\u2019t wear out \u2014 it\u2019s left off the age &amp; replacement chart.'; return; }
+  el.innerHTML='Typical working life <b style="color:var(--gd)">~'+life+' years</b> \u2014 used to colour the Age &amp; replacement chart. A guide; real life depends on use &amp; upkeep.';
+}
+function astInferAndSelectSubtype(){
+  if(astSubtypeEdited){ astSubtypeNote(); return; }
+  var cat=$('ast-cat')&&$('ast-cat').value; var name=$('ast-name')&&$('ast-name').value;
+  var inf=astInferSubtype(name,cat); var sel=$('ast-subtype'); if(sel&&inf) sel.value=inf.v;
+  var chip=$('ast-subtype-chip'); if(chip) chip.style.display=(inf&&inf.detected&&name)?'inline-block':'none';
+  astSubtypeNote();
+}
+function astMaybeInferSubtype(){ if(!astSubtypeEdited) astInferAndSelectSubtype(); }
+function astSubtypeChanged(){ astSubtypeEdited=true; var chip=$('ast-subtype-chip'); if(chip) chip.style.display='none'; astSubtypeNote(); }
+
 
 // ── Depreciation engine ───────────────────────────────────────
 function calcDepr(asset) {
@@ -7460,14 +7702,14 @@ function renderAssetList() {
   }
   if (empty) empty.style.display = 'none';
 
-  tbody.innerHTML = assets.map(function(a, i) {
+  var _rows = assets.map(function(a, i) {
     var d   = calcDepr(a);
     var ic  = CAT_ICONS[a.cat] || CAT_ICONS['Other'];
     var age = a.date ? Math.floor((new Date() - new Date(a.date)) / (365.25*24*3600*1000)) : 0;
-    var deprBadge = a.deprType === 's12b' ? 'S12B' : a.deprType === 's11e' ? 'S11(e)' : '';
+    var deprBadge = ASSET_TREAT_BADGE[a.deprType] || '';
     var origIdx   = ST_ASSETS.assets.indexOf(a);
 
-    return '<tr>' +
+    return '<tr onclick="openAssetDetail('+origIdx+')" style="cursor:pointer">' +
       '<td>' +
         '<div style="display:flex;align-items:center;gap:8px">' +
           '<div style="width:28px;height:28px;border-radius:6px;background:'+ic.bg+';display:flex;align-items:center;justify-content:center;flex-shrink:0">' +
@@ -7491,12 +7733,17 @@ function renderAssetList() {
       '</td>' +
       '<td>' +
         '<div style="display:flex;gap:4px">' +
-          '<button onclick="openEditAsset('+origIdx+')" style="background:var(--gb);border:1px solid var(--gp);border-radius:4px;padding:4px 8px;font-size:11px;font-weight:600;color:var(--gd);cursor:pointer">Edit</button>' +
-          '<button onclick="deleteAsset('+origIdx+')" style="background:var(--rp);border:1px solid #FECACA;border-radius:4px;padding:4px 8px;font-size:11px;font-weight:600;color:var(--rd);cursor:pointer">✕</button>' +
+          '<button onclick="event.stopPropagation();openEditAsset('+origIdx+')" style="background:var(--gb);border:1px solid var(--gp);border-radius:4px;padding:4px 8px;font-size:11px;font-weight:600;color:var(--gd);cursor:pointer">Edit</button>' +
+          '<button onclick="event.stopPropagation();deleteAsset('+origIdx+')" style="background:var(--rp);border:1px solid #FECACA;border-radius:4px;padding:4px 8px;font-size:11px;font-weight:600;color:var(--rd);cursor:pointer">✕</button>' +
         '</div>' +
       '</td>' +
     '</tr>';
   }).join('');
+  var _tp=0,_tb=0,_td=0;
+  assets.forEach(function(a){ var dd=calcDepr(a); _tp+=a.price||0; _tb+=dd.bookValue; _td+=dd.deprYear; });
+  var _totLbl = filter ? (filter+' <span class="sub">\u00b7 '+assets.length+' of '+ST_ASSETS.assets.length+' assets</span>') : ('TOTAL <span class="sub">\u00b7 '+assets.length+' asset'+(assets.length!==1?'s':'')+'</span>');
+  _rows += '<tr class="ast-totrow"><td>'+_totLbl+'</td><td></td><td></td><td>'+fmt(_tp)+'</td><td>'+fmt(_tb)+'</td><td>'+(_td>0?fmt(_td)+'/yr':'\u2014')+'</td><td></td></tr>';
+  tbody.innerHTML = _rows;
 }
 
 // ── Liabilities render ────────────────────────────────────────
@@ -7510,6 +7757,13 @@ function openAddAsset() {
   var d = $('ast-date'); if(d) d.value = '';
   var c = $('ast-cat');  if(c) c.selectedIndex = 0;
   var dv = $('ast-depr-preview'); if(dv) dv.style.display = 'none';
+  ['ast-lender','ast-outstanding','ast-instalment','ast-rate','ast-insured','ast-insurer','ast-renewal'].forEach(function(id){ var e=$(id); if(e) e.value=''; });
+  var fc=$('ast-financed'); if(fc) fc.checked=false;
+  var ff=$('ast-finance-fields'); if(ff) ff.style.display='none';
+  var tn=$('ast-treat-note'); if(tn) tn.style.display='none';
+  AST_DRAFT_DOCS=[]; astRenderDocThumbs(); setEl('ast-net-val', fmt(0));
+  astSubtypeEdited=false; astPopulateSubtypes(); astInferAndSelectSubtype();
+  astTreatChanged();
   var bg = $('ast-modal-bg'); if(bg) bg.style.display = 'flex';
 }
 function openEditAsset(idx) {
@@ -7527,7 +7781,19 @@ function openEditAsset(idx) {
   if(cat){ for(var i=0;i<cat.options.length;i++){ if(cat.options[i].value===a.cat||cat.options[i].text===a.cat){ cat.selectedIndex=i; break; } } }
   var dt = $('ast-depr-type');
   if(dt){ for(var j=0;j<dt.options.length;j++){ if(dt.options[j].value===a.deprType){ dt.selectedIndex=j; break; } } }
-  calcAssetDepr();
+  el=$('ast-financed'); if(el) el.checked = !!a.financed;
+  el=$('ast-lender'); if(el) el.value = a.lender||'';
+  el=$('ast-outstanding'); if(el) el.value = a.outstanding||'';
+  el=$('ast-instalment'); if(el) el.value = a.instalment||'';
+  el=$('ast-rate'); if(el) el.value = a.rate||'';
+  el=$('ast-insured'); if(el) el.value = a.insuredValue||'';
+  el=$('ast-insurer'); if(el) el.value = a.insurer||'';
+  el=$('ast-renewal'); if(el) el.value = a.renewalDate||'';
+  var ffe=$('ast-finance-fields'); if(ffe) ffe.style.display = a.financed?'block':'none';
+  AST_DRAFT_DOCS = (a.docs||[]).slice(); astRenderDocThumbs();
+  astPopulateSubtypes(); if(a.subtype){ var _ss=$('ast-subtype'); if(_ss) _ss.value=a.subtype; astSubtypeEdited=true; var _sc=$('ast-subtype-chip'); if(_sc) _sc.style.display='none'; astSubtypeNote(); } else { astSubtypeEdited=false; astInferAndSelectSubtype(); }
+  astShowTreatNote(); astCalcNet();
+  astTreatChanged();
   var bg = $('ast-modal-bg'); if(bg) bg.style.display = 'flex';
 }
 function closeAddAsset() {
@@ -7553,14 +7819,68 @@ function calcAssetDepr() {
     prev.innerHTML = '<div style="font-size:12px;font-weight:700;color:var(--gd);margin-bottom:5px">Section 12B Depreciation Schedule</div>' +
       lines.map(function(l){ return '<div style="font-size:12px;color:var(--t2);margin-bottom:2px">'+l+'</div>'; }).join('') +
       '<div style="font-size:11px;color:var(--t3);margin-top:4px">Total deduction over 3 years: '+fmt(price)+'</div>';
+  } else if (dtype==='renew') {
+    prev.innerHTML = '<div style="font-size:12px;font-weight:700;color:var(--gd);margin-bottom:5px">Renewable energy allowance</div>' +
+      '<div style="font-size:12px;color:var(--t2)"><strong>'+fmt(price)+'</strong> \u2014 often deductible in full in year one for qualifying solar/renewable plant.</div>' +
+      '<div style="font-size:11px;color:var(--t3);margin-top:4px">Confirm the exact rate for your system with your accountant.</div>';
   } else {
     var annual = Math.round(price/life);
-    prev.innerHTML = '<div style="font-size:12px;font-weight:700;color:var(--gd);margin-bottom:5px">Section 11(e) Wear &amp; Tear</div>' +
+    var head = (dtype==='s12u') ? 'Section 12U capital development' : 'Section 11(e) wear &amp; tear';
+    var foot = (dtype==='s12u') ? 'Spread shown for planning \u2014 actual timing depends on your farming income (your accountant confirms).' : 'Total deduction: '+fmt(annual*life);
+    prev.innerHTML = '<div style="font-size:12px;font-weight:700;color:var(--gd);margin-bottom:5px">'+head+'</div>' +
       '<div style="font-size:12px;color:var(--t2)">'+fmt(annual)+' per year over '+life+' years ('+Math.round(100/life)+'%/yr)</div>' +
-      '<div style="font-size:11px;color:var(--t3);margin-top:4px">Total deduction: '+fmt(annual*life)+'</div>';
+      '<div style="font-size:11px;color:var(--t3);margin-top:4px">'+foot+'</div>';
   }
 }
 
+var AST_DRAFT_DOCS = [];
+function astSuggestTreatment(){
+  var cat = $('ast-cat') && $('ast-cat').value;
+  var m = ASSET_TAX_MAP[cat];
+  if(m){ var dt=$('ast-depr-type'); if(dt) dt.value=m.type; var lf=$('ast-life'); if(lf) lf.value=m.life; }
+  astSubtypeEdited=false; astPopulateSubtypes(); astInferAndSelectSubtype();
+  astShowTreatNote(); astTreatChanged();
+}
+function astTreatChanged(){
+  var t=$('ast-depr-type')&&$('ast-depr-type').value;
+  var showLife=(t==='s11e'||t==='s12u');
+  var wrap=$('ast-life-wrap'); if(wrap) wrap.style.display=showLife?'block':'none';
+  var row=$('ast-depr-row'); if(row) row.style.gridTemplateColumns=showLife?'':'1fr';
+  calcAssetDepr();
+}
+function astShowTreatNote(){
+  var cat = $('ast-cat') && $('ast-cat').value;
+  var m = ASSET_TAX_MAP[cat]; var el=$('ast-treat-note'); if(!el) return;
+  if(m && m.note){ el.style.display='block'; el.innerHTML='<strong>Suggested treatment: '+(ASSET_TREAT_LABEL[m.type]||'')+'.</strong> '+m.note; }
+  else el.style.display='none';
+}
+function astToggleFinance(){
+  var on = $('ast-financed') && $('ast-financed').checked;
+  var f=$('ast-finance-fields'); if(f) f.style.display = on?'block':'none';
+  astCalcNet();
+}
+function astCalcNet(){
+  var price = parseFloat($('ast-price')&&$('ast-price').value)||0;
+  var out   = parseFloat($('ast-outstanding')&&$('ast-outstanding').value)||0;
+  setEl('ast-net-val', fmt(Math.max(0, price-out)));
+}
+function astAddDocs(ev){
+  var files = ev.target.files; if(!files) return;
+  Array.prototype.forEach.call(files, function(file){
+    var reader=new FileReader();
+    reader.onload=function(e){ AST_DRAFT_DOCS.push({name:file.name, kind:(file.type.indexOf('image')===0?'image':'doc'), data:e.target.result}); astRenderDocThumbs(); };
+    reader.readAsDataURL(file);
+  });
+  ev.target.value='';
+}
+function astRemoveDoc(i){ AST_DRAFT_DOCS.splice(i,1); astRenderDocThumbs(); }
+function astRenderDocThumbs(){
+  var el=$('ast-doc-thumbs'); if(!el) return;
+  el.innerHTML = AST_DRAFT_DOCS.map(function(d,i){
+    var inner = d.kind==='image' ? '<img src="'+d.data+'" style="width:100%;height:100%;object-fit:cover"/>' : '<div style="font-size:20px">&#x1F4C4;</div>';
+    return '<div style="position:relative;width:50px;height:50px;border-radius:7px;border:1px solid var(--br);background:var(--br2);display:flex;align-items:center;justify-content:center;overflow:hidden" title="'+esc(d.name)+'">'+inner+'<span onclick="astRemoveDoc('+i+')" style="position:absolute;top:-6px;right:-6px;background:var(--rd);color:#fff;width:16px;height:16px;border-radius:50%;font-size:11px;display:flex;align-items:center;justify-content:center;cursor:pointer">&times;</span></div>';
+  }).join('');
+}
 function saveAsset() {
   var name  = $('ast-name')  && $('ast-name').value.trim();
   var cat   = $('ast-cat')   && $('ast-cat').value;
@@ -7573,7 +7893,20 @@ function saveAsset() {
   if(!cat)   { toast('Please select a category','error');   return; }
   if(!price) { toast('Please enter the purchase price','error'); return; }
 
-  var entry = {id:ST_ASSETS.nextId++, name:name, cat:cat, date:date, price:price, deprType:dtype, life:life, notes:notes};
+  var subtype = ($('ast-subtype')&&$('ast-subtype').value)||'';
+  var entry = {id:ST_ASSETS.nextId++, name:name, cat:cat, date:date, price:price, deprType:dtype, life:life, notes:notes, subtype:subtype};
+  var financed = $('ast-financed') && $('ast-financed').checked;
+  entry.financed = !!financed;
+  if(financed){
+    entry.lender = ($('ast-lender')&&$('ast-lender').value.trim())||'';
+    entry.outstanding = parseFloat($('ast-outstanding')&&$('ast-outstanding').value)||0;
+    entry.instalment = parseFloat($('ast-instalment')&&$('ast-instalment').value)||0;
+    entry.rate = parseFloat($('ast-rate')&&$('ast-rate').value)||0;
+  }
+  var iv = parseFloat($('ast-insured')&&$('ast-insured').value)||0; if(iv) entry.insuredValue=iv;
+  var insr=($('ast-insurer')&&$('ast-insurer').value.trim())||''; if(insr) entry.insurer=insr;
+  var rnw=($('ast-renewal')&&$('ast-renewal').value)||''; if(rnw) entry.renewalDate=rnw;
+  entry.docs = AST_DRAFT_DOCS.slice();
   var editIdx = parseInt($('ast-edit-idx')&&$('ast-edit-idx').value);
   if(editIdx >= 0 && editIdx < ST_ASSETS.assets.length) {
     entry.id = ST_ASSETS.assets[editIdx].id;
@@ -7598,9 +7931,202 @@ function deleteAsset(idx) {
 function renderAssets() {
   renderAssetList();
   updateAssetSummary();
+  var iv=$('ast-view-insights'); if(iv && iv.style.display!=='none') renderAssetInsights();
+}
+function astTab(tab){
+  var reg=$('ast-view-register'), ins=$('ast-view-insights');
+  if(reg) reg.style.display = tab==='register'?'block':'none';
+  if(ins) ins.style.display = tab==='insights'?'block':'none';
+  var tr=$('ast-tab-register'), ti=$('ast-tab-insights');
+  if(tr) tr.classList.toggle('on', tab==='register');
+  if(ti) ti.classList.toggle('on', tab==='insights');
+  if(tab==='insights') renderAssetInsights();
+}
+function _astSoWhat(t){ return '<div style="margin-top:11px;background:var(--gb);border-left:3px solid var(--gl);border-radius:0 8px 8px 0;padding:8px 11px;font-size:11.5px;color:var(--gm);line-height:1.45"><b style="color:var(--gd)">So what:</b> '+t+'</div>'; }
+function _astCard(title,why,inner,soWhat){ return '<div style="background:#fff;border:1px solid var(--br);border-radius:13px;padding:14px;box-shadow:0 1px 3px rgba(0,0,0,.05)"><div style="font-size:13px;font-weight:800;margin-bottom:2px">'+title+'</div><div style="font-size:11px;color:var(--t3);line-height:1.4;margin-bottom:11px">'+why+'</div>'+inner+_astSoWhat(soWhat)+'</div>'; }
+function _astBar(name,pct,col,val){ pct=Math.max(0,Math.min(100,pct)); return '<div style="display:flex;align-items:center;gap:8px;margin-bottom:7px;font-size:11px"><span style="width:92px;color:var(--t2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">'+esc(name)+'</span><div style="flex:1;background:var(--br2);border-radius:5px;height:13px;overflow:hidden"><div style="height:100%;border-radius:5px;width:'+pct+'%;background:'+col+'"></div></div><span style="width:62px;text-align:right;font-weight:700;color:var(--t2)">'+val+'</span></div>'; }
+function _aiBar(name,pct,col,val,oc){ pct=Math.max(0,Math.min(100,pct)); return '<div class="ai-bar"'+(oc?' onclick="'+oc+'"':'')+'><span class="nm">'+esc(name)+'</span><div class="tk"><div class="fl" style="width:'+pct+'%;background:'+col+'"></div></div><span class="vv">'+val+'</span></div>'; }
+function _aiLeg(col,label,oc){ return '<span class="ai-lg"'+(oc?' onclick="'+oc+'"':'')+'><i style="background:'+col+'"></i>'+label+'</span>'; }
+function _aiRow(nm,amt,sub){ return '<div class="r"><span>'+esc(nm)+(sub?'<div class="sub">'+esc(sub)+'</div>':'')+'</span><span class="amt">'+amt+'</span></div>'; }
+function astDrillClose(t){ var el=$(t); if(el){ el.innerHTML=''; el.removeAttribute('data-sig'); } }
+function astDrill(kind,key,target){
+  var el=$(target); if(!el) return;
+  var sig=kind+'|'+key;
+  if(el.getAttribute('data-sig')===sig){ astDrillClose(target); return; }
+  var A=ST_ASSETS.assets, rows='', title='', total=0, totLabel='Total', hasTot=true;
+  if(kind==='kpi-total'){
+    var byc={},ord=[]; A.forEach(function(a){ if(byc[a.cat]==null){byc[a.cat]=0;ord.push(a.cat);} byc[a.cat]+=a.price||0; });
+    ord.sort(function(x,y){return byc[y]-byc[x];});
+    title='Total assets by category';
+    ord.forEach(function(c){ total+=byc[c]; rows+=_aiRow(c,fmt(byc[c])); });
+  } else if(kind==='cat'){
+    var items=A.filter(function(a){return a.cat===key;}).sort(function(x,y){return (y.price||0)-(x.price||0);});
+    title=key+' \u2014 '+items.length+' asset'+(items.length!==1?'s':'');
+    items.forEach(function(a){ total+=a.price||0; rows+=_aiRow(a.name,fmt(a.price||0)); });
+  } else if(kind==='fin'){
+    var fa=A.filter(function(a){return a.financed&&(a.outstanding||0)>0;}).sort(function(x,y){return (y.outstanding||0)-(x.outstanding||0);});
+    title='Financed \u2014 '+fa.length+' asset'+(fa.length!==1?'s':''); totLabel='Total owed';
+    fa.forEach(function(a){ total+=a.outstanding||0; rows+=_aiRow(a.name,fmt(a.outstanding||0),(a.lender||'')+(a.rate?' \u00b7 '+a.rate+'%':'')); });
+    if(!fa.length){ rows='<div class="r"><span>No financed assets</span><span class="amt">R0</span></div>'; }
+  } else if(kind==='fy'){
+    var fy=parseInt(key,10), c=[];
+    A.forEach(function(a){ var d=calcDepr(a); (d.deprSchedule||[]).forEach(function(s){ if(s.yr===fy&&s.amount>0) c.push({n:a.name,a:s.amount,r:s.rate}); }); });
+    c.sort(function(x,y){return y.a-x.a;});
+    title='FY'+(''+fy).slice(-2)+' write-off \u2014 '+c.length+' asset'+(c.length!==1?'s':''); totLabel='Total FY'+(''+fy).slice(-2);
+    c.forEach(function(x){ total+=x.a; rows+=_aiRow(x.n,fmt(x.a),x.r); });
+    if(!c.length){ rows='<div class="r"><span>No depreciation this year</span><span class="amt">R0</span></div>'; }
+  } else if(kind==='asset'){
+    var a=A[parseInt(key,10)]; if(!a){astDrillClose(target);return;} var d=calcDepr(a); hasTot=false;
+    var life=astLifeFor(a); var ageY=a.date?Math.floor((new Date()-new Date(a.date))/(365.25*864e5)):0;
+    var pct=life?Math.min(100,Math.round(ageY/life*100)):0;
+    var pcol=pct>90?'var(--rd)':(pct>=60?'#E07B2A':'var(--gl)');
+    title=a.name;
+    rows+=_aiRow('Type',astSubtypeLabel(a));
+    rows+=_aiRow('Bought',a.date||'\u2014');
+    if(life){ rows+=_aiRow('Age',ageY+' of ~'+life+' yr typical life'); rows+='<div class="r"><span>Working life used</span><span class="amt" style="color:'+pcol+'">'+pct+'%</span></div>'; }
+    rows+=_aiRow('Purchase price',fmt(a.price||0));
+    rows+=_aiRow('Book value now',(d.bookValue<=0&&a.deprType!=='none'?'R0 \u00b7 written off for tax':fmt(d.bookValue)));
+    if(a.financed) rows+=_aiRow('Finance owed',fmt(a.outstanding||0)+(a.lender?' ('+a.lender+')':''));
+    if(a.insuredValue) rows+=_aiRow('Insured for',fmt(a.insuredValue));
+  
+  } else if(kind==='ins'){
+    var a2=A[parseInt(key,10)]; if(!a2){astDrillClose(target);return;} var gap=(a2.price||0)-(a2.insuredValue||0); hasTot=false;
+    title=a2.name+(gap>0?' \u2014 under-insured':' \u2014 insured');
+    rows+=_aiRow('Insured for',fmt(a2.insuredValue||0)); rows+=_aiRow('Worth (purchase price)',fmt(a2.price||0));
+    if(gap>0){ rows+='<div class="r"><span>Shortfall you\u2019d carry</span><span class="amt" style="color:var(--rd)">'+fmt(gap)+'</span></div>'; }
+    if(a2.insurer) rows+=_aiRow('Insurer',a2.insurer);
+  } else if(kind==='notins'){
+    var ni=A.filter(function(a){return !a.insuredValue;}).sort(function(x,y){return (y.price||0)-(x.price||0);}); hasTot=false;
+    title='Not insured \u2014 '+ni.length+' asset'+(ni.length!==1?'s':'');
+    ni.slice(0,8).forEach(function(a){ rows+=_aiRow(a.name,fmt(a.price||0)); });
+    if(ni.length>8){ rows+=_aiRow('+ '+(ni.length-8)+' more',''); }
+    if(!ni.length){ rows='<div class="r"><span>Everything is insured</span><span class="amt"></span></div>'; }
+  }
+  el.innerHTML='<div class="ai-bd"><div class="bh"><span>'+esc(title)+'</span><span class="x" onclick="astDrillClose(\''+target+'\')">\u00d7</span></div>'+rows+(hasTot?'<div class="tt"><span>'+totLabel+'</span><span>'+fmt(total)+'</span></div>':'')+'</div>';
+  el.setAttribute('data-sig',sig);
+}
+function renderAssetInsights(){
+  var el=$('ast-view-insights'); if(!el) return;
+  var A=ST_ASSETS.assets;
+  if(!A.length){ el.innerHTML='<div style="padding:40px;text-align:center;color:var(--t3)">Add assets to see insights.</div>'; return; }
+  var CATCOL={'Land & Buildings':'#1B4332','Vehicles & Tractors':'#40916C','Machinery & Equipment':'#E07B2A','Irrigation & Water':'#1D4ED8','Storage & Silos':'#7C3AED','Capital Development':'#15803D','Renewable Energy':'#C8962C','Financial Assets':'#0EA5E9','Tools & Implements':'#DB2777','Other':'#9CA3AF'};
+  var byCat={},cats=[]; A.forEach(function(a){ if(byCat[a.cat]==null){byCat[a.cat]=0;cats.push(a.cat);} byCat[a.cat]+=a.price||0; });
+  var totVal=0; cats.forEach(function(c){ totVal+=byCat[c]; });
+  cats.sort(function(x,y){return byCat[y]-byCat[x];});
+  var circ=2*Math.PI*42, cum=0;
+  var segs=cats.map(function(c){ var frac=totVal?byCat[c]/totVal:0; var dash=frac*circ; var off=-cum*circ; cum+=frac; var oc="astDrill('cat','"+c+"','ai-bd-a')"; return '<circle cx="60" cy="60" r="42" stroke="'+(CATCOL[c]||'#9CA3AF')+'" stroke-dasharray="'+dash.toFixed(1)+' '+(circ-dash).toFixed(1)+'" stroke-dashoffset="'+off.toFixed(1)+'" style="cursor:pointer" onclick="'+oc+'"/>'; }).join('');
+  var donut='<svg viewBox="0 0 120 120" width="112" height="112" style="flex:none"><g transform="rotate(-90 60 60)" fill="none" stroke-width="19">'+segs+'</g><text x="60" y="57" text-anchor="middle" font-size="15" font-weight="800" fill="#1B4332" font-family="Plus Jakarta Sans">'+astK(totVal)+'</text><text x="60" y="71" text-anchor="middle" font-size="8" fill="#6B7280" font-family="Plus Jakarta Sans">'+A.length+' assets</text></svg>';
+  var legend=cats.map(function(c){ return _aiLeg(CATCOL[c]||'#9CA3AF', esc(c.split(' ')[0])+' '+Math.round(byCat[c]/totVal*100)+'%', "astDrill('cat','"+c+"','ai-bd-a')"); }).join('');
+  var topC=cats[0], topP=Math.round(byCat[topC]/totVal*100);
+  var swA='Most of your value is in <b>'+esc(topC)+'</b> ('+topP+'%). '+(topP>=50?'A big chunk is tied up in one place \u2014 keep enough cash and working gear to actually farm it.':'Your assets are spread across a few areas, which helps spread your risk.');
+  var fy0=(typeof getCurrentFY==='function')?getCurrentFY():2024;
+  var fys=[]; for(var k=0;k<5;k++) fys.push(fy0+k);
+  var dep={}; fys.forEach(function(f){dep[f]=0;});
+  A.forEach(function(a){ var d=calcDepr(a); (d.deprSchedule||[]).forEach(function(s){ if(dep[s.yr]!=null) dep[s.yr]+=s.amount; }); });
+  var mxD=Math.max.apply(null, fys.map(function(f){return dep[f];}).concat(1));
+  var barsB=fys.map(function(f){ return _aiBar('FY'+(''+f).slice(-2), dep[f]/mxD*100, '#40916C', dep[f]>0?astK(dep[f]):'\u2014', "astDrill('fy','"+f+"','ai-bd-b')"); }).join('');
+  var swB='You can claim about <b>'+astK(dep[fy0])+'</b> against tax this year'+(dep[fy0+4]<dep[fy0]?', dropping to '+astK(dep[fy0+4])+' by FY'+(''+(fy0+4)).slice(-2)+'. As that shrinks your tax bill creeps up \u2014 plan for it, or buy gear that brings fresh deductions.':'. Keep your register current so every deduction is captured.');
+  var totP=0,owed=0; A.forEach(function(a){ totP+=a.price||0; if(a.financed) owed+=a.outstanding||0; });
+  var netEq=totP-owed; var ownP=totP?Math.round(netEq/totP*100):100;
+  var innerC='<div style="font-size:24px;font-weight:800;color:var(--gd);line-height:1">'+fmt(netEq)+' <span style="font-size:12px;color:var(--t3);font-weight:600">you own</span></div>'+
+    '<div style="height:20px;border-radius:7px;overflow:hidden;display:flex;margin:14px 0 9px;cursor:pointer" onclick="astDrill(\'fin\',\'all\',\'ai-bd-c\')"><div style="width:'+ownP+'%;background:#1B4332"></div><div style="width:'+(100-ownP)+'%;background:#E74C3C"></div></div>'+
+    '<div style="display:flex;justify-content:space-between;font-size:12px">'+_aiLeg('#1B4332','Owned '+fmt(netEq),'')+_aiLeg('#E74C3C','Financed '+fmt(owed),"astDrill('fin','all','ai-bd-c')")+'</div>';
+  var swC='You own <b>'+ownP+'%</b> of your assets outright. '+(ownP>=80?'That is a strong position \u2014 good news when you apply for a loan.':'The bank still holds a fair chunk \u2014 paying down finance lifts how much you can borrow.');
+  var equip=[];
+  A.forEach(function(a,i){
+    var life=astLifeFor(a); if(!life) return;
+    var ageY=a.date?((new Date()-new Date(a.date))/(365.25*864e5)):0;
+    var d=calcDepr(a);
+    equip.push({i:i,name:a.name,sub:astSubtypeLabel(a),age:Math.floor(ageY),life:life,pct:Math.max(0,Math.min(100,Math.round(ageY/life*100))),wo:(d.bookValue<=0&&a.deprType!=='none')});
+  });
+  equip.sort(function(x,y){return y.pct-x.pct;});
+  var topD=equip.slice(0,6);
+  var atEnd=equip.filter(function(e){return e.pct>90;}).length;
+  var writtenOff=equip.filter(function(e){return e.wo;}).length;
+  function _pcol(p){ return p>90?'#E74C3C':(p>=60?'#E07B2A':'#40916C'); }
+  var ageLeg='<div class="ai-leg2"><span><i style="background:#40916C"></i>Plenty left (under 60%)</span><span><i style="background:#E07B2A"></i>Getting on (60\u201390%)</span><span><i style="background:#E74C3C"></i>At / past its life (over 90%)</span><span><span class="ai-wo">written off</span> = fully depreciated for tax</span></div>';
+  var barsD= equip.length ? (ageLeg+topD.map(function(e){
+      return '<div class="ai-bar two" onclick="astDrill(\'asset\',\''+e.i+'\',\'ai-bd-d\')"><span class="nm">'+esc(e.name)+'<span class="sl">'+esc(e.sub)+' \u00b7 '+e.age+' of ~'+e.life+' yr</span></span><div class="tk"><div class="fl" style="width:'+e.pct+'%;background:'+_pcol(e.pct)+'"></div></div><span class="vv2"><span class="p">'+e.pct+'%</span>'+(e.wo?'<span class="ai-wo">written off</span>':'')+'</span></div>';
+    }).join('')) : '<div style="font-size:12px;color:var(--t3)">No machinery, vehicles or equipment added yet.</div>';
+  var swD= !equip.length ? 'Add machinery, vehicles or equipment to see how close each is to needing replacement.' : (atEnd>0 ? ('<b>'+atEnd+'</b> '+(atEnd!==1?'assets are':'asset is')+' at or past '+(atEnd!==1?'their':'its')+' typical working life \u2014 start budgeting to replace '+(atEnd!==1?'them':'it')+'.'+(writtenOff>0?(' ('+writtenOff+' '+(writtenOff!==1?'are':'is')+' also fully written off for tax \u2014 a separate thing from wear.)'):'')) : ('Your gear still has working life left \u2014 nothing is near replacement yet.'+(writtenOff>0?(' '+writtenOff+' '+(writtenOff!==1?'items are':'item is')+' fully written off for tax, but that\u2019s about tax, not wear.'):'')));
+
+  var insured=[],notIns=0; A.forEach(function(a,i){ if(a.insuredValue) insured.push({i:i,name:a.name,ratio:(a.price?Math.round(a.insuredValue/a.price*100):100),under:a.insuredValue<(a.price||0)}); else notIns++; });
+  var under=insured.filter(function(x){return x.under;}).length;
+  var barsE= insured.length ? insured.slice(0,6).map(function(x){ return _aiBar(x.name, Math.min(100,x.ratio), x.under?'#E74C3C':'#40916C', x.under?('\u2212'+(100-x.ratio)+'%'):'OK', "astDrill('ins','"+x.i+"','ai-bd-e')"); }).join('') : '<div style="font-size:12px;color:var(--t3)">No assets have insurance recorded yet.</div>';
+  var notLink= notIns ? '<div style="margin-top:10px;font-size:12px;color:var(--t3)">'+notIns+' asset'+(notIns!==1?'s':'')+' not insured \u00b7 <span style="color:var(--bl);font-weight:700;cursor:pointer;text-decoration:underline" onclick="astDrill(\'notins\',\'all\',\'ai-bd-e\')">tap to list</span></div>' : '';
+  var swE= (under||notIns) ? ('<b>'+under+'</b> asset'+(under!==1?'s are':' is')+' insured for less than '+(under!==1?'they are':'it is')+' worth and <b>'+notIns+'</b> '+(notIns!==1?'are':'is')+' not insured at all. One fire, theft or hailstorm and you would carry that loss yourself \u2014 worth a call to your insurer.') : 'Everything on the register is insured at or above its value \u2014 you are well covered.';
+  var html='';
+  html+='<div class="ai-kpis" id="ai-kpis">'+
+    '<div class="ai-kpi" onclick="astDrill(\'kpi-total\',\'all\',\'ai-bd-kpi\')"><div class="l">Total assets</div><div class="v">'+astK(totVal)+'</div><div class="s">'+A.length+' assets \u00b7 tap to split</div></div>'+
+    '<div class="ai-kpi" onclick="astDrill(\'fin\',\'all\',\'ai-bd-kpi\')"><div class="l">You own</div><div class="v">'+ownP+'%</div><div class="s">'+fmt(netEq)+' net equity</div></div>'+
+    '<div class="ai-kpi" onclick="astDrill(\'fy\',\''+fy0+'\',\'ai-bd-kpi\')"><div class="l">Tax write-off this yr</div><div class="v">'+astK(dep[fy0])+'</div><div class="s">depreciation FY'+(''+fy0).slice(-2)+'</div></div>'+
+  '</div><div id="ai-bd-kpi"></div>';
+  html+='<div class="ai-grid2">';
+  html+='<div class="ai-card in2"><div class="ai-title">Asset value by category</div><div class="ai-why">Where your '+astK(totVal)+' is tied up \u2014 tap a slice.</div><div style="display:flex;align-items:center;gap:14px"><div>'+donut+'</div><div class="ai-legend">'+legend+'</div></div><div id="ai-bd-a"></div><div class="ai-sw"><b>So what:</b> '+swA+'</div></div>';
+  html+='<div class="ai-card in2"><div class="ai-title">What you own vs the bank</div><div class="ai-why">Tap the red slice to see the loans.</div>'+innerC+'<div id="ai-bd-c"></div><div class="ai-sw"><b>So what:</b> '+swC+'</div></div>';
+  html+='</div>';
+  html+='<div class="ai-card"><div class="ai-title">Depreciation forecast</div><div class="ai-why">Tap a year to see which assets make up that write-off.</div>'+barsB+'<div id="ai-bd-b"></div><div class="ai-sw"><b>So what:</b> '+swB+'</div></div>';
+  html+='<div class="ai-card"><div class="ai-title">Age &amp; replacement runway</div><div class="ai-why">Tap a machine to see its price, book value and finance.</div>'+barsD+'<div id="ai-bd-d"></div><div class="ai-sw"><b>So what:</b> '+swD+'</div></div>';
+  html+='<div class="ai-card"><div class="ai-title">Insurance cover</div><div class="ai-why">Tap an asset to see the gap.</div>'+barsE+notLink+'<div id="ai-bd-e"></div><div class="ai-sw"><b>So what:</b> '+swE+'</div></div>';
+  html+='<div style="font-size:11px;color:var(--t4);text-align:center;margin-top:6px">Tax figures are a starting point for your accountant \u2014 not tax advice.</div>';
+  el.innerHTML=html;
 }
 
 // ── Print asset register ──────────────────────────────────────
+function astK(v){ v=v||0; return v>=1e6?('R'+(v/1e6).toFixed(1)+'m') : v>=1e3?('R'+Math.round(v/1e3)+'k') : ('R'+Math.round(v)); }
+function astValCard(lbl,val,col){ return '<div style="background:var(--br2);border-radius:9px;padding:9px 11px"><div style="font-size:10px;color:var(--t3);font-weight:700">'+lbl+'</div><div style="font-size:15px;font-weight:800;color:'+(col||'var(--t1)')+'">'+val+'</div></div>'; }
+function closeAssetDetail(){ var bg=$('ast-detail-bg'); if(bg) bg.style.display='none'; }
+function openAssetDetail(idx){
+  var a = ST_ASSETS.assets[idx]; if(!a) return;
+  var d = calcDepr(a); var repl = a.insuredValue||0;
+  setEl('ast-detail-title', a.name||'Asset');
+  var eb=$('ast-detail-edit'); if(eb) eb.onclick=function(){ closeAssetDetail(); openEditAsset(idx); };
+  var body=$('ast-detail-body'); if(!body) return;
+  var h='';
+  h += '<div style="font-size:12px;color:var(--t3);margin-bottom:14px">'+esc(a.cat||'')+(a.date?' \u00b7 bought '+esc(a.date):'')+(a.notes?' \u00b7 '+esc(a.notes):'')+'</div>';
+  h += '<div style="display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:16px">';
+  h += astValCard('Purchase price', fmt(a.price||0), 'var(--t1)');
+  h += astValCard('Book value (tax)', fmt(d.bookValue), 'var(--bl)');
+  if(repl) h += astValCard('Insured / replacement', fmt(repl), 'var(--gd)');
+  if(a.financed) h += astValCard('Net equity you hold', fmt(Math.max(0,(repl||a.price||0)-(a.outstanding||0))), 'var(--gd)');
+  h += '</div>';
+  // #8 depreciation forecast
+  if(d.deprSchedule && d.deprSchedule.length && a.deprType!=='none'){
+    var sch=d.deprSchedule.slice(0,5);
+    var mx=Math.max.apply(null, sch.map(function(x){return x.amount;}).concat(1));
+    h += '<div style="font-size:12px;font-weight:700;margin-bottom:7px">Depreciation runway \u2014 '+(ASSET_TREAT_LABEL[a.deprType]||'')+'</div>';
+    h += '<div style="display:flex;gap:8px;align-items:flex-end;height:96px;margin-bottom:5px">';
+    sch.forEach(function(x){ var ht=Math.max(5,Math.round(x.amount/mx*100));
+      h += '<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%"><div style="font-size:9.5px;font-weight:800;color:var(--gd);margin-bottom:3px">'+astK(x.amount)+'</div><div style="width:100%;background:var(--gl);border-radius:6px 6px 0 0;height:'+ht+'%"></div><div style="font-size:9px;color:var(--t3);font-weight:700;margin-top:4px">FY'+(''+x.yr).slice(-2)+' \u00b7 '+x.rate+'</div></div>'; });
+    h += '</div>';
+    if(d.deprSchedule.length>5) h += '<div style="font-size:10.5px;color:var(--t3)">+'+(d.deprSchedule.length-5)+' more years</div>';
+    h += '<div style="font-size:11px;color:var(--t3);margin-bottom:16px">A starting point for your accountant \u2014 not tax advice.</div>';
+  }
+  // #4 finance
+  if(a.financed){
+    h += '<div style="background:var(--br2);border-radius:10px;padding:11px 13px;margin-bottom:12px"><div style="font-size:12px;font-weight:700;margin-bottom:6px">&#x1F4B3; Finance</div>';
+    h += '<div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:3px"><span style="color:var(--t3)">'+esc(a.lender||'Lender')+(a.rate?' \u00b7 '+a.rate+'%':'')+'</span><span style="font-weight:700">'+(a.instalment?fmt(a.instalment)+'/mo':'')+'</span></div>';
+    h += '<div style="display:flex;justify-content:space-between;font-size:12px"><span style="color:var(--t3)">Outstanding balance</span><span style="font-weight:700;color:var(--rd)">'+fmt(a.outstanding||0)+'</span></div></div>';
+  }
+  // #5 insurance
+  if(repl || a.insurer || a.renewalDate){
+    var under = repl>0 && repl < (a.price||0);
+    h += '<div style="border:1px solid '+(under?'#f4c7c2':'var(--br)')+';background:'+(under?'var(--rp)':'#fff')+';border-radius:10px;padding:11px 13px;margin-bottom:12px">';
+    h += '<div style="display:flex;align-items:center;gap:8px;margin-bottom:5px"><span style="font-size:12px;font-weight:700">&#x1F6E1;&#xFE0F; Insurance</span>'+(repl?(under?'<span style="font-size:10px;font-weight:800;background:var(--rd);color:#fff;border-radius:20px;padding:2px 8px">UNDER-INSURED</span>':'<span style="font-size:10px;font-weight:800;background:var(--gp);color:var(--gd);border-radius:20px;padding:2px 8px">Adequately insured</span>'):'')+'</div>';
+    if(a.insurer) h += '<div style="font-size:12px;color:var(--t3)">Insurer: '+esc(a.insurer)+'</div>';
+    if(under) h += '<div style="font-size:11.5px;color:#b3261e;font-weight:600;margin-top:3px">Sum insured ('+fmt(repl)+') is below the purchase price ('+fmt(a.price||0)+') \u2014 you may not be able to replace it.</div>';
+    if(a.renewalDate){ var dd=Math.ceil((new Date(a.renewalDate)-new Date())/86400000); var rtxt = dd<0?'Renewal overdue':(dd<=45?('Renews in '+dd+' day'+(dd!==1?'s':'')):('Renews '+esc(a.renewalDate))); h += '<div style="font-size:11.5px;color:'+(dd<=45?'var(--or)':'var(--t3)')+';font-weight:'+(dd<=45?'700':'400')+';margin-top:3px">'+rtxt+'</div>'; }
+    h += '</div>';
+  }
+  // #6 documents
+  if(a.docs && a.docs.length){
+    h += '<div style="font-size:12px;font-weight:700;margin-bottom:6px">&#x1F4CE; Documents</div><div style="display:flex;gap:8px;flex-wrap:wrap">';
+    a.docs.forEach(function(dc){ var inner = dc.kind==='image'?'<img src="'+dc.data+'" style="width:100%;height:100%;object-fit:cover"/>':'<div style="font-size:20px">&#x1F4C4;</div>'; h += '<a href="'+dc.data+'" target="_blank" style="width:54px;height:54px;border-radius:8px;border:1px solid var(--br);background:var(--br2);display:flex;align-items:center;justify-content:center;overflow:hidden" title="'+esc(dc.name)+'">'+inner+'</a>'; });
+    h += '</div>';
+  }
+  body.innerHTML = h;
+  var bg=$('ast-detail-bg'); if(bg) bg.style.display='flex';
+}
 function printAssetRegister() {
   var fy = getCurrentFY ? getCurrentFY() : 2024;
   var totalPurchase=0, totalBook=0, totalDeprYear=0;
@@ -7622,6 +8148,52 @@ function printAssetRegister() {
     '<tr class="total"><td>Annual depreciation deduction (S12B/S11e)</td><td class="amt pos">'+fmt(totalDeprYear)+'/yr</td></tr>'+
     '</table>';
   printWindow('Asset Register — FY '+fy, html);
+}
+function astLenderData(){
+  var byCat={}, order=[];
+  ST_ASSETS.assets.forEach(function(a){
+    var val=a.insuredValue||a.price||0; var owed=(a.financed?(a.outstanding||0):0);
+    if(!byCat[a.cat]){ byCat[a.cat]={val:0,owed:0}; order.push(a.cat); }
+    byCat[a.cat].val+=val; byCat[a.cat].owed+=owed;
+  });
+  var tV=0,tO=0; var rows=order.map(function(c){ var g=byCat[c]; tV+=g.val; tO+=g.owed; return {cat:c,val:g.val,owed:g.owed,eq:g.val-g.owed}; });
+  return {rows:rows,tV:tV,tO:tO,net:tV-tO};
+}
+function astLenderPrint(){
+  var D=astLenderData();
+  var rows=D.rows.map(function(r){ return '<tr><td>'+r.cat+'</td><td class="amt">'+fmt(r.val)+'</td><td class="amt">'+(r.owed?fmt(r.owed):'\u2014')+'</td><td class="amt">'+fmt(r.eq)+'</td></tr>'; }).join('');
+  var html =
+    '<h1>Asset Schedule</h1>'+
+    '<div class="meta">'+(FARM?FARM.name:'Farm')+' &nbsp;&middot;&nbsp; prepared for a finance / loan application &nbsp;&middot;&nbsp; '+new Date().toLocaleDateString('en-ZA')+'</div>'+
+    '<button onclick="window.print()" style="background:#1B4332;color:#fff;border:none;padding:8px 16px;border-radius:6px;cursor:pointer;margin-bottom:20px">Print / Save as PDF</button>'+
+    '<table><tr><th>Category</th><th>Value</th><th>Finance owed</th><th>Net equity</th></tr>'+rows+
+    '<tr class="total"><td>TOTAL</td><td class="amt">'+fmt(D.tV)+'</td><td class="amt">'+fmt(D.tO)+'</td><td class="amt">'+fmt(D.net)+'</td></tr></table>'+
+    '<h2>Net asset position</h2><table>'+
+    '<tr><td>Total asset value</td><td class="amt">'+fmt(D.tV)+'</td></tr>'+
+    '<tr><td>Less: outstanding finance</td><td class="amt">'+fmt(D.tO)+'</td></tr>'+
+    '<tr class="total"><td>Net asset position (equity)</td><td class="amt pos">'+fmt(D.net)+'</td></tr></table>'+
+    '<p style="font-size:12px;color:#666;margin-top:18px">Asset values reflect insured / replacement value where recorded, otherwise purchase price. Outstanding finance is the balance owed on financed assets. Prepared from the AgriInsights asset register \u2014 figures to be confirmed against source documents.</p>';
+  printWindow('Asset Schedule \u2014 '+(FARM?FARM.name:'Farm'), html);
+}
+function closeAstLender(){ var bg=$('ast-lender-bg'); if(bg) bg.style.display='none'; }
+function astExportLenderPack(){
+  var D=astLenderData();
+  var sub=$('ast-lender-sub'); if(sub) sub.textContent=(FARM&&FARM.name?FARM.name:'Farm')+' \u00b7 for a finance / loan application';
+  var rows=D.rows.map(function(r){ return '<tr><td>'+esc(r.cat)+'</td><td class="amt">'+fmt(r.val)+'</td><td class="amt">'+(r.owed?fmt(r.owed):'\u2014')+'</td><td class="amt">'+fmt(r.eq)+'</td></tr>'; }).join('');
+  var printBtn='<button onclick="astLenderPrint()" style="width:100%;padding:13px;border:none;border-radius:10px;background:var(--gd);color:#fff;font-weight:800;font-size:14px;cursor:pointer;margin-bottom:6px">\u2B07 Print / Save as PDF</button>'+
+    '<div style="font-size:11px;color:#9CA3AF;text-align:center;margin-bottom:20px">A one-page schedule ready to attach to a Land Bank or ABSA AgriBusiness application.</div>';
+  var body=$('ast-lender-body');
+  if(body) body.innerHTML='<style>'+PREVIEW_CSS+'</style>'+
+    '<div style="background:#F0FAF4;border:1px solid #cfe9d8;border-radius:12px;padding:14px 16px;margin-bottom:18px;display:flex;justify-content:space-between;align-items:center">'+
+      '<div><div style="font-size:11px;color:#6B7280;font-weight:700;text-transform:uppercase;letter-spacing:.04em">Net asset position (equity)</div><div style="font-size:22px;font-weight:800;color:#1B4332">'+fmt(D.net)+'</div></div>'+
+      '<div style="text-align:right;font-size:11.5px;color:#6B7280;line-height:1.6">Total assets '+fmt(D.tV)+'<br>Less finance '+fmt(D.tO)+'</div>'+
+    '</div>'+
+    printBtn+
+    '<div style="font-size:11px;font-weight:800;color:#6B7280;text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px">Preview</div>'+
+    '<table class="pv-table"><thead><tr><th>Category</th><th class="amt">Value</th><th class="amt">Finance owed</th><th class="amt">Net equity</th></tr></thead><tbody>'+rows+
+    '<tr class="total"><td>Total</td><td class="amt">'+fmt(D.tV)+'</td><td class="amt">'+fmt(D.tO)+'</td><td class="amt">'+fmt(D.net)+'</td></tr></tbody></table>'+
+    '<p style="font-size:11px;color:#9CA3AF;margin-top:14px">Asset values use insured / replacement value where recorded, otherwise purchase price. Figures to be confirmed against source documents.</p>';
+  var bg=$('ast-lender-bg'); if(bg) bg.style.display='flex';
 }
 
 // ============================================================
@@ -14366,7 +14938,29 @@ function obPickMode(el) {
 function obBuildTour() {
   var s     = OB_STRINGS[OB_LANG] || OB_STRINGS.en;
   var list  = $('ob-tour-list'); if (!list) return;
-  var items = OB_MODE === 'fresh' ? s.tour_fresh : s.tour_demo;
+  var af = OB_LANG === 'af';
+  // Farm-type aware: honour the enterprise the user picked (crops / livestock / mixed)
+  var ent = OB_FARM_ENTERPRISE || 'mixed';
+  var items;
+  if (OB_MODE === 'fresh') {
+    items = s.tour_fresh.slice();
+    if (ent === 'crops' || ent === 'mixed') {
+      items.splice(items.length - 1, 0, { icon:'🌾', iconBg:'#40916C',
+        title: af ? 'Stel Nakoming op' : 'Set up Compliance',
+        sub: af ? "Kies watter Wette op jou plaas geld en stoor jou lisensies & sertifikate." : 'Pick which Acts apply to your farm and store your licences & certificates.' });
+    }
+  } else {
+    var plusSvg = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>';
+    items = [
+      { icon:'📊', title: af?'Verken die Tuisblad':'Explore the Dashboard', sub: af?'Sien jou wins, geldvloei en begroting in een oogopslag.':'See your profit, cashflow and budget at a glance.' },
+      { icon:'💰', title: af?'Inkomste & Uitgawes':'Income & Expenses', sub: af?'Elke transaksie per kategorie — tik enige een om dit te wysig.':'Every transaction by category — tap any one to edit it.' },
+      { icon:'💧', title: af?'Sien jou Geldvloei':'See your Money Flow', sub: af?'Jou kontantbaan maande vooruit — wanneer geld krap raak.':'Your cash runway months ahead — exactly when money gets tight.' }
+    ];
+    if (ent === 'crops' || ent === 'mixed') items.push({ icon:'🌾', iconBg:'#40916C', title: af?'Gewasse & Nakoming':'Crops & Compliance', sub: af?"Landerye & spuitrekords, plus nakoming-herinneringe en 'n ouditpak.":'Lands & sprays, plus compliance reminders and a hand-over audit pack.' });
+    if (ent === 'livestock' || ent === 'mixed') items.push({ icon:'🐄', iconBg:'#C8962C', title: af?'Vee & Kudde':'Livestock & Herd', sub: af?'Kuddewaarde, bewegings & gesondheidsrekords.':'Herd value, movements & health records.' });
+    items.push({ icon:'🌱', title: af?'Maak My Plan oop':'Open My Plan', sub: af?'Gewaskalender & vee-gebeure. Probeer die Wat-As-hulpmiddel.':'Crop calendar & livestock events. Try the What-If tool.' });
+    items.push({ icon: plusSvg, iconBg:'#40916C', title: af?'Teken jou eerste transaksie aan':'Record your first transaction', sub: af?'Gebruik die groen + knoppie regs onder — onder 30 sekondes.':'Use the green + button (bottom right) — under 30 seconds.' });
+  }
   var title = $('ob-ready-title');
   var sub   = $('ob-ready-sub');
   var btn   = $('ob-finish-btn');
@@ -14377,6 +14971,7 @@ function obBuildTour() {
   if (title) title.textContent = farm + s.step4h + first + '!';
   if (sub)   sub.textContent   = OB_MODE === 'fresh' ? s.step4sub_fresh : s.step4sub_demo;
   if (btn)   btn.textContent   = OB_MODE === 'fresh' ? s.finishBtnFresh : s.finishBtnDemo;
+  var rb = $('ob-ready-back'); if (rb) rb.textContent = s.backBtn;
   list.innerHTML = items.map(function(item, i) {
     var bg = item.iconBg ? 'background:'+item.iconBg+';' : '';
     return '<div class="ob-tour-item">' +
@@ -14521,6 +15116,7 @@ var TOUR_STEPS = [
     pos:    'top',
     spotlight_pad: 12,
     onEnter: 'tourDemoQC',
+    onLeave: 'tourCloseQC',
     onLeave: 'tourCloseQC'
   },
   {
@@ -14584,8 +15180,8 @@ var TOUR_STEPS = [
     page:   'assets',
     icon:   '🚜',
     title:  'Assets — What your farm is worth',
-    desc:   'Record all your farm assets — land, tractors, irrigation, silos, vehicles. The app calculates SARS Section 12B and Section 11(e) depreciation automatically and shows your current book value.',
-    tip:    'Print the Asset Register directly from here — it is already in the format your accountant needs for your tax return.',
+    desc:   'Record everything your farm owns — land, tractors, irrigation, silos, vehicles, even solar and dams. The app picks the right SARS write-off for each one and tracks its book value. Two tabs: the Register lists every asset; Insights turns it all into plain-language charts.',
+    tip:    'Tap any asset to add its finance, insurance and documents. The Insights tab then shows what you own vs the bank, your tax write-off forecast, ageing gear and insurance gaps — and you can tap any chart to see exactly which assets make up the number.',
     pos:    'right'
   },
   {
@@ -14613,7 +15209,28 @@ var card = $('tour-card');
     card.style.maxWidth  = '300px';
     card.style.width     = '300px';
   }
-  var sl = $('tour-spotlight'); if (sl) sl.style.display='none';
+  // Highlight the 'record a transaction' box (the quick-add sheet) once it opens
+  var sl = $('tour-spotlight');
+  if (sl) {
+    setTimeout(function(){
+      var sheet = $('qc-sheet');
+      if (!sl) return;
+      var r = sheet ? sheet.getBoundingClientRect() : null;
+      if (r && r.width && r.height) {
+        var pad = 10;
+        sl.style.display = 'block';
+        sl.style.left   = (r.left - pad) + 'px';
+        sl.style.top    = (r.top  - pad) + 'px';
+        sl.style.width  = (r.width  + pad*2) + 'px';
+        sl.style.height = (r.height + pad*2) + 'px';
+        sl.style.borderRadius = '16px';
+        sl.style.outline = '3px solid #40916C';
+        sl.style.outlineOffset = '2px';
+      } else {
+        sl.style.display = 'none';
+      }
+    }, 340);
+  }
 
   setTimeout(function() {
     var descEl = $('qc-desc'), amtEl = $('qc-amt');
@@ -14682,6 +15299,7 @@ function tourCloseQC() {
 
   var card = $('tour-card');
   if (card) { card.style.maxWidth=''; card.style.width=''; }
+  var sl = $('tour-spotlight'); if (sl) { sl.style.borderRadius = ''; sl.style.outline = ''; sl.style.outlineOffset = ''; }
 }
 // Skip tour steps whose required nav item is hidden for this farm type
 function tourStepHidden(i){
@@ -14799,7 +15417,30 @@ var prevBtn = $('tour-prev');
 var card = $('tour-card');
   if (card) { card.className = ''; void card.offsetWidth; card.className = 'tour-card-enter'; }
 
-setTimeout(function(){ tourPosition(step); }, 120);
+setTimeout(function(){ tourScrollTo(step.target, function(scrolled){ setTimeout(function(){ tourPosition(step); }, scrolled ? 420 : 0); }); }, 120);
+}
+
+// Smoothly bring a tour target into view (centred) before highlighting it,
+// but only when it isn't already comfortably on screen. Then run done(scrolled).
+function tourScrollTo(targetId, done){
+  var el = targetId ? $(targetId) : null;
+  if (!el) { done(false); return; }
+  var r = el.getBoundingClientRect();
+  if (!r.width && !r.height) { done(false); return; }   // hidden / not laid out
+  // Fixed / sticky elements (e.g. the quick-add FAB, a fixed sidebar) are always
+  // in view — scrolling them is pointless and can race with other positioning.
+  var n = el;
+  while (n && n !== document.body) {
+    var pp; try { pp = getComputedStyle(n).position; } catch(e) { pp = ''; }
+    if (pp === 'fixed' || pp === 'sticky') { done(false); return; }
+    n = n.parentElement;
+  }
+  var vh = window.innerHeight;
+  var comfy = r.top >= 64 && r.bottom <= vh - 64;
+  if (comfy) { done(false); return; }
+  try { el.scrollIntoView({ behavior:'smooth', block:'center', inline:'nearest' }); }
+  catch(e) { try { el.scrollIntoView(); } catch(e2){} }
+  done(true);
 }
 
 function tourPosition(step) {
@@ -14835,8 +15476,20 @@ spotlight.style.display = 'block';
   spotlight.style.width  = (r.width  + pad*2) + 'px';
   spotlight.style.height = (r.height + pad*2) + 'px';
 
-var cardW = 320, cardH = 310;
+// Measure the card's real size (offsetWidth/Height ignore the entrance transform)
+  // so it's clamped accurately and never runs off a short / non-fullscreen window.
+  card.style.maxHeight = '';
+  card.style.overflowY = '';
+  var cardW = card.offsetWidth  || 320;
+  var cardH = card.offsetHeight || 310;
   var vw = window.innerWidth, vh = window.innerHeight;
+  // If the card is taller than the window, cap it and let it scroll so the
+  // Next / Back buttons always stay reachable.
+  if (cardH > vh - 16) {
+    card.style.maxHeight = (vh - 16) + 'px';
+    card.style.overflowY = 'auto';
+    cardH = vh - 16;
+  }
   var pos = step.pos || 'right';
 
   var top, left;
@@ -15239,7 +15892,7 @@ var PAGE_TOURS = {
     { target:'pg-dashboard', title:'Dashboard overview', icon:'📊',
       text:'Everything on one screen — profit status, cashflow, budget progress, market prices and recent income. It updates the moment you add a transaction.',
       tip:'The big green/red card at the very top answers the one question every farmer asks: Am I making money this month?', pos:'center' },
-    { target:'dash-income', title:'Your key numbers', icon:'💰',
+    { target:'dash-cf-grid', title:'Your key numbers', icon:'💰',
       text:'These four cards show this month\'s income, expenses, profit and transaction count — all live from your recorded data.',
       tip:'Tap any of these cards to jump straight to the relevant page for more detail.', pos:'smart' },
     { target:'dashChart', title:'6-month performance chart', icon:'📈',
@@ -15320,9 +15973,9 @@ var PAGE_TOURS = {
     { page:'reports', target:'rpt-income', title:'Report summary figures', icon:'💰',
       text:'The headline numbers for your selected period — income, expenses, gross profit, net profit and margin. These match what would appear on your official statements.',
       pos:'smart' },
-    { target:'pg-reports', title:'The three statements', icon:'📄',
+    { target:'rpt-stmt-cards', title:'The three statements', icon:'📄',
       text:'Click P&L Statement, Cash Flow Statement or Tax Summary to open a full print preview. The Tax Summary includes VAT 201 figures and Section 11 deduction calculations.',
-      tip:'Your accountant needs these three documents for your annual tax return. Keep them up to date throughout the year to avoid a rush at year-end.', pos:'center' },
+      tip:'Your accountant needs these three documents for your annual tax return. Keep them up to date throughout the year to avoid a rush at year-end.', pos:'smart' },
     { target:'acc-pack', title:'Accountant Pack', icon:'📦',
       text:'Further down the page, the Accountant Pack bundles your year-end exports. Tap the Year-end pack to preview everything first — Profit & Loss, transactions, general ledger, asset register and a Pastel import — then download it all in one go.',
       tip:'You can also export directly for Pastel or Xero, or invite your accountant by email so they can pull the records themselves.', pos:'smart' }
@@ -15334,44 +15987,71 @@ var PAGE_TOURS = {
     { target:'bgt-annual-input', title:'Set your annual target', icon:'💰',
       text:'Enter your total income goal for the financial year. Then choose a pattern to distribute it across months — Harvest Season is the most realistic for grain farms.',
       tip:'Harvest Season puts 80% of income in September–February (your main harvest and delivery months) and lighter targets in the planting months.', pos:'smart' },
-    { target:'budget-monthly-grid', title:'Monthly targets grid', icon:'🗓️',
+    { target:'bgt-month-bars-in', title:'Monthly targets grid', icon:'🗓️',
       text:'Each block shows a month\'s target and a progress bar of actual income vs target. Green bar = at or above target. You can edit any individual month directly.',
       tip:'The NOW badge shows the current month. Past months show whether you hit or missed your target — great for spotting seasonal patterns over time.', pos:'smart' }
   ],
   planning: [
     { target:'pg-planning', title:'Planning overview', icon:'🌱',
-      text:'See all your crop cycles on a 12-month calendar. Each crop shows planting, growing, harvest and selling stages so you can see your full year at a glance.',
-      pos:'center' },
-    { target:'plan-cal-grid', title:'Crop calendar', icon:'📅',
-      text:'Each crop gets a row with colour-coded stage indicators across the 12 months. 🌱 Plant, 🌿 Grow, 🌾 Harvest, 💰 Sell — tap any crop\'s Edit button to change dates.',
-      tip:'The calendar automatically calculates income and cost estimates for each month based on your yield, price and input cost targets.', pos:'smart' },
-    { target:'ps-profit', title:'Year summary', icon:'💰',
-      text:'Total planned income, costs and profit for the full season — calculated from all your crop cycles combined.',
-      tip:'Compare Planned vs Actual YTD to see how your real performance tracks against your plan.', pos:'smart' }
+      text:'Plan your whole year ahead — crops and livestock — then watch the forecast update as the real numbers come in. Two tabs split the work: Crops and Livestock.', pos:'center' },
+    { target:'plan-tab-crops', title:'Crops & Livestock tabs', icon:'🗂️', tab:'crops',
+      text:'The Crops tab plans your planting-to-selling cycles; the Livestock tab plans herd events like buying, calving and selling. The count on each tab shows how many items you have planned.', pos:'smart' },
+    { target:'plan-cal-grid', title:'Crop calendar', icon:'📅', tab:'crops',
+      text:'Each crop gets a row with colour-coded stages across the 12 months — 🌱 Plant, 🌿 Grow, 🌾 Harvest, 💰 Sell. Tap a crop’s Edit button to change dates, yield, price or input cost.', tip:'The calendar turns those dates into a month-by-month income and cost estimate automatically.', pos:'smart' },
+    { target:'plan-add-crop-btn', title:'Add a crop cycle', icon:'➕', tab:'crops',
+      text:'Add a crop with its area, expected yield, price and input cost — or link it to a real land from your Crops page so the plan and the field stay in sync.', pos:'smart' },
+    { target:'plan-tab-live', title:'Livestock plan', icon:'🐄', tab:'livestock',
+      text:'Switch to the Livestock tab to plan herd events through the year — purchases, births, sales and recurring costs like feed and dosing.', pos:'smart' },
+    { target:'plan-live-grid', title:'Livestock events', icon:'📋', tab:'livestock',
+      text:'Each event shows its month, type and rand value and feeds the same 12-month forecast as your crops. Recurring events — like monthly feed — repeat automatically.', tip:'Tap + Add livestock event to schedule a purchase, sale or cost.', pos:'smart' },
+    { target:'ps-profit', title:'Season summary & What-If', icon:'💰', tab:'crops',
+      text:'Total planned income, cost and profit for the whole season — crops and livestock combined. The What-If tool stress-tests that profit against a price drop or yield loss before it happens.', tip:'Compare Planned vs Actual YTD to see how your real performance is tracking against the plan.', pos:'smart' }
   ],
   livestock: [
-    { target:'ls-herd-cards', title:'Herd overview', icon:'🐄',
-      text:'Each livestock group shows its ROI percentage, buy price, monthly care cost and target sell price. The ROI badge turns green when your return exceeds 60%.',
-      pos:'smart' },
-    { target:'roi-herd-val', title:'Total herd value', icon:'💰',
-      text:'Your estimated total herd value based on today\'s AMT market prices — updated automatically. Compare your target sell prices to the market to decide when to sell.',
-      tip:'If today\'s market price is above your target, that\'s a green signal. Below means you\'re either selling cheap or need to wait for prices to recover.', pos:'smart' }
+    { target:'ls-herd-cards', title:'Herd overview', icon:'🐄', tab:'overview',
+      text:'Each livestock group shows its ROI %, what you paid, the monthly care cost and your target sell price. The ROI badge turns green once your return clears 60%.', pos:'smart' },
+    { target:'roi-herd-val', title:'Herd value vs the market', icon:'💰', tab:'overview',
+      text:'Your total herd value at today’s AMT market prices, updated automatically. Compare it to what you paid and to your target sell price to time your sales.', tip:'Market above your target is a green light to sell; below means waiting, or selling at a discount.', pos:'smart' },
+    { target:'ls-tab-register', title:'Movement register', icon:'📋', tab:'register',
+      text:'The Register records every movement — births, purchases, sales and deaths — building the stock register SARS and the Animal Identification Act expect, plus the numbers behind your herd value.', pos:'center' },
+    { target:'ls-tab-health', title:'Health & treatments', icon:'💉', tab:'health',
+      text:'The Health tab tracks vaccinations, dosing and treatments per group — with dates and withdrawal periods. It’s your animal-health record and your Act 36 stock-remedy evidence in one.', pos:'center' },
+    { target:'ls-tab-add', title:'Add a group or event', icon:'➕', tab:'add',
+      text:'Add a new livestock group, or record a purchase, sale, birth or death. Everything you capture flows into the overview, the register and your forecasts.', pos:'center' }
   ],
   market: [
-    { target:'mkt-crop-cards', title:'SAFEX grain prices', icon:'🌽',
-      text:'Current SAFEX futures prices for white maize, yellow maize, wheat, soybeans and other field crops — with 6-week trend sparklines and daily % change.',
-      tip:'The sparkline shows whether prices are trending up or down over the past 6 weeks. An upward trend may mean waiting to sell is worthwhile.', pos:'smart' },
-    { target:'mkt-myfarm-section', title:'My Farm value today', icon:'🌾',
-      text:'This section compares today\'s market price to your planned target price for each crop and livestock group. It tells you exactly what your harvest is worth right now.',
-      pos:'smart' }
+    { target:'mkt-crop-cards', title:'SAFEX grain prices', icon:'🌽', tab:'crops',
+      text:'Live SAFEX futures for white & yellow maize, wheat, soybeans, sunflower and sorghum — each with a 6-week trend sparkline and the daily % change.', tip:'An upward sparkline may mean holding a little longer before you sell is worthwhile.', pos:'smart' },
+    { target:'mkt-crop-insight', title:'What the prices mean', icon:'💡', tab:'crops',
+      text:'A plain-language read on the grain market — which crops are climbing, which are slipping, and what that means for your selling decisions this week.', pos:'smart' },
+    { target:'mkt-tab-livestock', title:'Livestock (AMT) prices', icon:'🐄', tab:'livestock',
+      text:'Current red-meat and livestock prices from the AMT — weaners, slaughter cattle, sheep and more — so you can value your herd against the real market.', pos:'smart' },
+    { target:'mkt-tab-inputs', title:'Input & fuel prices', icon:'⛽', tab:'inputs',
+      text:'Track the cost side too — diesel, fertiliser and other key inputs — so you can see your margin squeezed from both ends, not just the selling price.', pos:'smart' },
+    { target:'mkt-tab-alerts', title:'Price alerts', icon:'🔔', tab:'alerts',
+      text:'Set a target price for any crop or class and the app flags it the moment the market reaches it — so you don’t miss a selling window.', pos:'smart' },
+    { target:'mkt-myfarm-section', title:'My Farm value today', icon:'🌾', tab:'crops',
+      text:'This section compares today’s market price to your planned target for each crop and livestock group — telling you exactly what your harvest and herd are worth right now.', pos:'smart' }
   ],
   assets: [
-    { target:'ast-tbody', title:'Asset register', icon:'🚜',
-      text:'Every asset on your farm — land, tractors, irrigation, silos, vehicles. The register shows purchase price, current book value and annual depreciation.',
-      pos:'smart' },
-    { target:'ast-total', title:'Total values', icon:'💰',
-      text:'Your total farm assets, total book value after depreciation, and the annual S12B/S11e deduction you can claim from SARS.',
-      tip:'Section 12B allows 50/30/20 accelerated depreciation on farming equipment. Section 11(e) is straight-line wear and tear. Both reduce your taxable income.', pos:'smart' }
+    { target:'ast-tab-register', title:'Two views of your assets', icon:'🚜', tab:'register',
+      text:'Everything your farm owns lives here. The Register lists every asset; the Insights tab turns that list into plain-language charts. Let\u2019s start with the Register.', pos:'smart' },
+    { target:'ast-total', title:'The headline numbers', icon:'💰', tab:'register',
+      text:'Your total asset value, the book value left after depreciation, and the yearly write-off you can claim from SARS \u2014 all worked out for you and kept up to date.',
+      tip:'Section 12B gives 50/30/20 accelerated write-off on most farming gear; Section 11(e) is straight-line wear and tear. Both lower your taxable income \u2014 the app picks the right one per asset.', pos:'smart' },
+    { target:'ast-tbody', title:'Tap any asset to open it', icon:'📋', tab:'register',
+      text:'Each row shows the category, what you paid, what it\u2019s worth now and this year\u2019s depreciation. Filter by category up top, or tap a row to see the full detail.',
+      tip:'The detail view shows a depreciation forecast, what you still owe the bank, whether it\u2019s properly insured, and any photos of the invoice or policy you\u2019ve stored.', pos:'smart' },
+    { target:'ast-add-btn', title:'Adding an asset is easy', icon:'➕', tab:'register',
+      text:'Type what it is and the app suggests the right SARS treatment, the usual write-off period and a plain-language note \u2014 no tax knowledge needed. You can also record finance, insurance and snap a photo of the invoice.',
+      tip:'It handles land, vehicles, machinery, irrigation, storage, solar, dams and fencing \u2014 each with the correct tax treatment already chosen.', pos:'smart' },
+    { target:'ast-lender-btn', title:'Lender Pack for the bank', icon:'🏦', tab:'register',
+      text:'Applying for finance? Export a clean schedule of every asset \u2014 its value, what you owe and the equity you own outright \u2014 ready to hand to Land Bank, ABSA or your co-op.', pos:'smart' },
+    { target:'ast-tab-insights', title:'Insights — answers, not numbers', icon:'📊', tab:'insights',
+      text:'Now the Insights tab. Three headline tiles up top: what your assets are worth, how much you own outright vs the bank, and your tax write-off this year. Tap any tile to see the split.', pos:'smart' },
+    { target:'ast-view-insights', title:'Tap any chart to see inside', icon:'👆', tab:'insights',
+      text:'Below the tiles: where your value sits, what you own vs the bank, your depreciation forecast, ageing gear, and insurance gaps \u2014 each with a plain \u201cSo what\u201d line telling you what to do next.',
+      tip:'Tap any bar, pie slice or number and it opens a breakdown of exactly which assets make up that total \u2014 so nothing is a black box.', pos:'center' }
   ],
   transactions: [
     { target:'pg-transactions', title:'All your transactions', icon:'📝',
@@ -15384,17 +16064,18 @@ var PAGE_TOURS = {
   ],
   crop: [
     { target:'pg-crop', title:'Crops — your cropping enterprise', icon:'🌾', tab:'overview',
-      text:'Everything for your crops in one place. The Overview shows each land with its crop, area, growth stage and expected gross margin for the season.', pos:'center' },
-    { target:'crop-tab-lands', title:'Lands register', icon:'🗺️',
-      text:'The Lands tab is your register of every field — area, current crop and rotation history. Tap a land to record a planting or harvest, or link it to your plan.', pos:'smart' },
-    { target:'crop-tab-inputs', title:'Inputs & spray log', icon:'🧪',
-      text:'Log every spray and input — product, rate, batch number and pre-harvest interval. These records double as your Act 36 agrochemical evidence and feed your costs.', pos:'smart' },
-    { target:'crop-view-comply', title:'Compliance tracker', icon:'✅', tab:'comply',
-      text:'A card for each Act that touches crop farming — water, agrochemicals, GMO, seed, soil, worker safety and more. The score up top shows how many are on track, and the colour dot flags anything due or needing attention.',
-      tip:'Tap “Choose what to track” to switch areas on or off for your farm — only what applies to you shows.', pos:'center' },
-    { target:'crop-view-comply', title:'Records, reminders & documents', icon:'📋', tab:'comply',
-      text:'Tap any area to enter your records, log a dated check with a photo, and store your licence or certificate — with expiry alerts. The app reminds you when a check is due and resets the reminder once you log it.', pos:'center' },
-    { target:'crop-view-comply', title:'Audit log & pack', icon:'🗂️', tab:'comply',
+      text:'Everything for your crops in one place. The Overview lists each land with its crop, area, growth stage and the expected gross margin for the season.', pos:'center' },
+    { target:'crop-view-overview', title:'Margins at a glance', icon:'📈', tab:'overview',
+      text:'Each land card shows expected income, input cost and gross margin per hectare — so you can see which fields are pulling their weight long before the season ends.', pos:'smart' },
+    { target:'crop-tab-lands', title:'Lands register', icon:'🗺️', tab:'lands',
+      text:'Your register of every field — area, current crop and rotation history. Tap a land to record a planting or harvest, or to link it to your plan.', tip:'Keeping rotation history helps with agronomy and with the rotation records some buyers ask for.', pos:'smart' },
+    { target:'crop-tab-inputs', title:'Inputs & spray log', icon:'🧪', tab:'inputs',
+      text:'Log every spray and input — product, rate, batch number, operator and pre-harvest interval. Each entry feeds your cost per hectare and doubles as your Act 36 spray record.', tip:'Recording the pre-harvest interval lets the app warn you if a harvest is logged too soon after a spray.', pos:'smart' },
+    { target:'crop-tab-comply', title:'Compliance tracker', icon:'✅', tab:'comply', onEnter:'tourComplyTracker',
+      text:'A card for each Act that touches crop farming — water, agrochemicals, GMO, seed, soil, worker safety and more. The score at the top shows how many areas are on track; a coloured dot flags anything due or needing attention.', tip:'Tap “Choose what to track” to switch areas on or off — only what applies to your farm shows.', pos:'center' },
+    { target:'crop-view-comply', title:'Records, reminders & documents', icon:'📋', tab:'comply', onEnter:'tourComplyTracker',
+      text:'Tap any area to enter its records, log a dated check with a photo, and store the licence or certificate with an expiry alert. The app reminds you when a check is due and resets the reminder once you log it.', pos:'center' },
+    { target:'crop-audit-toggle', title:'Audit log & pack', icon:'🗂️', tab:'comply', onEnter:'tourComplyAudit',
       text:'Switch to the Audit log to search every record by legislation, certificate or note and filter by date — tap a photo to view it full size. Export a single area, or build a full audit pack with the photos embedded for an inspector or buyer.', pos:'center' }
   ]
 };
@@ -15462,9 +16143,18 @@ if (prevBtn) prevBtn.onclick = function(){ pageTourPrev(); };
 
   // Let a step switch a sub-tab (e.g. crop Compliance) before spotlighting
   var _posDelay = 100;
-  if (step.tab && PAGE_TOUR_PAGE==='crop' && typeof cropSetTab==='function') { try{ cropSetTab(step.tab); }catch(e){} _posDelay = 220; }
-  if (step.onEnter && window[step.onEnter]) { try{ window[step.onEnter](); }catch(e){} _posDelay = 220; }
-  setTimeout(function(){ tourPosition(step); }, _posDelay);
+  if (step.tab) {
+    try {
+      if (PAGE_TOUR_PAGE==='crop'      && typeof cropSetTab==='function') cropSetTab(step.tab);
+      else if (PAGE_TOUR_PAGE==='planning'  && typeof setPlanTab==='function') setPlanTab(step.tab);
+      else if (PAGE_TOUR_PAGE==='livestock' && typeof lsTab==='function')      lsTab(step.tab);
+      else if (PAGE_TOUR_PAGE==='market') { var _mb=$('mkt-tab-'+step.tab); if(_mb) _mb.click(); }
+      else if (PAGE_TOUR_PAGE==='assets'    && typeof astTab==='function')    astTab(step.tab);
+    } catch(e){}
+    _posDelay = 280;
+  }
+  if (step.onEnter && window[step.onEnter]) { try{ window[step.onEnter](); }catch(e){} _posDelay = 280; }
+  setTimeout(function(){ tourScrollTo(step.target, function(scrolled){ setTimeout(function(){ tourPosition(step); }, scrolled ? 420 : 0); }); }, _posDelay);
 }
 
 function pageTourNext() {
@@ -16733,14 +17423,14 @@ function txRender() {
         var bgStyle  = isEven ? '' : 'background:var(--bg)';
         var isEditing = TX_EDIT_IDX === ri;
 
-        rows += '<tr data-txidx="'+ri+'" style="'+(bgStyle)+'">' +
+        rows += '<tr class="txrow-click" data-txidx="'+ri+'" onclick="openTxnDetail('+ri+')" style="'+(bgStyle)+';cursor:pointer">' +
           '<td style="font-size:12px;color:var(--t3)">'+escHtml(t.date)+'</td>' +
           '<td><div style="font-weight:600;font-size:13px;color:var(--t1)">'+escHtml(t.desc||'')+'</div>' +
                '<div class="tx-source">'+escHtml(source)+'</div></td>' +
           '<td>'+catTag(t.cat||'')+'</td>' +
           '<td style="text-align:right;font-weight:700;color:'+amtCol+'">'+amtSign+fmt(t.amt)+'</td>' +
           '<td style="font-size:12px;color:var(--t3)">'+escHtml(t.method||'')+'</td>' +
-          '<td><button class="tx-edit-btn" onclick="txStartEdit('+ri+')">✏ Edit</button></td>' +
+          '<td><button class="tx-edit-btn" onclick="event.stopPropagation();txStartEdit('+ri+')">✏ Edit</button></td>' +
         '</tr>';
 
         if (isEditing) {
